@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBIT — Intelligent Territory Planning</title>
+  <meta name="description" content="ORBIT automatically creates geographically balanced sales territories from your store data, then plans every rep's daily schedule.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#" aria-label="ORBIT home">
+      <svg width="28" height="28" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <circle cx="15" cy="15" r="4" fill="#ff500a"/>
+        <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#ff500a" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+        <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#ff500a" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+        <circle cx="26" cy="9" r="1.8" fill="#ff500a" opacity="0.85"/>
+      </svg>
+      ORBIT
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#demo" class="btn btn-primary">Request a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div class="hero-content">
+        <div><span class="pill">Territory Optimization Software</span></div>
+        <h1>Sales territories that <span class="hero-em">actually</span> make sense.</h1>
+        <p class="hero-lead">Upload your store network. ORBIT automatically creates geographically balanced territories — then schedules every store visit for every rep, for every day of the week.</p>
+        <div class="hero-ctas">
+          <a href="#demo" class="btn btn-primary btn-lg">Request a Demo</a>
+          <a href="#how" class="btn btn-ghost btn-lg">See How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat">
+            <span class="hstat-num">±7%</span>
+            <span class="hstat-lbl">Weight balance across all territories</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-num">&lt;60s</span>
+            <span class="hstat-lbl">To optimize 1,000+ store networks</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-num">5+</span>
+            <span class="hstat-lbl">Industries served across Africa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-map-wrap">
+          <div class="chrome">
+            <span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span>
+            <span class="ct">ORBIT — <span>Territory Manager</span></span>
+          </div>
+          <!-- Territory map: 5 regions, animated Monday route through Central territory -->
+          <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg"
+               style="display:block;width:100%;background:#080c12;"
+               aria-label="ORBIT territory map: 5 sales territories with animated rep route">
+            <defs>
+              <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Cartographic grid -->
+            <g stroke="#16202e" stroke-width="0.6">
+              <line x1="0" y1="84" x2="720" y2="84"/>
+              <line x1="0" y1="168" x2="720" y2="168"/>
+              <line x1="0" y1="252" x2="720" y2="252"/>
+              <line x1="0" y1="336" x2="720" y2="336"/>
+              <line x1="120" y1="0" x2="120" y2="420"/>
+              <line x1="240" y1="0" x2="240" y2="420"/>
+              <line x1="360" y1="0" x2="360" y2="420"/>
+              <line x1="480" y1="0" x2="480" y2="420"/>
+              <line x1="600" y1="0" x2="600" y2="420"/>
+            </g>
+
+            <!-- T1: Orange / NW -->
+            <polygon points="22,22 298,15 332,125 215,178 70,188 20,148"
+              fill="#ff500a" fill-opacity="0.16" stroke="#ff500a" stroke-width="1.8" stroke-opacity="0.72"
+              filter="url(#glow)"/>
+            <!-- T2: Blue / NE -->
+            <polygon points="298,15 698,20 700,148 548,158 380,145 332,125"
+              fill="#4d9ef8" fill-opacity="0.16" stroke="#4d9ef8" stroke-width="1.8" stroke-opacity="0.72"
+              filter="url(#glow)"/>
+            <!-- T3: Green / Center (active territory — route animates here) -->
+            <polygon points="20,148 70,188 215,178 332,125 380,145 415,285 250,315 60,278"
+              fill="#30d9a0" fill-opacity="0.20" stroke="#30d9a0" stroke-width="2.2" stroke-opacity="0.9"
+              filter="url(#glow)"/>
+            <!-- T4: Purple / SE -->
+            <polygon points="380,145 548,158 700,148 705,368 548,392 395,348 415,285"
+              fill="#a67ef8" fill-opacity="0.16" stroke="#a67ef8" stroke-width="1.8" stroke-opacity="0.72"
+              filter="url(#glow)"/>
+            <!-- T5: Amber / S -->
+            <polygon points="60,278 250,315 415,285 395,348 298,390 60,375"
+              fill="#f5b742" fill-opacity="0.16" stroke="#f5b742" stroke-width="1.8" stroke-opacity="0.72"
+              filter="url(#glow)"/>
+
+            <!-- Stores: T1 -->
+            <g fill="white" fill-opacity="0.48">
+              <circle cx="82" cy="50" r="2.8"/><circle cx="156" cy="42" r="2.8"/>
+              <circle cx="232" cy="62" r="2.8"/><circle cx="118" cy="100" r="2.8"/>
+              <circle cx="264" cy="100" r="2.8"/><circle cx="82" cy="136" r="2.8"/>
+              <circle cx="196" cy="128" r="2.8"/><circle cx="286" cy="65" r="2.8"/>
+            </g>
+            <!-- Stores: T2 -->
+            <g fill="white" fill-opacity="0.48">
+              <circle cx="422" cy="42" r="2.8"/><circle cx="502" cy="38" r="2.8"/>
+              <circle cx="592" cy="55" r="2.8"/><circle cx="642" cy="70" r="2.8"/>
+              <circle cx="452" cy="95" r="2.8"/><circle cx="542" cy="112" r="2.8"/>
+              <circle cx="644" cy="130" r="2.8"/><circle cx="512" cy="72" r="2.8"/>
+              <circle cx="682" cy="90" r="2.8"/>
+            </g>
+            <!-- Stores: T4 -->
+            <g fill="white" fill-opacity="0.48">
+              <circle cx="442" cy="168" r="2.8"/><circle cx="518" cy="192" r="2.8"/>
+              <circle cx="600" cy="168" r="2.8"/><circle cx="640" cy="248" r="2.8"/>
+              <circle cx="582" cy="298" r="2.8"/><circle cx="630" cy="345" r="2.8"/>
+              <circle cx="500" cy="258" r="2.8"/><circle cx="454" cy="308" r="2.8"/>
+            </g>
+            <!-- Stores: T5 -->
+            <g fill="white" fill-opacity="0.48">
+              <circle cx="92" cy="310" r="2.8"/><circle cx="188" cy="328" r="2.8"/>
+              <circle cx="302" cy="318" r="2.8"/><circle cx="150" cy="358" r="2.8"/>
+              <circle cx="262" cy="362" r="2.8"/><circle cx="358" cy="355" r="2.8"/>
+            </g>
+
+            <!-- Animated Monday route through T3 (Central) -->
+            <polyline class="anim-route"
+              points="165,162 100,192 118,248 162,198 235,188 198,252 298,238 348,202 268,168"
+              fill="none" stroke="#4d9ef8" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.9"/>
+
+            <!-- Route stops: fade in as route draws -->
+            <g fill="#4d9ef8">
+              <circle class="r-dot" cx="165" cy="162" r="4.5"/>
+              <circle class="r-dot" cx="100" cy="192" r="3.5"/>
+              <circle class="r-dot" cx="118" cy="248" r="3.5"/>
+              <circle class="r-dot" cx="162" cy="198" r="3.5"/>
+              <circle class="r-dot" cx="235" cy="188" r="3.5"/>
+              <circle class="r-dot" cx="198" cy="252" r="3.5"/>
+              <circle class="r-dot" cx="298" cy="238" r="3.5"/>
+              <circle class="r-dot" cx="348" cy="202" r="3.5"/>
+              <circle class="r-dot" cx="268" cy="168" r="3.5"/>
+            </g>
+            <!-- Pulsing ring on start -->
+            <circle class="r-pulse" cx="165" cy="162" r="9"
+              fill="none" stroke="#4d9ef8" stroke-width="1.5" stroke-opacity="0.6"/>
+
+            <!-- HUD legend -->
+            <rect x="14" y="376" width="210" height="28" rx="4"
+              fill="#141820" fill-opacity="0.92" stroke="#242e40" stroke-width="1"/>
+            <circle cx="32" cy="390" r="5" fill="#ff500a" opacity="0.82"/>
+            <circle cx="52" cy="390" r="5" fill="#4d9ef8" opacity="0.82"/>
+            <circle cx="72" cy="390" r="5" fill="#30d9a0" opacity="0.82"/>
+            <circle cx="92" cy="390" r="5" fill="#a67ef8" opacity="0.82"/>
+            <circle cx="112" cy="390" r="5" fill="#f5b742" opacity="0.82"/>
+            <text x="128" y="394" fill="#7a90aa" font-size="9.5" font-family="monospace">5 territories · 40 stores</text>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ── -->
+<div id="trust">
+  <div class="container">
+    <p class="trust-label">Trusted by leading field sales and operations teams</p>
+    <div class="trust-logos">
+      <span class="tlogo">ABInBev</span>
+      <span class="tlogo">DHL</span>
+      <span class="tlogo">Perfetti</span>
+      <span class="tlogo">Woolworths</span>
+      <span class="tlogo">Distell</span>
+      <span class="tlogo">Johnson &amp; Johnson</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<section id="how">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">How It Works</span>
+      <h2>From raw data to deployed territories in three steps</h2>
+      <p>No GIS expertise required. Upload a spreadsheet, set your parameters, and ORBIT does the hard work.</p>
+    </div>
+    <div class="steps">
+      <div class="step f d1">
+        <div class="step-n">1</div>
+        <h3>Upload your data</h3>
+        <p>Drop an Excel file with your stores, GPS coordinates, and call frequencies. Pre-assigned stores and shopping centres are automatically respected and never split.</p>
+      </div>
+      <div class="step f d2">
+        <div class="step-n">2</div>
+        <h3>Run the algorithm</h3>
+        <p>Choose how many territories you need. ORBIT's constraint-aware algorithm balances workload and geography simultaneously — results in under a minute.</p>
+      </div>
+      <div class="step f d3">
+        <div class="step-n">3</div>
+        <h3>Plan and dispatch</h3>
+        <p>Generate rep schedules day by day. Adjust on the live map. Export to Excel — or push plans directly to your reps' mobile devices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features" class="alt">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">Features</span>
+      <h2>Everything your planning team needs</h2>
+      <p>ORBIT handles the full workflow from territory design to daily scheduling — in a single tool.</p>
+    </div>
+    <div class="feat-cols">
+      <div class="feat-item f">
+        <div class="feat-icon-wrap">⚖️</div>
+        <div>
+          <h3>Balanced territories</h3>
+          <p>Achieves ±7% weight balance across all territories. No rep gets a massive workload while another sits idle.</p>
+        </div>
+      </div>
+      <div class="feat-item f d1">
+        <div class="feat-icon-wrap">🗺️</div>
+        <div>
+          <h3>Geographic contiguity</h3>
+          <p>No fragmented islands. Every territory is a single connected region — because disconnected territories waste drive time and confuse reps.</p>
+        </div>
+      </div>
+      <div class="feat-item f">
+        <div class="feat-icon-wrap">✏️</div>
+        <div>
+          <h3>Interactive map editing</h3>
+          <p>Drag stores between territories, polygon-select entire areas, and reassign in one click. Full undo history keeps everything reversible.</p>
+        </div>
+      </div>
+      <div class="feat-item f d1">
+        <div class="feat-icon-wrap">📅</div>
+        <div>
+          <h3>Tactical scheduling</h3>
+          <p>Day-by-day visit schedules optimized for travel distance and working hours. Handles variable hours, depots, and multi-week planning periods.</p>
+        </div>
+      </div>
+      <div class="feat-item f">
+        <div class="feat-icon-wrap">🔁</div>
+        <div>
+          <h3>Multiple scenarios</h3>
+          <p>Create and compare different territory configurations side by side. Run 2–30 territory counts at once and choose what works best for your business.</p>
+        </div>
+      </div>
+      <div class="feat-item f d1">
+        <div class="feat-icon-wrap">📊</div>
+        <div>
+          <h3>Excel integration</h3>
+          <p>Import from your existing spreadsheet format. Export results back to Excel for your team. No new systems to learn — plug into what you already use.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TERRITORY CUTTING SPOTLIGHT ── -->
+<section id="territory">
+  <div class="container">
+    <div class="spot">
+      <div class="spot-text f">
+        <span class="pill">Territory Cutting</span>
+        <h2>Perfectly balanced regions. Every time.</h2>
+        <p>ORBIT's algorithm combines weighted K-means clustering with geographic contiguity constraints and iterative boundary tuning. The result: territories that are compact, connected, and fair — without hours of manual adjustment.</p>
+        <ul class="checks">
+          <li>±7% weight balance guaranteed across all territories</li>
+          <li>Respects pre-assigned stores and shopping centre groupings</li>
+          <li>Guarantees geographic connectivity — no islands, ever</li>
+          <li>Compare 2 to 30 territory counts in a single algorithm run</li>
+          <li>Manual refinement on a live map with instant visual feedback</li>
+        </ul>
+      </div>
+      <div class="f d1">
+        <div class="mockup">
+          <div class="chrome">
+            <span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span>
+          </div>
+          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Territory cutting UI mockup">
+            <!-- Sidebar -->
+            <rect width="148" height="340" fill="#141820"/>
+            <rect x="148" width="1" height="340" fill="#242e40"/>
+            <text x="14" y="22" fill="#d8e4f0" font-size="8.5" font-weight="700" font-family="monospace">Territory Cuts</text>
+            <line x1="14" y1="28" x2="134" y2="28" stroke="#242e40"/>
+            <!-- Cut pills -->
+            <rect x="14" y="35" width="25" height="13" rx="3" fill="#ff500a"/>
+            <text x="26" y="44" fill="white" font-size="7" text-anchor="middle" font-family="monospace">5</text>
+            <rect x="43" y="35" width="25" height="13" rx="3" fill="#191f2d" stroke="#242e40" stroke-width="1"/>
+            <text x="55" y="44" fill="#7a90aa" font-size="7" text-anchor="middle" font-family="monospace">6</text>
+            <rect x="72" y="35" width="25" height="13" rx="3" fill="#191f2d" stroke="#242e40" stroke-width="1"/>
+            <text x="84" y="44" fill="#7a90aa" font-size="7" text-anchor="middle" font-family="monospace">7</text>
+            <!-- Stats table -->
+            <text x="14" y="63" fill="#46586e" font-size="6.5" font-family="monospace">Territory</text>
+            <text x="90" y="63" fill="#46586e" font-size="6.5" font-family="monospace">Stores</text>
+            <text x="120" y="63" fill="#46586e" font-size="6.5" font-family="monospace">Wt%</text>
+            <line x1="14" y1="67" x2="134" y2="67" stroke="#242e40"/>
+            <rect x="14" y="72" width="6" height="6" rx="1" fill="#ff500a"/>
+            <text x="25" y="79" fill="#d8e4f0" font-size="7" font-family="monospace">North</text>
+            <text x="90" y="79" fill="#d8e4f0" font-size="7" font-family="monospace">84</text>
+            <text x="120" y="79" fill="#d8e4f0" font-size="7" font-family="monospace">19.8</text>
+            <rect x="14" y="83" width="6" height="6" rx="1" fill="#4d9ef8"/>
+            <text x="25" y="90" fill="#d8e4f0" font-size="7" font-family="monospace">East</text>
+            <text x="90" y="90" fill="#d8e4f0" font-size="7" font-family="monospace">79</text>
+            <text x="120" y="90" fill="#d8e4f0" font-size="7" font-family="monospace">20.4</text>
+            <!-- Central row highlighted -->
+            <rect x="10" y="93" width="128" height="14" rx="2" fill="rgba(48,217,160,0.08)"/>
+            <rect x="14" y="95" width="6" height="6" rx="1" fill="#30d9a0"/>
+            <text x="25" y="102" fill="#30d9a0" font-size="7" font-family="monospace">Central</text>
+            <text x="90" y="102" fill="#30d9a0" font-size="7" font-family="monospace">91</text>
+            <text x="120" y="102" fill="#30d9a0" font-size="7" font-family="monospace">21.2</text>
+            <rect x="14" y="107" width="6" height="6" rx="1" fill="#a67ef8"/>
+            <text x="25" y="114" fill="#d8e4f0" font-size="7" font-family="monospace">South</text>
+            <text x="90" y="114" fill="#d8e4f0" font-size="7" font-family="monospace">76</text>
+            <text x="120" y="114" fill="#d8e4f0" font-size="7" font-family="monospace">18.9</text>
+            <rect x="14" y="118" width="6" height="6" rx="1" fill="#f5b742"/>
+            <text x="25" y="125" fill="#d8e4f0" font-size="7" font-family="monospace">West</text>
+            <text x="90" y="125" fill="#d8e4f0" font-size="7" font-family="monospace">82</text>
+            <text x="120" y="125" fill="#d8e4f0" font-size="7" font-family="monospace">19.7</text>
+            <!-- Balance indicator -->
+            <text x="14" y="144" fill="#46586e" font-size="6.5" font-family="monospace">Balance: ±3.2%</text>
+            <rect x="14" y="148" width="120" height="3" rx="1.5" fill="#191f2d"/>
+            <rect x="14" y="148" width="88" height="3" rx="1.5" fill="#30d9a0" opacity="0.55"/>
+            <!-- Download button -->
+            <rect x="14" y="162" width="120" height="15" rx="3" fill="#191f2d" stroke="#242e40"/>
+            <text x="74" y="173" fill="#7a90aa" font-size="6.5" text-anchor="middle" font-family="monospace">⬇ Download Excel</text>
+            <!-- Map area -->
+            <rect x="149" y="0" width="331" height="340" fill="#080c12"/>
+            <g stroke="#16202e" stroke-width="0.5">
+              <line x1="149" y1="85" x2="480" y2="85"/><line x1="149" y1="170" x2="480" y2="170"/>
+              <line x1="149" y1="255" x2="480" y2="255"/><line x1="215" y1="0" x2="215" y2="340"/>
+              <line x1="282" y1="0" x2="282" y2="340"/><line x1="349" y1="0" x2="349" y2="340"/>
+              <line x1="416" y1="0" x2="416" y2="340"/>
+            </g>
+            <!-- Map territories -->
+            <polygon points="153,12 285,8 308,82 222,115 163,118 153,72" fill="#ff500a" fill-opacity="0.16" stroke="#ff500a" stroke-width="1.5" stroke-opacity="0.75"/>
+            <polygon points="285,8 477,12 478,90 372,102 308,82" fill="#4d9ef8" fill-opacity="0.16" stroke="#4d9ef8" stroke-width="1.5" stroke-opacity="0.75"/>
+            <polygon points="153,72 163,118 222,115 308,82 372,102 396,200 260,224 152,205" fill="#30d9a0" fill-opacity="0.20" stroke="#30d9a0" stroke-width="2" stroke-opacity="0.88"/>
+            <polygon points="372,102 478,90 479,238 368,256 305,222 396,200" fill="#a67ef8" fill-opacity="0.16" stroke="#a67ef8" stroke-width="1.5" stroke-opacity="0.75"/>
+            <polygon points="152,205 260,224 396,200 368,256 290,288 152,278" fill="#f5b742" fill-opacity="0.16" stroke="#f5b742" stroke-width="1.5" stroke-opacity="0.75"/>
+            <!-- Map store dots -->
+            <g fill="white" fill-opacity="0.42">
+              <circle cx="172" cy="28" r="2"/><circle cx="215" cy="22" r="2"/><circle cx="252" cy="38" r="2"/>
+              <circle cx="192" cy="62" r="2"/><circle cx="262" cy="62" r="2"/>
+              <circle cx="345" cy="25" r="2"/><circle cx="395" cy="20" r="2"/><circle cx="435" cy="48" r="2"/>
+              <circle cx="460" cy="68" r="2"/><circle cx="355" cy="62" r="2"/>
+              <circle cx="172" cy="128" r="2"/><circle cx="205" cy="142" r="2"/><circle cx="255" cy="132" r="2"/>
+              <circle cx="182" cy="168" r="2"/><circle cx="220" cy="178" r="2"/><circle cx="308" cy="162" r="2"/>
+              <circle cx="340" cy="112" r="2"/><circle cx="362" cy="128" r="2"/>
+              <circle cx="415" cy="145" r="2"/><circle cx="448" cy="185" r="2"/>
+              <circle cx="175" cy="215" r="2"/><circle cx="215" cy="228" r="2"/>
+              <circle cx="255" cy="238" r="2"/><circle cx="295" cy="225" r="2"/>
+            </g>
+            <!-- Map controls -->
+            <rect x="432" y="12" width="36" height="55" rx="3" fill="#141820" stroke="#242e40" stroke-width="1"/>
+            <text x="450" y="28" fill="#7a90aa" font-size="8" text-anchor="middle" font-family="monospace">⊞</text>
+            <line x1="432" y1="35" x2="468" y2="35" stroke="#242e40"/>
+            <text x="450" y="48" fill="#7a90aa" font-size="8" text-anchor="middle" font-family="monospace">◫</text>
+            <line x1="432" y1="54" x2="468" y2="54" stroke="#242e40"/>
+            <text x="450" y="65" fill="#7a90aa" font-size="8" text-anchor="middle" font-family="monospace">⬡</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TACTICAL PLANNING SPOTLIGHT ── -->
+<section id="tactical" class="alt">
+  <div class="container">
+    <div class="spot flip">
+      <div class="f">
+        <div class="mockup">
+          <div class="chrome">
+            <span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span>
+          </div>
+          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Tactical planning UI mockup">
+            <!-- Sidebar -->
+            <rect width="182" height="340" fill="#141820"/>
+            <rect x="182" width="1" height="340" fill="#242e40"/>
+            <text x="14" y="22" fill="#d8e4f0" font-size="8.5" font-weight="700" font-family="monospace">Q1 Week 1 — Central</text>
+            <line x1="14" y1="28" x2="168" y2="28" stroke="#242e40"/>
+            <!-- Day tabs -->
+            <rect x="14" y="34" width="30" height="13" rx="2" fill="#4d9ef8"/>
+            <text x="29" y="43" fill="white" font-size="7" text-anchor="middle" font-family="monospace">Mon</text>
+            <rect x="48" y="34" width="30" height="13" rx="2" fill="#30d9a0" opacity="0.75"/>
+            <text x="63" y="43" fill="#141820" font-size="7" text-anchor="middle" font-family="monospace">Tue</text>
+            <rect x="82" y="34" width="30" height="13" rx="2" fill="#191f2d" stroke="#242e40" stroke-width="1"/>
+            <text x="97" y="43" fill="#46586e" font-size="7" text-anchor="middle" font-family="monospace">Wed</text>
+            <rect x="116" y="34" width="30" height="13" rx="2" fill="#191f2d" stroke="#242e40" stroke-width="1"/>
+            <text x="131" y="43" fill="#46586e" font-size="7" text-anchor="middle" font-family="monospace">Thu</text>
+            <!-- Route list -->
+            <line x1="14" y1="56" x2="168" y2="56" stroke="#242e40"/>
+            <text x="14" y="68" fill="#4d9ef8" font-size="7.5" font-weight="700" font-family="monospace">Monday — 16 stops</text>
+            <text x="14" y="80" fill="#46586e" font-size="6.8" font-family="monospace">08:00  Store A1 (Depot)</text>
+            <text x="14" y="91" fill="#7a90aa" font-size="6.8" font-family="monospace">08:38  Store A2</text>
+            <text x="14" y="102" fill="#7a90aa" font-size="6.8" font-family="monospace">09:14  Store A3</text>
+            <text x="14" y="113" fill="#7a90aa" font-size="6.8" font-family="monospace">09:55  Mall Centre</text>
+            <text x="14" y="124" fill="#7a90aa" font-size="6.8" font-family="monospace">10:50  Store A5</text>
+            <text x="14" y="135" fill="#7a90aa" font-size="6.8" font-family="monospace">11:32  Store A6</text>
+            <text x="14" y="146" fill="#7a90aa" font-size="6.8" font-family="monospace">12:18  Store A7</text>
+            <text x="14" y="157" fill="#4d9ef8" font-size="6.5" font-family="monospace">            … 9 more stops</text>
+            <!-- Stats -->
+            <line x1="14" y1="168" x2="168" y2="168" stroke="#242e40"/>
+            <text x="14" y="180" fill="#46586e" font-size="6.8" font-family="monospace">Distance:    138 km</text>
+            <text x="14" y="192" fill="#46586e" font-size="6.8" font-family="monospace">Drive time:  2h 18m</text>
+            <text x="14" y="204" fill="#46586e" font-size="6.8" font-family="monospace">Visit time:  5h 42m</text>
+            <text x="14" y="216" fill="#30d9a0" font-size="6.8" font-family="monospace">Total:       8h 00m ✓</text>
+            <!-- Export button -->
+            <rect x="14" y="230" width="155" height="16" rx="3" fill="#ff500a" opacity="0.9"/>
+            <text x="92" y="241" fill="white" font-size="7" text-anchor="middle" font-family="monospace">⬇ Export Excel</text>
+            <!-- Map area -->
+            <rect x="183" y="0" width="297" height="340" fill="#080c12"/>
+            <g stroke="#16202e" stroke-width="0.5">
+              <line x1="183" y1="85" x2="480" y2="85"/><line x1="183" y1="170" x2="480" y2="170"/>
+              <line x1="183" y1="255" x2="480" y2="255"/><line x1="240" y1="0" x2="240" y2="340"/>
+              <line x1="360" y1="0" x2="360" y2="340"/><line x1="430" y1="0" x2="430" y2="340"/>
+            </g>
+            <!-- Central territory backdrop -->
+            <polygon points="188,25 450,20 462,158 392,200 208,195 186,142"
+              fill="#30d9a0" fill-opacity="0.10" stroke="#30d9a0" stroke-width="1.5" stroke-opacity="0.45"/>
+            <!-- Monday route (static in mockup) -->
+            <polyline points="222,65 268,48 310,72 344,58 376,82 348,118 312,142 282,162 258,148 228,172 262,188 308,178 344,198 375,175 405,148 440,132"
+              fill="none" stroke="#4d9ef8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+            <!-- Route stops -->
+            <g fill="#4d9ef8">
+              <circle cx="222" cy="65" r="4"/>
+              <circle cx="268" cy="48" r="3.2"/><circle cx="310" cy="72" r="3.2"/>
+              <circle cx="344" cy="58" r="3.2"/><circle cx="376" cy="82" r="3.2"/>
+              <circle cx="348" cy="118" r="3.2"/><circle cx="312" cy="142" r="3.2"/>
+              <circle cx="282" cy="162" r="3.2"/><circle cx="258" cy="148" r="3.2"/>
+              <circle cx="228" cy="172" r="3.2"/><circle cx="262" cy="188" r="3.2"/>
+              <circle cx="308" cy="178" r="3.2"/><circle cx="344" cy="198" r="3.2"/>
+              <circle cx="375" cy="175" r="3.2"/><circle cx="405" cy="148" r="3.2"/>
+              <circle cx="440" cy="132" r="3.2"/>
+            </g>
+            <!-- Start ring -->
+            <circle cx="222" cy="65" r="9" fill="none" stroke="#4d9ef8" stroke-width="1.5" stroke-opacity="0.5"/>
+            <text x="225" y="57" fill="#4d9ef8" font-size="6.5" font-family="monospace">Start 08:00</text>
+            <!-- Other stores (faded) -->
+            <g fill="white" fill-opacity="0.12">
+              <circle cx="200" cy="220" r="2.5"/><circle cx="232" cy="248" r="2.5"/>
+              <circle cx="355" cy="285" r="2.5"/><circle cx="402" cy="308" r="2.5"/>
+              <circle cx="435" cy="255" r="2.5"/><circle cx="462" cy="222" r="2.5"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="spot-text f d1">
+        <span class="pill">Tactical Planning</span>
+        <h2>Every rep, every store, every day.</h2>
+        <p>Once territories are cut, ORBIT solves the scheduling problem: which stores does each rep visit on which day, in what order, to minimize drive time while fitting within working hours.</p>
+        <ul class="checks">
+          <li>Day-by-day route optimization across your full planning period</li>
+          <li>Configurable working hours per day — even different hours each day</li>
+          <li>Start from territory centre or a single shared depot</li>
+          <li>Multi-week planning periods from 1 to 8 weeks</li>
+          <li>Compare coverage and distance across all territories side by side</li>
+          <li>Export daily plans to Excel for immediate dispatch</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INDUSTRIES ── -->
+<section id="industries">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">Industries</span>
+      <h2>Built for any field operation with a store network</h2>
+      <p>If your team drives between customer locations, ORBIT can cut your territories and plan your routes.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card f">
+        <div class="ind-em">🏪</div>
+        <div><h3>Sales &amp; Merchandising</h3><p>Manage rep territories across retail, wholesale, and independent channels. Balance call frequency with drive time.</p></div>
+      </div>
+      <div class="ind-card f d1">
+        <div class="ind-em">🚚</div>
+        <div><h3>FMCG &amp; Distribution</h3><p>Balance delivery routes across customers with different visit frequencies and order volumes.</p></div>
+      </div>
+      <div class="ind-card f d2">
+        <div class="ind-em">🔧</div>
+        <div><h3>Field Service</h3><p>Ensure technicians cover their zones without excessive travel between sites or overlapping regions.</p></div>
+      </div>
+      <div class="ind-card f">
+        <div class="ind-em">💊</div>
+        <div><h3>Pharmaceutical</h3><p>Ensure every pharmacy, clinic, and hospital gets the right rep visiting on a reliable schedule.</p></div>
+      </div>
+      <div class="ind-card f d1">
+        <div class="ind-em">🏬</div>
+        <div><h3>Retail Operations</h3><p>Territory-cut field teams for promotions, audits, stock checks, and in-store merchandising programs.</p></div>
+      </div>
+      <div class="ind-card f d2">
+        <div class="ind-em">🚐</div>
+        <div><h3>Van Sales</h3><p>Optimize daily driver routes across dense urban store networks. Minimize kilometres, maximize deliveries.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials" class="alt">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">Customer Stories</span>
+      <h2>Proven in the field</h2>
+      <p>ORBIT powers territory planning for some of Africa's most demanding field sales operations.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi f">
+        <div class="testi-q"><p>"I am happy to recommend ORBIT, both in terms of the depth and capability of the software as well as the responsiveness and willingness of the team to assist. It has fundamentally changed how we approach territory planning."</p></div>
+        <div class="testi-who">
+          <div class="testi-av">DHL</div>
+          <div>
+            <div class="testi-nm">Head of Planning</div>
+            <div class="testi-co">DHL Supply Chain</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi f d1">
+        <div class="testi-q"><p>"ORBIT helped us structure our delivery routes, minimizing the manpower and resources required — while reaching 15% more outlets at 10% lower cost. The ROI was clear within the first quarter."</p></div>
+        <div class="testi-who">
+          <div class="testi-av">PVM</div>
+          <div>
+            <div class="testi-nm">Operations Executive</div>
+            <div class="testi-co">Perfetti Van Melle</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stat-bar f">
+      <div><div class="stat-val">+15%</div><div class="stat-lbl">More outlets served</div></div>
+      <div class="stat-div"></div>
+      <div><div class="stat-val">−10%</div><div class="stat-lbl">Lower distribution cost</div></div>
+      <div class="stat-div"></div>
+      <div><div class="stat-val">±7%</div><div class="stat-lbl">Territory weight balance</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROADMAP ── -->
+<section id="roadmap">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">What's Coming</span>
+      <h2>Built for the future of field sales</h2>
+      <p>ORBIT is actively developed. Here's what's shipping next.</p>
+    </div>
+    <div class="road-grid">
+      <div class="road-card f">
+        <div class="road-ic ic-blue">📱</div>
+        <div>
+          <span class="rtag t-soon">Coming Soon</span>
+          <div class="road-h">Mobile App for Reps</div>
+          <p class="road-p">A companion iOS and Android app. Reps see their daily schedule and map route, check in at each store, and work offline. Plans published instantly from ORBIT to every rep's device.</p>
+        </div>
+      </div>
+      <div class="road-card f d1">
+        <div class="road-ic ic-purple">☁️</div>
+        <div>
+          <span class="rtag t-soon">Coming Soon</span>
+          <div class="road-h">Cloud SaaS Platform</div>
+          <p class="road-p">Team accounts, role-based access, and cloud-hosted scenarios. Managers create territories; reps see only their own plans. No more emailing spreadsheets around.</p>
+        </div>
+      </div>
+      <div class="road-card f">
+        <div class="road-ic ic-green">📆</div>
+        <div>
+          <span class="rtag t-dev">In Development</span>
+          <div class="road-h">Daily Planning</div>
+          <p class="road-p">Below tactical level — automatic daily run scheduling that accounts for appointment windows and rep-specific constraints. Moving from weekly plans to day-by-day precision.</p>
+        </div>
+      </div>
+      <div class="road-card f d1">
+        <div class="road-ic ic-amber">🤝</div>
+        <div>
+          <span class="rtag t-soon">Coming Soon</span>
+          <div class="road-h">Reseller Programme</div>
+          <p class="road-p">White-label ORBIT under your brand. A partner portal for managing client accounts, custom subdomains, and co-marketing assets. Recurring commission on every subscription.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing" class="alt">
+  <div class="container">
+    <div class="p-intro f">
+      <span class="pill">Pricing</span>
+      <h2>Pricing that scales with your store network</h2>
+      <p>No per-rep fees. No per-territory fees. One straightforward subscription based on the size of your store network.</p>
+    </div>
+    <div class="p-grid">
+      <div class="p-card f">
+        <div class="p-tier">Starter</div>
+        <div class="p-scale">Up to 500 stores</div>
+        <div class="p-sub">Contact us for pricing</div>
+        <ul class="p-feats">
+          <li>Territory cutting algorithm</li>
+          <li>Tactical planning</li>
+          <li>Up to 30 territory cuts</li>
+          <li>Excel import &amp; export</li>
+          <li>Email support</li>
+          <li>Guided onboarding session</li>
+        </ul>
+        <a href="#demo" class="btn btn-ghost" style="width:100%;justify-content:center;">Get a Quote</a>
+      </div>
+      <div class="p-card pop f d1">
+        <div class="p-tier">Professional</div>
+        <div class="p-scale">500 – 2,000 stores</div>
+        <div class="p-sub">Contact us for pricing</div>
+        <ul class="p-feats">
+          <li>Everything in Starter</li>
+          <li>Multiple scenarios</li>
+          <li>Unlimited territory counts</li>
+          <li>Priority support</li>
+          <li>Mobile app access (on launch)</li>
+          <li>Quarterly territory review</li>
+        </ul>
+        <a href="#demo" class="btn btn-primary" style="width:100%;justify-content:center;">Get a Quote</a>
+      </div>
+      <div class="p-card f d2">
+        <div class="p-tier">Enterprise</div>
+        <div class="p-scale">2,000+ stores</div>
+        <div class="p-sub">Custom pricing</div>
+        <ul class="p-feats">
+          <li>Everything in Professional</li>
+          <li>Dedicated account manager</li>
+          <li>SLA with uptime guarantee</li>
+          <li>API integration support</li>
+          <li>White-label option</li>
+          <li>Custom data processing agreement</li>
+        </ul>
+        <a href="#demo" class="btn btn-ghost" style="width:100%;justify-content:center;">Talk to Sales</a>
+      </div>
+    </div>
+    <p class="p-note f">All plans include a free 30-minute demo with your own data. No commitment required.</p>
+  </div>
+</section>
+
+<!-- ── DEMO REQUEST ── -->
+<section id="demo">
+  <div class="container">
+    <div class="demo-wrap">
+      <div class="demo-txt f">
+        <span class="pill">Request a Demo</span>
+        <h2>See ORBIT in action with your own data.</h2>
+        <p>We'll walk you through the full workflow — territory cutting, tactical planning, and export — using a real sample from your store network. No commitment, no sales pressure.</p>
+        <ul class="demo-pts">
+          <li>30-minute online session tailored to your store network</li>
+          <li>See your own territories optimized live in the session</li>
+          <li>Free feasibility assessment for your store count and geography</li>
+          <li>No software to install — we share our screen</li>
+        </ul>
+        <p class="demo-note">Or email us directly at <a href="mailto:david.lubinsky@opsi.co.za">david.lubinsky@opsi.co.za</a></p>
+      </div>
+      <div class="f d1">
+        <div class="form-card">
+          <h3>Book your free demo</h3>
+          <form id="dform" novalidate>
+            <div class="fg-row">
+              <div class="fg">
+                <label for="fn">Full name *</label>
+                <input type="text" id="fn" name="name" required placeholder="Jane Smith">
+              </div>
+              <div class="fg">
+                <label for="fc">Company *</label>
+                <input type="text" id="fc" name="company" required placeholder="Acme Corp">
+              </div>
+            </div>
+            <div class="fg">
+              <label for="fe">Work email *</label>
+              <input type="email" id="fe" name="email" required placeholder="jane@company.com">
+            </div>
+            <div class="fg">
+              <label for="fs">Approximate store / customer count</label>
+              <select id="fs" name="stores">
+                <option value="">Select a range…</option>
+                <option>Fewer than 50</option>
+                <option>50 – 200</option>
+                <option>200 – 500</option>
+                <option>500 – 2,000</option>
+                <option>More than 2,000</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="fm">Tell us about your territory challenge (optional)</label>
+              <textarea id="fm" name="message" placeholder="e.g. We have 400 stores across 3 provinces and 8 reps…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request My Demo →</button>
+          </form>
+          <div class="form-ok" id="form-ok">
+            <div class="ok-ico">✅</div>
+            <div class="ok-head">Request received!</div>
+            <p>We'll be in touch within one business day to schedule your session.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="logo" href="#">
+          <svg width="24" height="24" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <circle cx="15" cy="15" r="4" fill="#ff500a"/>
+            <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#ff500a" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+            <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#ff500a" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+            <circle cx="26" cy="9" r="1.8" fill="#ff500a" opacity="0.85"/>
+          </svg>
+          ORBIT
+        </a>
+        <p>Intelligent territory planning and rep scheduling for field sales teams. Fewer kilometres. More coverage. Balanced workloads.</p>
+        <p class="ft-opsi">Built by <a href="https://www.opsi.co.za" target="_blank" rel="noopener">OPSI Systems (Pty) Ltd</a></p>
+      </div>
+      <div class="ft-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#demo">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Video Tutorials</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="mailto:david.lubinsky@opsi.co.za">Email Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 ORBIT by OPSI Systems (Pty) Ltd. All rights reserved.</span>
+      <div class="ft-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#demo">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
