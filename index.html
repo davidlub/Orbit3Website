@@ -27,6 +27,8 @@
     <ul class="nav-links">
       <li><a href="#how">How It Works</a></li>
       <li><a href="#features">Features</a></li>
+      <li><a href="#daily">Daily Planning</a></li>
+      <li><a href="#mobile">Mobile App</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
@@ -42,9 +44,9 @@
     <div class="hero-grid">
 
       <div class="hero-content">
-        <div><span class="pill">Territory Optimization Software</span></div>
+        <div><span class="pill">Territory &amp; Field-Visit Planning</span></div>
         <h1>Sales territories that <span class="hero-em">actually</span> make sense.</h1>
-        <p class="hero-lead">Upload your store network. ORBIT automatically creates geographically balanced territories — then schedules every store visit for every rep, for every day of the week.</p>
+        <p class="hero-lead">Upload your store network. ORBIT builds geographically balanced territories, schedules every visit for every rep — repeating or dynamic — and puts each route on their phone. When your data changes, the plans update themselves.</p>
         <div class="hero-ctas">
           <a href="#demo" class="btn btn-primary btn-lg">Request a Demo</a>
           <a href="#how" class="btn btn-ghost btn-lg">See How It Works</a>
@@ -288,18 +290,18 @@
     <div class="steps">
       <div class="step f d1">
         <div class="step-n">1</div>
-        <h3>Upload your data</h3>
-        <p>Drop an Excel file with your stores, GPS coordinates, and call frequencies. Pre-assigned stores and shopping centres are automatically respected and never split.</p>
+        <h3>Load your master data</h3>
+        <p>Import stores and reps from Excel into your organisation's master data, grouped by region. GPS, call frequencies, contract dates, pre-assigned groups and shopping centres are all respected — and never split.</p>
       </div>
       <div class="step f d2">
         <div class="step-n">2</div>
-        <h3>Run the algorithm</h3>
-        <p>Choose how many territories you need. ORBIT's constraint-aware algorithm balances workload and geography simultaneously — results in under a minute.</p>
+        <h3>Cut territories &amp; build routes</h3>
+        <p>Pick a region and run the algorithm — balanced, contiguous territories in under a minute. Then schedule visits into <strong>Repeating</strong> calendars or <strong>Dynamic</strong> urgency-driven days.</p>
       </div>
       <div class="step f d3">
         <div class="step-n">3</div>
-        <h3>Plan and dispatch</h3>
-        <p>Generate rep schedules day by day. Adjust on the live map. Export to Excel — or push plans directly to your reps' mobile devices.</p>
+        <h3>Dispatch &amp; keep it live</h3>
+        <p>Push plans to reps' phones and track every visit as it happens. When your data changes, flow the updates straight into live plans — no full replan.</p>
       </div>
     </div>
   </div>
@@ -354,6 +356,41 @@
         <div>
           <h3>Excel integration</h3>
           <p>Import from your existing spreadsheet format. Export results back to Excel for your team. No new systems to learn — plug into what you already use.</p>
+        </div>
+      </div>
+      <div class="feat-item f">
+        <div class="feat-icon-wrap">🔄</div>
+        <div>
+          <h3>Flow-through updates</h3>
+          <p>Add, remove or edit stores in master data and ORBIT shows exactly what changed — then flows it into live plans: new stores slotted, dropped stores removed, routes and visits updated. No full replan.</p>
+        </div>
+      </div>
+      <div class="feat-item f d1">
+        <div class="feat-icon-wrap">🧭</div>
+        <div>
+          <h3>Repeating &amp; Dynamic routes</h3>
+          <p>Run a fixed <strong>Repeating</strong> calendar cycle, or let <strong>Dynamic</strong> mode build each day from store urgency and last-visit dates. Two planning styles, one tool.</p>
+        </div>
+      </div>
+      <div class="feat-item f">
+        <div class="feat-icon-wrap">📱</div>
+        <div>
+          <h3>Rep mobile app</h3>
+          <p>An offline-capable web app: reps see their route, navigate, and mark Start / Finish per stop. GPS is captured on every tap and synced back automatically — even after working with no signal.</p>
+        </div>
+      </div>
+      <div class="feat-item f d1">
+        <div class="feat-icon-wrap">🗄️</div>
+        <div>
+          <h3>Master data &amp; regions</h3>
+          <p>One organisation-wide source of truth for stores and reps, partitioned into regions. Edit inline, bulk-upload, and build every scenario from the same clean data.</p>
+        </div>
+      </div>
+      <div class="feat-item f">
+        <div class="feat-icon-wrap">📍</div>
+        <div>
+          <h3>Visit tracking</h3>
+          <p>Every actual visit is logged — from the mobile app, planning edits, historical last-visit dates, or an external API — with GPS and timestamps, searchable and exportable.</p>
         </div>
       </div>
     </div>
@@ -568,6 +605,192 @@
   </div>
 </section>
 
+<!-- ── DAILY PLANNING (REPEATING + DYNAMIC) ── -->
+<section id="daily">
+  <div class="container">
+    <div class="spot">
+      <div class="f">
+        <div class="mockup">
+          <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span></div>
+          <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Daily planning modes mockup">
+            <!-- mode toggle -->
+            <rect x="18" y="18" width="120" height="26" rx="6" fill="#4d9ef8"/>
+            <text x="78" y="35" fill="white" font-size="10" font-weight="700" text-anchor="middle" font-family="monospace">Repeating</text>
+            <rect x="146" y="18" width="120" height="26" rx="6" fill="#141820" stroke="#30d9a0" stroke-width="1.3"/>
+            <text x="206" y="35" fill="#30d9a0" font-size="10" font-weight="700" text-anchor="middle" font-family="monospace">Dynamic</text>
+            <!-- calendar grid -->
+            <text x="18" y="70" fill="#7a90aa" font-size="8.5" font-family="monospace">MON  TUE  WED  THU  FRI</text>
+            <g font-family="monospace" font-size="8" text-anchor="middle">
+              <!-- 3 weeks x 5 days -->
+              <g>
+                <rect x="18" y="78" width="42" height="32" rx="4" fill="#12202e" stroke="#2b4a63"/>
+                <rect x="66" y="78" width="42" height="32" rx="4" fill="#191f2d" stroke="#242e40"/>
+                <rect x="114" y="78" width="42" height="32" rx="4" fill="#12202e" stroke="#2b4a63"/>
+                <rect x="162" y="78" width="42" height="32" rx="4" fill="#191f2d" stroke="#242e40"/>
+                <rect x="210" y="78" width="42" height="32" rx="4" fill="#12202e" stroke="#2b4a63"/>
+                <rect x="18" y="116" width="42" height="32" rx="4" fill="#191f2d" stroke="#242e40"/>
+                <rect x="66" y="116" width="42" height="32" rx="4" fill="#12202e" stroke="#2b4a63"/>
+                <rect x="114" y="116" width="42" height="32" rx="4" fill="#191f2d" stroke="#242e40"/>
+                <rect x="162" y="116" width="42" height="32" rx="4" fill="#12202e" stroke="#2b4a63"/>
+                <rect x="210" y="116" width="42" height="32" rx="4" fill="#191f2d" stroke="#242e40"/>
+              </g>
+              <g fill="#4d9ef8">
+                <text x="39" y="98">14</text><text x="135" y="98">9</text><text x="231" y="98">11</text>
+                <text x="87" y="136">8</text><text x="183" y="136">12</text>
+              </g>
+              <g fill="#46586e">
+                <text x="87" y="98">·</text><text x="183" y="98">·</text>
+                <text x="39" y="136">·</text><text x="135" y="136">·</text><text x="231" y="136">·</text>
+              </g>
+            </g>
+            <text x="18" y="170" fill="#4d9ef8" font-size="8" font-family="monospace">▲ Fixed weekly cycle, mapped to the calendar</text>
+            <!-- dynamic urgency list -->
+            <line x1="18" y1="182" x2="300" y2="182" stroke="#242e40"/>
+            <text x="18" y="200" fill="#30d9a0" font-size="8.5" font-weight="700" font-family="monospace">Dynamic — most urgent first</text>
+            <g font-family="monospace" font-size="8">
+              <rect x="18" y="208" width="234" height="16" rx="3" fill="#12241c" stroke="#1f5a41"/>
+              <text x="24" y="219" fill="#d8e4f0">Store B7  · 9 days overdue</text>
+              <rect x="18" y="228" width="234" height="16" rx="3" fill="#12241c" stroke="#1f5a41" opacity="0.8"/>
+              <text x="24" y="239" fill="#a9c2b8">Store C2  · 4 days overdue</text>
+              <rect x="18" y="248" width="234" height="16" rx="3" fill="#191f2d" stroke="#242e40"/>
+              <text x="24" y="259" fill="#7a90aa">Store A9  · due today</text>
+            </g>
+            <!-- mini map -->
+            <rect x="300" y="0" width="180" height="320" fill="#080c12"/>
+            <polygon points="318,40 456,32 468,150 396,196 330,182 312,110" fill="#4d9ef8" fill-opacity="0.08" stroke="#4d9ef8" stroke-width="1.2" stroke-opacity="0.4"/>
+            <polyline points="340,70 378,56 420,80 400,120 356,140 388,168 430,150" fill="none" stroke="#30d9a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#30d9a0"><circle cx="340" cy="70" r="4"/><circle cx="378" cy="56" r="3"/><circle cx="420" cy="80" r="3"/><circle cx="400" cy="120" r="3"/><circle cx="356" cy="140" r="3"/><circle cx="388" cy="168" r="3"/><circle cx="430" cy="150" r="3"/></g>
+          </svg>
+        </div>
+      </div>
+      <div class="spot-text f d1">
+        <span class="pill">Daily Planning</span>
+        <h2>Two ways to plan every day.</h2>
+        <p>Take a plan live and ORBIT drives it onto a real calendar — with the mode that fits how you work.</p>
+        <ul class="checks">
+          <li><strong>Repeating</strong> — a fixed weekly cycle mapped across the planning period, so reps follow a predictable, recurring beat.</li>
+          <li><strong>Dynamic</strong> — each day is built fresh from store <em>urgency</em>: days since last visit versus the target cadence, seeded by each store's last-visit date.</li>
+          <li>Contract start/end dates gate visits automatically — nothing is scheduled outside a store's active window.</li>
+          <li>Working days, leave, and per-rep hours are all respected.</li>
+          <li>A live dashboard tracks completed vs due, tempo, and off-location visits.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REP MOBILE APP ── -->
+<section id="mobile" class="alt">
+  <div class="container">
+    <div class="spot flip">
+      <div class="f">
+        <div class="mockup" style="max-width:300px;margin:0 auto;">
+          <svg viewBox="0 0 260 400" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;border-radius:22px;" aria-label="Rep mobile app mockup">
+            <rect x="0" y="0" width="260" height="400" rx="22" fill="#0a0e14" stroke="#242e40" stroke-width="1.5"/>
+            <!-- notch -->
+            <rect x="98" y="10" width="64" height="8" rx="4" fill="#1a2230"/>
+            <!-- header -->
+            <text x="20" y="46" fill="#d8e4f0" font-size="13" font-weight="700" font-family="system-ui">My route</text>
+            <rect x="150" y="34" width="90" height="16" rx="8" fill="#12241c" stroke="#1f5a41"/>
+            <text x="195" y="46" fill="#30d9a0" font-size="8.5" text-anchor="middle" font-family="system-ui">✓ 4 / 12 done</text>
+            <text x="20" y="64" fill="#46586e" font-size="8.5" font-family="system-ui">Mon 6 Jul · ⏳ 2 to sync · offline ok</text>
+            <!-- card 1 done -->
+            <rect x="16" y="76" width="228" height="40" rx="9" fill="#101722" stroke="rgba(76,175,125,0.5)"/>
+            <circle cx="34" cy="96" r="9" fill="#12241c"/><text x="34" y="99" fill="#30d9a0" font-size="8" text-anchor="middle" font-family="system-ui">1</text>
+            <text x="52" y="93" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">Zara Sandton City</text>
+            <text x="52" y="106" fill="#7a90aa" font-size="7.5" font-family="system-ui">08:12–08:34 · 22 min</text>
+            <rect x="196" y="86" width="38" height="16" rx="8" fill="rgba(76,175,125,0.2)"/><text x="215" y="97" fill="#30d9a0" font-size="7.5" text-anchor="middle" font-family="system-ui">Done</text>
+            <!-- card 2 in progress -->
+            <rect x="16" y="122" width="228" height="70" rx="9" fill="#101722" stroke="rgba(79,142,247,0.6)"/>
+            <circle cx="34" cy="140" r="9" fill="#12202e"/><text x="34" y="143" fill="#4d9ef8" font-size="8" text-anchor="middle" font-family="system-ui">2</text>
+            <text x="52" y="137" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">iStore Sandton</text>
+            <text x="52" y="150" fill="#7a90aa" font-size="7.5" font-family="system-ui">📍 12 Main Rd · 📞 +27 11 555…</text>
+            <rect x="52" y="160" width="86" height="22" rx="6" fill="#30d9a0"/><text x="95" y="175" fill="#08110b" font-size="8.5" font-weight="700" text-anchor="middle" font-family="system-ui">⏹ Finish</text>
+            <rect x="146" y="160" width="86" height="22" rx="6" fill="#191f2d" stroke="#3a2530"/><text x="189" y="175" fill="#e06a6a" font-size="8.5" text-anchor="middle" font-family="system-ui">✗ Not done</text>
+            <!-- card 3 collapsed -->
+            <rect x="16" y="198" width="228" height="30" rx="9" fill="#101722" stroke="#242e40"/>
+            <circle cx="34" cy="213" r="9" fill="#191f2d"/><text x="34" y="216" fill="#7a90aa" font-size="8" text-anchor="middle" font-family="system-ui">3</text>
+            <text x="52" y="217" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">Ackermans Mall</text>
+            <text x="232" y="217" fill="#46586e" font-size="10" text-anchor="end" font-family="system-ui">▸</text>
+            <!-- card 4 collapsed -->
+            <rect x="16" y="234" width="228" height="30" rx="9" fill="#101722" stroke="#242e40"/>
+            <circle cx="34" cy="249" r="9" fill="#191f2d"/><text x="34" y="252" fill="#7a90aa" font-size="8" text-anchor="middle" font-family="system-ui">4</text>
+            <text x="52" y="253" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">Game Menlyn</text>
+            <text x="232" y="253" fill="#46586e" font-size="10" text-anchor="end" font-family="system-ui">▸</text>
+            <!-- mini map footer -->
+            <rect x="16" y="272" width="228" height="112" rx="9" fill="#080c12" stroke="#242e40"/>
+            <polyline points="40,320 78,300 120,330 158,308 196,336 220,312" fill="none" stroke="#4d9ef8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#4d9ef8"><circle cx="40" cy="320" r="4"/><circle cx="78" cy="300" r="3"/><circle cx="120" cy="330" r="3"/><circle cx="158" cy="308" r="3"/><circle cx="196" cy="336" r="3"/><circle cx="220" cy="312" r="3"/></g>
+          </svg>
+        </div>
+      </div>
+      <div class="spot-text f d1">
+        <span class="pill">Rep Mobile App</span>
+        <h2>Your reps' route, in their pocket.</h2>
+        <p>No app store, no install headaches — just a link. The rep app is a fast, installable web app that works even when there's no signal.</p>
+        <ul class="checks">
+          <li>See today's stops in order, with contact, address and tap-to-call phone</li>
+          <li>One tap to Start and Finish each visit — dwell time captured automatically</li>
+          <li>GPS recorded on every button press, flagging off-location visits</li>
+          <li>Fully offline: work all day with no coverage, syncs the moment you reconnect</li>
+          <li>Turn-by-turn hand-off to the phone's maps app for navigation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOW-THROUGH UPDATES ── -->
+<section id="updates">
+  <div class="container">
+    <div class="spot">
+      <div class="f">
+        <div class="mockup">
+          <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span></div>
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Flow-through updates mockup">
+            <text x="20" y="30" fill="#d8e4f0" font-size="11" font-weight="700" font-family="system-ui">Data changes</text>
+            <rect x="360" y="16" width="104" height="20" rx="10" fill="rgba(245,166,35,0.16)" stroke="rgba(245,166,35,0.5)"/>
+            <text x="412" y="30" fill="#f0b429" font-size="8.5" text-anchor="middle" font-family="system-ui">⟳ 3 changes</text>
+            <!-- added -->
+            <text x="20" y="58" fill="#46586e" font-size="8" font-weight="700" font-family="monospace">NEW STORES (1)</text>
+            <rect x="20" y="64" width="440" height="22" rx="5" fill="#12241c" stroke="#1f5a41"/>
+            <text x="30" y="79" fill="#d8e4f0" font-size="9" font-family="system-ui">➕  Store D4 — Vryheid Depot</text>
+            <!-- removed -->
+            <text x="20" y="104" fill="#46586e" font-size="8" font-weight="700" font-family="monospace">REMOVED (1)</text>
+            <rect x="20" y="110" width="440" height="22" rx="5" fill="#241416" stroke="#5a1f26"/>
+            <text x="30" y="125" fill="#d8e4f0" font-size="9" font-family="system-ui">➖  Store B2 — closed</text>
+            <!-- changed -->
+            <text x="20" y="150" fill="#46586e" font-size="8" font-weight="700" font-family="monospace">CHANGED (1)</text>
+            <rect x="20" y="156" width="440" height="22" rx="5" fill="#12202e" stroke="#2b4a63"/>
+            <text x="30" y="171" fill="#d8e4f0" font-size="9" font-family="system-ui">✎  Store A7 — moved location</text>
+            <rect x="300" y="159" width="70" height="15" rx="7" fill="rgba(79,142,247,0.18)"/><text x="335" y="170" fill="#8fb8fb" font-size="7.5" text-anchor="middle" font-family="system-ui">territory</text>
+            <rect x="376" y="159" width="66" height="15" rx="7" fill="rgba(76,175,125,0.18)"/><text x="409" y="170" fill="#7fd0a6" font-size="7.5" text-anchor="middle" font-family="system-ui">cadence</text>
+            <!-- apply -->
+            <rect x="336" y="196" width="128" height="26" rx="6" fill="#ff500a"/>
+            <text x="400" y="213" fill="white" font-size="9" font-weight="700" text-anchor="middle" font-family="system-ui">Apply changes</text>
+            <!-- result -->
+            <line x1="20" y1="240" x2="460" y2="240" stroke="#242e40"/>
+            <text x="20" y="262" fill="#30d9a0" font-size="9" font-family="system-ui">✓ Live plan updated — routes re-optimised, visits regenerated</text>
+            <text x="20" y="280" fill="#7a90aa" font-size="8.5" font-family="system-ui">Completed visits preserved · no full replan</text>
+          </svg>
+        </div>
+      </div>
+      <div class="spot-text f d1">
+        <span class="pill">Flow-Through Updates</span>
+        <h2>Your data changes. Your plans keep up.</h2>
+        <p>Stores open, close and move; contracts and call frequencies shift. ORBIT treats master data as the source of truth and flows changes straight into your live plans — so a small change never means a full replan.</p>
+        <ul class="checks">
+          <li>See exactly what changed — added, removed and edited stores, each tagged with its impact</li>
+          <li>New stores are auto-assigned to the right territory and slotted into the nearest route day</li>
+          <li>Removed stores drop out of routes and future visits automatically</li>
+          <li>Dynamic plans absorb changes on the next generated day; Repeating routes are re-optimised in place</li>
+          <li>Completed and in-progress visits are always preserved</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── INDUSTRIES ── -->
 <section id="industries">
   <div class="container">
@@ -649,33 +872,49 @@
 <section id="roadmap">
   <div class="container">
     <div class="sh f">
-      <span class="pill">What's Coming</span>
-      <h2>Built for the future of field sales</h2>
-      <p>ORBIT is actively developed. Here's what's shipping next.</p>
+      <span class="pill">Shipped &amp; Next</span>
+      <h2>Moving fast — and just getting started</h2>
+      <p>The features below have all shipped recently. Here's what's live now, and what's coming next.</p>
     </div>
     <div class="road-grid">
       <div class="road-card f">
         <div class="road-ic ic-blue">📱</div>
         <div>
-          <span class="rtag t-soon">Coming Soon</span>
-          <div class="road-h">Mobile App for Reps</div>
-          <p class="road-p">A companion iOS and Android app. Reps see their daily schedule and map route, check in at each store, and work offline. Plans published instantly from ORBIT to every rep's device.</p>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">Rep Mobile App</div>
+          <p class="road-p">An offline-capable web app — no app store. Reps see their route, mark Start/Finish per stop, and capture GPS on every tap. Plans publish instantly and sync back the moment there's signal.</p>
         </div>
       </div>
       <div class="road-card f d1">
-        <div class="road-ic ic-purple">☁️</div>
+        <div class="road-ic ic-green">📆</div>
         <div>
-          <span class="rtag t-soon">Coming Soon</span>
-          <div class="road-h">Cloud SaaS Platform</div>
-          <p class="road-p">Team accounts, role-based access, and cloud-hosted scenarios. Managers create territories; reps see only their own plans. No more emailing spreadsheets around.</p>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">Daily Planning — Repeating &amp; Dynamic</div>
+          <p class="road-p">Take a plan live on a real calendar: a fixed Repeating cycle, or Dynamic days built from store urgency and last-visit dates. Contract windows and rep hours respected automatically.</p>
         </div>
       </div>
       <div class="road-card f">
-        <div class="road-ic ic-green">📆</div>
+        <div class="road-ic ic-purple">☁️</div>
         <div>
-          <span class="rtag t-dev">In Development</span>
-          <div class="road-h">Daily Planning</div>
-          <p class="road-p">Below tactical level — automatic daily run scheduling that accounts for appointment windows and rep-specific constraints. Moving from weekly plans to day-by-day precision.</p>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">Team accounts, regions &amp; roles</div>
+          <p class="road-p">Cloud-hosted, multi-tenant platform with org-wide master data partitioned by region, user management and roles. Managers plan; reps see only their own routes.</p>
+        </div>
+      </div>
+      <div class="road-card f d1">
+        <div class="road-ic ic-amber">📷</div>
+        <div>
+          <span class="rtag t-soon">Coming Soon</span>
+          <div class="road-h">Photos from the field</div>
+          <p class="road-p">Reps snap shelf, compliance and proof-of-visit photos on their phone — captured offline and synced against each visit, viewable straight from the visit log.</p>
+        </div>
+      </div>
+      <div class="road-card f">
+        <div class="road-ic ic-blue">🔌</div>
+        <div>
+          <span class="rtag t-soon">Coming Soon</span>
+          <div class="road-h">Integrations &amp; API</div>
+          <p class="road-p">Push visits and pull results through a clean API — already ingesting external visits today, with CRM and ERP connectors on the way.</p>
         </div>
       </div>
       <div class="road-card f d1">
