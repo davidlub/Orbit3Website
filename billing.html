@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBIT — Pricing &amp; Billing</title>
+  <meta name="description" content="ORBIT pricing is one simple price per rep, per month. You only pay for the reps you deploy or the visit workload ORBIT plans — whichever is greater. Billed monthly, no lock-in.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Billing-page-specific pieces, on the site's tokens. */
+    .bill-hero { padding:150px 0 40px; text-align:center; }
+    .bill-hero h1 { font-family:var(--serif); font-weight:800; font-size:clamp(2.1rem,5vw,3.4rem); line-height:1.08; letter-spacing:-0.02em; color:var(--text); margin:18px auto 0; max-width:14ch; }
+    .bill-hero .lead { max-width:600px; margin:22px auto 30px; font-size:1.12rem; line-height:1.76; color:var(--text-2); }
+    .bill-hero .btn { margin:0 6px; }
+
+    .bill-grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .bill-cardc { background:var(--card,#fff); border:1px solid var(--border,#e7e0d3); border-radius:16px; padding:28px 26px; }
+    .bill-cardc h3 { font-family:var(--serif); font-size:1.18rem; color:var(--text); margin-bottom:10px; }
+    .bill-cardc p { font-size:0.94rem; }
+    .bill-num { width:44px; height:44px; border-radius:12px; background:var(--a-pale,#fdeee7); border:1px solid rgba(224,72,12,0.2); color:var(--accent); font-family:var(--mono); display:flex; align-items:center; justify-content:center; margin-bottom:18px; font-size:1.05rem; }
+
+    /* The billable-rep formula callout */
+    .bill-formula { background:linear-gradient(135deg, var(--a-pale,#fdeee7), transparent 70%); border:1px solid rgba(224,72,12,0.22); border-radius:18px; padding:34px 32px; text-align:center; margin:0 auto; max-width:820px; }
+    .bill-formula .eq { font-family:var(--mono); font-size:1.05rem; color:var(--text); background:#fff; border:1px solid var(--border,#e7e0d3); border-radius:12px; padding:16px 20px; display:inline-block; margin:8px 0 6px; line-height:1.9; }
+    .bill-formula .eq b { color:var(--accent); }
+    .bill-formula .sub { font-size:0.9rem; color:var(--text-3); }
+
+    /* Worked example */
+    .ex-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:34px; }
+    .ex-card { background:var(--card,#fff); border:1px solid var(--border,#e7e0d3); border-radius:16px; padding:26px; }
+    .ex-card h4 { font-family:var(--serif); font-size:1.05rem; color:var(--text); margin-bottom:14px; }
+    .ex-row { display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-bottom:1px dashed var(--border,#e7e0d3); font-size:0.9rem; }
+    .ex-row span:first-child { color:var(--text-3); }
+    .ex-row span:last-child { color:var(--text); font-family:var(--mono); }
+    .ex-out { margin-top:16px; padding:14px 16px; border-radius:12px; background:var(--a-pale,#fdeee7); border:1px solid rgba(224,72,12,0.22); font-size:0.92rem; color:var(--text); }
+    .ex-out b { color:var(--accent); }
+
+    /* Included list on two columns */
+    .bill-incl { display:grid; grid-template-columns:1fr 1fr; gap:11px 40px; max-width:820px; margin:0 auto; }
+
+    /* FAQ */
+    .faq { max-width:800px; margin:0 auto; display:flex; flex-direction:column; gap:14px; }
+    .faq details { background:var(--card,#fff); border:1px solid var(--border,#e7e0d3); border-radius:14px; padding:4px 22px; }
+    .faq summary { cursor:pointer; font-family:var(--serif); font-size:1.02rem; color:var(--text); padding:16px 0; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+    .faq summary::-webkit-details-marker { display:none; }
+    .faq summary::after { content:'+'; color:var(--accent); font-family:var(--mono); font-size:1.3rem; }
+    .faq details[open] summary::after { content:'–'; }
+    .faq p { padding:0 0 18px; font-size:0.93rem; margin:0; }
+
+    .bill-cta { text-align:center; }
+    .bill-cta .p-note { margin-top:18px; }
+
+    @media (max-width:860px){
+      .bill-grid3, .ex-grid, .bill-incl { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="index.html" aria-label="ORBIT home">
+      <svg width="28" height="28" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <circle cx="15" cy="15" r="4" fill="#ff500a"/>
+        <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#ff500a" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+        <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#ff500a" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+        <circle cx="26" cy="9" r="1.8" fill="#ff500a" opacity="0.85"/>
+      </svg>
+      ORBIT
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#how">How It Works</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#daily">Daily Planning</a></li>
+      <li><a href="index.html#mobile">Mobile App</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="billing.html">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#demo" class="btn btn-primary">Request a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="bill-hero">
+  <div class="container">
+    <div><span class="pill">Pricing &amp; Billing</span></div>
+    <h1>Pricing that scales with the work you do.</h1>
+    <p class="lead">One simple price per rep, per month. You only pay for the reps you deploy — or the visit workload ORBIT plans for you, whichever is greater. No big up-front licence, no per-territory fees, no surprises.</p>
+    <div>
+      <a href="index.html#demo" class="btn btn-primary btn-lg">Get a Tailored Quote</a>
+      <a href="index.html#features" class="btn btn-ghost btn-lg">See Features</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE MODEL ── -->
+<section id="model">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">How Pricing Works</span>
+      <h2>You pay per billable rep</h2>
+      <p>A single, transparent rate per rep — with everything in the platform included. No feature tiers to decode.</p>
+    </div>
+    <div class="bill-grid3">
+      <div class="bill-cardc f">
+        <div class="bill-num">1</div>
+        <h3>One price per rep</h3>
+        <p>A single monthly rate for every rep on the plan — planning seats for your office team are included. No per-store, per-territory or per-module fees.</p>
+      </div>
+      <div class="bill-cardc f d1">
+        <div class="bill-num">2</div>
+        <h3>Billable reps track real usage</h3>
+        <p>You're billed for the greater of the reps you deploy or the visit workload ORBIT actually plans — so pricing always reflects the coverage you're getting, and never less.</p>
+      </div>
+      <div class="bill-cardc f d2">
+        <div class="bill-num">3</div>
+        <h3>Billed monthly, no lock-in</h3>
+        <p>We take a snapshot on a fixed date each month and invoice from it. Month-to-month by default; choose annual for a discount.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT'S A BILLABLE REP ── -->
+<section class="alt" id="billable">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">The Fair Bit</span>
+      <h2>What counts as a “billable rep”?</h2>
+      <p>It's the larger of two numbers, so you're never under- or over-charged for the coverage you actually use.</p>
+    </div>
+
+    <div class="bill-formula f">
+      <div class="eq">
+        billable reps = <b>max</b>(&nbsp;reps you deploy&nbsp;,&nbsp; planned visits per month ÷ visits-per-rep&nbsp;)
+      </div>
+      <div class="sub">Store visits are counted per month, from each site's target visit frequency. “Visits-per-rep” is a realistic monthly rep capacity, agreed with you (for example, ~800 visits per rep per month).</div>
+    </div>
+
+    <div class="ex-grid">
+      <div class="ex-card f">
+        <h4>Example A — a normal field team</h4>
+        <div class="ex-row"><span>Reps deployed</span><span>12</span></div>
+        <div class="ex-row"><span>Planned store visits / month</span><span>7,200</span></div>
+        <div class="ex-row"><span>Workload reps (7,200 ÷ 800)</span><span>9</span></div>
+        <div class="ex-out">Billable reps = <b>max(12, 9) = 12</b> — you simply pay for your team.</div>
+      </div>
+      <div class="ex-card f d1">
+        <h4>Example B — a big network, few reps loaded</h4>
+        <div class="ex-row"><span>Reps deployed</span><span>6</span></div>
+        <div class="ex-row"><span>Planned store visits / month</span><span>9,600</span></div>
+        <div class="ex-row"><span>Workload reps (9,600 ÷ 800)</span><span>12</span></div>
+        <div class="ex-out">Billable reps = <b>max(6, 12) = 12</b> — the workload sets the price, so a huge network can't be run on paper for the cost of one rep.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT'S INCLUDED ── -->
+<section id="included">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">Everything Included</span>
+      <h2>One price. The whole platform.</h2>
+      <p>No gated features. Every rep on the plan gets the full ORBIT toolkit.</p>
+    </div>
+    <ul class="checks bill-incl f">
+      <li>Balanced, contiguous territory cutting (±7%)</li>
+      <li>Multi-week tactical route planning</li>
+      <li>Daily planning — Repeating &amp; Dynamic modes</li>
+      <li>Offline-capable rep mobile app</li>
+      <li>Visit tracking with GPS &amp; timestamps</li>
+      <li>Flow-through updates from your master data</li>
+      <li>Excel import &amp; export</li>
+      <li>Multiple divisions, scenarios &amp; users</li>
+      <li>Guided onboarding &amp; support</li>
+      <li>Free pilot on one region with your own data</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── BILLING DETAILS ── -->
+<section class="alt" id="details">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">Billing Details</span>
+      <h2>Simple, predictable invoicing</h2>
+    </div>
+    <div class="bill-grid3">
+      <div class="bill-cardc f">
+        <h3>Monthly snapshot</h3>
+        <p>On a fixed date each month we snapshot your billable reps and freeze the figure — so every invoice is reproducible and auditable, and mid-month changes never cause surprises.</p>
+      </div>
+      <div class="bill-cardc f d1">
+        <h3>USD or ZAR</h3>
+        <p>Invoiced in the currency that suits you. Rates are agreed up front and fixed for your term.</p>
+      </div>
+      <div class="bill-cardc f d2">
+        <h3>Start with a pilot</h3>
+        <p>Every engagement begins with a free pilot on one region using your own data — so you see the value before you commit. Month-to-month after that; annual plans save more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">FAQ</span>
+      <h2>Billing questions, answered</h2>
+    </div>
+    <div class="faq f">
+      <details open>
+        <summary>Do I pay for reps I haven't loaded into the system?</summary>
+        <p>Only if the visit workload you're planning requires them. Billable reps are the greater of the reps you deploy or the monthly visit workload ÷ a rep's capacity. If you plan the work of ten reps, you pay for ten — whether or not all ten profiles are loaded. If you load twelve reps doing lighter work, you pay for twelve.</p>
+      </details>
+      <details>
+        <summary>How are “planned visits per month” counted?</summary>
+        <p>Each store carries a target visit frequency. ORBIT sums those across your network and normalises them to a standard month using your division's planning period — so a store visited weekly counts as more workload than one visited monthly.</p>
+      </details>
+      <details>
+        <summary>What happens when my store network changes?</summary>
+        <p>Your bill follows it. Because the monthly snapshot reads your live master data, adding or removing stores adjusts your billable reps at the next snapshot — up or down.</p>
+      </details>
+      <details>
+        <summary>How am I invoiced?</summary>
+        <p>We take a snapshot on a fixed date each month and invoice from it. The snapshot records your store, rep and visit counts, your billable reps and the amount — so the number on the invoice can always be traced back to your data on that day.</p>
+      </details>
+      <details>
+        <summary>Is there a minimum, or a lock-in?</summary>
+        <p>There's a small minimum number of billable reps so we can support you properly, and billing is month-to-month with no lock-in. Annual plans are available at a discount.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="alt bill-cta" id="quote">
+  <div class="container">
+    <div class="sh f" style="margin-bottom:26px">
+      <span class="pill">Get Started</span>
+      <h2>Get a tailored quote</h2>
+      <p>Tell us your store network and team, and we'll size your billable reps and give you a firm monthly figure — usually within a business day.</p>
+    </div>
+    <div class="f" style="text-align:center">
+      <a href="index.html#demo" class="btn btn-primary btn-lg">Request a Demo &amp; Quote</a>
+      <p class="p-note">Every quote includes a free pilot on one region with your own data. No commitment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="logo" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <circle cx="15" cy="15" r="4" fill="#ff500a"/>
+            <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#ff500a" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+            <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#ff500a" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+            <circle cx="26" cy="9" r="1.8" fill="#ff500a" opacity="0.85"/>
+          </svg>
+          ORBIT
+        </a>
+        <p>Intelligent territory planning and rep scheduling for field sales teams. Fewer kilometres. More coverage. Balanced workloads.</p>
+        <p class="ft-opsi">Built by <a href="https://www.opsi.co.za" target="_blank" rel="noopener">OPSI Systems (Pty) Ltd</a></p>
+      </div>
+      <div class="ft-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how">How It Works</a></li>
+          <li><a href="index.html#industries">Industries</a></li>
+          <li><a href="billing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#demo">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="mailto:david.lubinsky@opsi.co.za">Email Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 ORBIT by OPSI Systems (Pty) Ltd. All rights reserved.</span>
+      <div class="ft-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="index.html#demo">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
