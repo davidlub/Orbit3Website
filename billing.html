@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ORBIT — Pricing &amp; Billing</title>
-  <meta name="description" content="ORBIT pricing is one simple price per rep, per month. You only pay for the reps you deploy or the visit workload ORBIT plans — whichever is greater. Billed monthly, no lock-in.">
+  <meta name="description" content="ORBIT is priced per rep, per month — for the reps you deploy or the visit workload it plans, whichever is greater. Choose Route Planning, or add Field Sales (SFA) for a higher per-rep rate. Billed monthly, no lock-in.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -73,11 +73,11 @@
       ORBIT
     </a>
     <ul class="nav-links">
+      <li><a href="index.html#editions">Two Modes</a></li>
       <li><a href="index.html#how">How It Works</a></li>
       <li><a href="index.html#features">Features</a></li>
       <li><a href="index.html#daily">Daily Planning</a></li>
-      <li><a href="index.html#mobile">Mobile App</a></li>
-      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#sfa">Field Sales</a></li>
       <li><a href="billing.html">Pricing</a></li>
     </ul>
     <div class="nav-right">
@@ -90,8 +90,8 @@
 <section class="bill-hero">
   <div class="container">
     <div><span class="pill">Pricing &amp; Billing</span></div>
-    <h1>Pricing that scales with the work you do.</h1>
-    <p class="lead">One simple price per rep, per month. You only pay for the reps you deploy — or the visit workload ORBIT plans for you, whichever is greater. No big up-front licence, no per-territory fees, no surprises.</p>
+    <h1>Two modes. One simple per-rep price.</h1>
+    <p class="lead">Pay per rep, per month — for the reps you deploy or the visit workload ORBIT plans, whichever is greater. Choose <strong>Route Planning</strong>, or add <strong>Field Sales</strong> for full order-taking at a higher per-rep rate. Planning seats for your office team are always included, with no per-territory fees and no surprises.</p>
     <div>
       <a href="index.html#demo" class="btn btn-primary btn-lg">Get a Tailored Quote</a>
       <a href="index.html#features" class="btn btn-ghost btn-lg">See Features</a>
@@ -110,8 +110,8 @@
     <div class="bill-grid3">
       <div class="bill-cardc f">
         <div class="bill-num">1</div>
-        <h3>One price per rep</h3>
-        <p>A single monthly rate for every rep on the plan — planning seats for your office team are included. No per-store, per-territory or per-module fees.</p>
+        <h3>One rate per rep — per mode</h3>
+        <p>A single monthly rate for every rep on the plan, with office planning seats included. <strong>Route Planning</strong> has one per-rep rate; <strong>Field Sales</strong> adds order-taking at a higher per-rep rate. No per-store, per-territory or per-module fees.</p>
       </div>
       <div class="bill-cardc f d1">
         <div class="bill-num">2</div>
@@ -166,22 +166,39 @@
 <section id="included">
   <div class="container">
     <div class="sh f">
-      <span class="pill">Everything Included</span>
-      <h2>One price. The whole platform.</h2>
-      <p>No gated features. Every rep on the plan gets the full ORBIT toolkit.</p>
+      <span class="pill">What's Included</span>
+      <h2>Pick a mode — everything in it is included.</h2>
+      <p>No gated add-ons within a mode. Every rep gets the full toolkit for the mode you run.</p>
     </div>
-    <ul class="checks bill-incl f">
-      <li>Balanced, contiguous territory cutting (±7%)</li>
-      <li>Multi-week tactical route planning</li>
-      <li>Daily planning — Repeating &amp; Dynamic modes</li>
-      <li>Offline-capable rep mobile app</li>
-      <li>Visit tracking with GPS &amp; timestamps</li>
-      <li>Flow-through updates from your master data</li>
-      <li>Excel import &amp; export</li>
-      <li>Multiple partitions, scenarios &amp; users</li>
-      <li>Guided onboarding &amp; support</li>
-      <li>Free pilot on one region with your own data</li>
-    </ul>
+    <div class="ex-grid f">
+      <div class="ex-card">
+        <h4>Route Planning · included</h4>
+        <ul class="checks">
+          <li>Balanced, contiguous territory cutting (±7%)</li>
+          <li>Multi-week tactical route planning</li>
+          <li>Daily planning — Repeating &amp; Dynamic</li>
+          <li>Offline-capable rep mobile app</li>
+          <li>Visit tracking with GPS &amp; timestamps</li>
+          <li>Flow-through updates from master data</li>
+          <li>Excel import/export &amp; open REST API</li>
+          <li>Multiple partitions, scenarios &amp; users</li>
+        </ul>
+      </div>
+      <div class="ex-card">
+        <h4>Field Sales · adds</h4>
+        <ul class="checks">
+          <li>Product catalogue &amp; tiered price lists</li>
+          <li>On-visit order capture, online &amp; offline</li>
+          <li>Per-tier pricing with per-product VAT</li>
+          <li>On-site customer signatures</li>
+          <li>Live sales dashboard &amp; analytics</li>
+          <li>Commit to batches &amp; ERP hand-off</li>
+          <li>Emailed / downloadable PDF invoices</li>
+          <li>Orders API for ERP &amp; BI integration</li>
+        </ul>
+      </div>
+    </div>
+    <p class="p-note f" style="margin-top:26px">Both modes begin with a free pilot on one region using your own data, and include guided onboarding &amp; support.</p>
   </div>
 </section>
 
@@ -236,6 +253,10 @@
       <details>
         <summary>Is there a minimum, or a lock-in?</summary>
         <p>There's a small minimum number of billable reps so we can support you properly, and billing is month-to-month with no lock-in. Annual plans are available at a discount.</p>
+      </details>
+      <details>
+        <summary>Do I have to take orders to use ORBIT?</summary>
+        <p>No. Route Planning is a complete product on its own — territories, routes, the rep app and visit tracking. Field Sales is an optional mode you switch on when you want reps to take orders; it adds the catalogue, tiered pricing, order capture, signatures and the live sales dashboard, at a higher per-rep rate. You can start with planning and add Field Sales later without migrating anything.</p>
       </details>
     </div>
   </div>

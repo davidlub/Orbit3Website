@@ -213,6 +213,24 @@ nav.up { border-bottom-color:var(--border); box-shadow:0 1px 20px rgba(33,29,23,
 }
 .mockup { border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--border-hi); background:#0a0e14; box-shadow:var(--shadow-shot); }
 
+/* ── Editions (two modes) ── */
+.ed-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.ed-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:42px 38px; box-shadow:var(--shadow-sm);
+  transition:transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+}
+.ed-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--border-hi); }
+.ed-card.ed-pop { border-color:rgba(224,72,12,0.28); box-shadow:0 4px 14px rgba(224,72,12,0.10), 0 20px 50px rgba(224,72,12,0.12); }
+.ed-tag { font-family:var(--mono); font-size:0.66rem; font-weight:700; text-transform:uppercase; letter-spacing:0.13em; color:var(--accent); margin-bottom:13px; }
+.ed-card h3 { font-family:var(--serif); font-size:1.5rem; font-weight:700; color:var(--ink); margin-bottom:12px; letter-spacing:-0.01em; line-height:1.18; }
+.ed-card > p { font-size:0.95rem; line-height:1.68; margin-bottom:24px; }
+.ed-arrow { text-align:center; margin-top:40px; font-family:var(--mono); font-size:0.8rem; color:var(--text-3); }
+.ed-arrow b { color:var(--accent); }
+
+/* Framed real product screenshots reuse .mockup; give the image a clean edge */
+.mockup img { display:block; width:100%; }
+
 /* ── Industries ── */
 .ind-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 .ind-card { background:var(--card); border:1px solid var(--border); border-radius:var(--r-lg); padding:24px 26px; display:flex; gap:15px; align-items:flex-start; box-shadow:var(--shadow-sm); transition:transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
@@ -367,7 +385,9 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
   .steps::before { display:none; }
   .feat-cols { grid-template-columns:1fr; }
   .spot,.spot.flip { grid-template-columns:1fr; direction:ltr; }
-  .mockup { display:none; }
+  .ed-grid { grid-template-columns:1fr; }
+  /* SVG mockups are decorative → hide on mobile; real screenshots stay visible */
+  .mockup:not(:has(img)) { display:none; }
   .ind-grid { grid-template-columns:repeat(2,1fr); }
   .testi-grid { grid-template-columns:1fr; }
   .road-grid { grid-template-columns:1fr; }
