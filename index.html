@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ORBIT — Territory Planning &amp; Field Sales</title>
-  <meta name="description" content="ORBIT builds geographically balanced sales territories and daily routes — and, in Field Sales mode, turns every visit into an order with catalogue, tiered pricing, signatures and a live sales dashboard.">
+  <title>ORBIT — Territory Planning, Routes &amp; Field Sales</title>
+  <meta name="description" content="ORBIT builds geographically balanced sales territories and daily routes, puts each rep's day on their phone, and — in Field Sales mode — turns every visit into an order with catalogue, tiered pricing, signatures and a live dashboard. Includes an AI assistant that answers questions about your own data.">
+  <meta property="og:title" content="ORBIT — Territory Planning, Routes &amp; Field Sales">
+  <meta property="og:description" content="Balanced territories, routes your reps can actually drive, and orders taken where the sale happens. Watch the 90-second tour.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="videos/v0.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Raleway is the TRAMM face; DM Mono stays for data labels inside the product shots. -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,19 +22,20 @@
   <div class="nav-in">
     <a class="logo" href="#" aria-label="ORBIT home">
       <svg width="28" height="28" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-        <circle cx="15" cy="15" r="4" fill="#ff500a"/>
-        <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#ff500a" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
-        <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#ff500a" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
-        <circle cx="26" cy="9" r="1.8" fill="#ff500a" opacity="0.85"/>
+        <circle cx="15" cy="15" r="4" fill="#0080c7"/>
+        <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#0080c7" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+        <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#0080c7" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+        <circle cx="26" cy="9" r="1.8" fill="#19afff" opacity="0.95"/>
       </svg>
       ORBIT
     </a>
     <ul class="nav-links">
+      <li><a href="#videos">Watch</a></li>
       <li><a href="#editions">Two Modes</a></li>
-      <li><a href="#how">How It Works</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#daily">Daily Planning</a></li>
       <li><a href="#sfa">Field Sales</a></li>
+      <li><a href="#assistant">Assistant</a></li>
       <li><a href="billing.html">Pricing</a></li>
     </ul>
     <div class="nav-right">
@@ -46,10 +52,10 @@
       <div class="hero-content">
         <div><span class="pill">Territory Planning · Routes · Field Sales</span></div>
         <h1>Plan the routes. Then <span class="hero-em">run</span> the sales day.</h1>
-        <p class="hero-lead">Upload your store network and ORBIT builds balanced territories, schedules every visit — repeating or dynamic — and puts each route on the rep's phone. Switch on <strong>Field Sales</strong> and that same route takes orders: your catalogue, tiered pricing, signatures and a live sales dashboard.</p>
+        <p class="hero-lead">Upload your store network and ORBIT builds balanced territories, schedules every visit — repeating or dynamic — and puts each route on the rep's phone. Switch on <strong>Field Sales</strong> and that same route takes orders: your catalogue, tiered pricing, signatures and a live sales dashboard. Ask the built-in <strong>assistant</strong> anything about your own data.</p>
         <div class="hero-ctas">
           <a href="#demo" class="btn btn-primary btn-lg">Request a Demo</a>
-          <a href="#how" class="btn btn-ghost btn-lg">See How It Works</a>
+          <a href="#videos" class="btn btn-ghost btn-lg">▶ Watch the 90-second tour</a>
         </div>
         <div class="hero-stats">
           <div class="hstat">
@@ -99,7 +105,7 @@
 
             <!-- T1: Orange / NW -->
             <polygon points="22,22 298,15 332,125 215,178 70,188 20,148"
-              fill="#ff500a" fill-opacity="0.16" stroke="#ff500a" stroke-width="1.8" stroke-opacity="0.72"
+              fill="#e05a72" fill-opacity="0.16" stroke="#e05a72" stroke-width="1.8" stroke-opacity="0.72"
               filter="url(#glow)"/>
             <!-- T2: Blue / NE -->
             <polygon points="298,15 698,20 700,148 548,158 380,145 332,125"
@@ -157,9 +163,9 @@
             <!-- T1 Route (Orange/NW) — loops within T1 boundary -->
             <polyline class="anim-t1"
               points="82,50 156,42 232,62 286,65 264,100 196,128 82,136 82,50"
-              fill="none" stroke="#ff500a" stroke-width="2.2"
+              fill="none" stroke="#e05a72" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.88"/>
-            <g fill="#ff500a">
+            <g fill="#0080c7">
               <circle class="r-dot" cx="82"  cy="50"  r="4.5" style="animation-delay:0.50s"/>
               <circle class="r-dot" cx="156" cy="42"  r="3.5" style="animation-delay:0.78s"/>
               <circle class="r-dot" cx="232" cy="62"  r="3.5" style="animation-delay:1.09s"/>
@@ -169,7 +175,7 @@
               <circle class="r-dot" cx="82"  cy="136" r="3.5" style="animation-delay:2.17s"/>
             </g>
             <circle class="r-pulse" cx="82" cy="50" r="9"
-              fill="none" stroke="#ff500a" stroke-width="1.5" stroke-opacity="0.6"
+              fill="none" stroke="#e05a72" stroke-width="1.5" stroke-opacity="0.6"
               style="animation-delay:0.5s"/>
 
             <!-- T2 Route (Blue/NE) — loops within T2 boundary -->
@@ -250,7 +256,7 @@
             <!-- HUD legend -->
             <rect x="14" y="376" width="210" height="28" rx="4"
               fill="#141820" fill-opacity="0.92" stroke="#242e40" stroke-width="1"/>
-            <circle cx="32" cy="390" r="5" fill="#ff500a" opacity="0.82"/>
+            <circle cx="32" cy="390" r="5" fill="#e05a72" opacity="0.82"/>
             <circle cx="52" cy="390" r="5" fill="#4d9ef8" opacity="0.82"/>
             <circle cx="72" cy="390" r="5" fill="#30d9a0" opacity="0.82"/>
             <circle cx="92" cy="390" r="5" fill="#a67ef8" opacity="0.82"/>
@@ -278,6 +284,68 @@
     </div>
   </div>
 </div>
+
+<!-- ── VIDEO SHOWCASE ── -->
+<section id="videos">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">Watch It Work</span>
+      <h2>Ninety seconds, then the detail.</h2>
+      <p>Real screens, real data — no mockups. Start with the overview, then follow the
+         thread from a blank map to an order in your ERP.</p>
+    </div>
+
+    <div class="vid-hero f">
+      <div class="vid-frame">
+        <video controls preload="none" poster="videos/v0.jpg"
+                playsinline aria-label="Meet ORBIT — overview">
+          <source src="videos/v0.mp4" type="video/mp4">
+          Your browser can't play this video.
+        </video>
+      </div>
+      <p class="vid-cap"><strong>Meet ORBIT</strong> — the whole platform in 1:18.</p>
+    </div>
+
+    <div class="vid-grid">
+      <div class="vid-card f">
+        <div class="vid-frame">
+          <video controls preload="none" poster="videos/v1.jpg"
+                  playsinline aria-label="Territories that make sense">
+            <source src="videos/v1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="vid-meta"><span class="vid-num">01</span><span class="vid-len">2:11</span></div>
+        <h3>Territories that make sense</h3>
+        <p>Your store list in, balanced territories out — within ±7% on weight, each one
+           geographically whole. Then the visit-days and routes that follow from them.</p>
+      </div>
+      <div class="vid-card f d1">
+        <div class="vid-frame">
+          <video controls preload="none" poster="videos/v2.jpg"
+                  playsinline aria-label="Planning that stays current">
+            <source src="videos/v2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="vid-meta"><span class="vid-num">02</span><span class="vid-len">2:25</span></div>
+        <h3>Planning that stays current</h3>
+        <p>Take the plan live on a real calendar — a repeating cycle or a day rebuilt from
+           urgency — and watch a change to your master data flow straight into the routes.</p>
+      </div>
+      <div class="vid-card f d2">
+        <div class="vid-frame">
+          <video controls preload="none" poster="videos/v3.jpg"
+                  playsinline aria-label="In the rep's hands">
+            <source src="videos/v3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="vid-meta"><span class="vid-num">03</span><span class="vid-len">2:40</span></div>
+        <h3>In the rep's hands</h3>
+        <p>A link on the phone, today's calls in driving order, and an order taken on the
+           spot — photographed off a scribbled sheet if that's quicker — then handed to your ERP.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── TWO EDITIONS / MODES ── -->
 <section id="editions" class="alt">
@@ -456,14 +524,14 @@
           <div class="chrome">
             <span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span>
           </div>
-          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Territory cutting UI mockup">
+          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#001626;" aria-label="Territory cutting UI mockup">
             <!-- Sidebar -->
             <rect width="148" height="340" fill="#141820"/>
             <rect x="148" width="1" height="340" fill="#242e40"/>
             <text x="14" y="22" fill="#d8e4f0" font-size="8.5" font-weight="700" font-family="monospace">Territory Cuts</text>
             <line x1="14" y1="28" x2="134" y2="28" stroke="#242e40"/>
             <!-- Cut pills -->
-            <rect x="14" y="35" width="25" height="13" rx="3" fill="#ff500a"/>
+            <rect x="14" y="35" width="25" height="13" rx="3" fill="#0080c7"/>
             <text x="26" y="44" fill="white" font-size="7" text-anchor="middle" font-family="monospace">5</text>
             <rect x="43" y="35" width="25" height="13" rx="3" fill="#191f2d" stroke="#242e40" stroke-width="1"/>
             <text x="55" y="44" fill="#7a90aa" font-size="7" text-anchor="middle" font-family="monospace">6</text>
@@ -474,7 +542,7 @@
             <text x="90" y="63" fill="#46586e" font-size="6.5" font-family="monospace">Stores</text>
             <text x="120" y="63" fill="#46586e" font-size="6.5" font-family="monospace">Wt%</text>
             <line x1="14" y1="67" x2="134" y2="67" stroke="#242e40"/>
-            <rect x="14" y="72" width="6" height="6" rx="1" fill="#ff500a"/>
+            <rect x="14" y="72" width="6" height="6" rx="1" fill="#0080c7"/>
             <text x="25" y="79" fill="#d8e4f0" font-size="7" font-family="monospace">North</text>
             <text x="90" y="79" fill="#d8e4f0" font-size="7" font-family="monospace">84</text>
             <text x="120" y="79" fill="#d8e4f0" font-size="7" font-family="monospace">19.8</text>
@@ -512,7 +580,7 @@
               <line x1="416" y1="0" x2="416" y2="340"/>
             </g>
             <!-- Map territories -->
-            <polygon points="153,12 285,8 308,82 222,115 163,118 153,72" fill="#ff500a" fill-opacity="0.16" stroke="#ff500a" stroke-width="1.5" stroke-opacity="0.75"/>
+            <polygon points="153,12 285,8 308,82 222,115 163,118 153,72" fill="#e05a72" fill-opacity="0.16" stroke="#e05a72" stroke-width="1.5" stroke-opacity="0.75"/>
             <polygon points="285,8 477,12 478,90 372,102 308,82" fill="#4d9ef8" fill-opacity="0.16" stroke="#4d9ef8" stroke-width="1.5" stroke-opacity="0.75"/>
             <polygon points="153,72 163,118 222,115 308,82 372,102 396,200 260,224 152,205" fill="#30d9a0" fill-opacity="0.20" stroke="#30d9a0" stroke-width="2" stroke-opacity="0.88"/>
             <polygon points="372,102 478,90 479,238 368,256 305,222 396,200" fill="#a67ef8" fill-opacity="0.16" stroke="#a67ef8" stroke-width="1.5" stroke-opacity="0.75"/>
@@ -553,7 +621,7 @@
           <div class="chrome">
             <span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span>
           </div>
-          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Tactical planning UI mockup">
+          <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#001626;" aria-label="Tactical planning UI mockup">
             <!-- Sidebar -->
             <rect width="182" height="340" fill="#141820"/>
             <rect x="182" width="1" height="340" fill="#242e40"/>
@@ -586,7 +654,7 @@
             <text x="14" y="204" fill="#46586e" font-size="6.8" font-family="monospace">Visit time:  5h 42m</text>
             <text x="14" y="216" fill="#30d9a0" font-size="6.8" font-family="monospace">Total:       8h 00m ✓</text>
             <!-- Export button -->
-            <rect x="14" y="230" width="155" height="16" rx="3" fill="#ff500a" opacity="0.9"/>
+            <rect x="14" y="230" width="155" height="16" rx="3" fill="#0080c7" opacity="0.9"/>
             <text x="92" y="241" fill="white" font-size="7" text-anchor="middle" font-family="monospace">⬇ Export Excel</text>
             <!-- Map area -->
             <rect x="183" y="0" width="297" height="340" fill="#080c12"/>
@@ -650,7 +718,7 @@
       <div class="f">
         <div class="mockup">
           <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span></div>
-          <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Daily planning modes mockup">
+          <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#001626;" aria-label="Daily planning modes mockup">
             <!-- mode toggle -->
             <rect x="18" y="18" width="120" height="26" rx="6" fill="#4d9ef8"/>
             <text x="78" y="35" fill="white" font-size="10" font-weight="700" text-anchor="middle" font-family="monospace">Repeating</text>
@@ -723,8 +791,8 @@
     <div class="spot flip">
       <div class="f">
         <div class="mockup" style="max-width:300px;margin:0 auto;">
-          <svg viewBox="0 0 260 400" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;border-radius:22px;" aria-label="Rep mobile app mockup">
-            <rect x="0" y="0" width="260" height="400" rx="22" fill="#0a0e14" stroke="#242e40" stroke-width="1.5"/>
+          <svg viewBox="0 0 260 400" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#001626;border-radius:22px;" aria-label="Rep mobile app mockup">
+            <rect x="0" y="0" width="260" height="400" rx="22" fill="#001626" stroke="#242e40" stroke-width="1.5"/>
             <!-- notch -->
             <rect x="98" y="10" width="64" height="8" rx="4" fill="#1a2230"/>
             <!-- header -->
@@ -804,7 +872,98 @@
       <div class="f d1">
         <div class="mockup">
           <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span><span class="ct">ORBIT — <span>Orders</span></span></div>
-          <img src="ScreenShots/sfa-01-orders.png" alt="ORBIT orders view: committed batches, signatures, VAT-inclusive totals and a live revenue dashboard" loading="lazy" width="1600" height="1000">
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg"
+               style="display:block;width:100%;background:#001626;"
+               aria-label="ORBIT orders view: submitted and committed orders with signatures and VAT-inclusive totals">
+            <!-- toolbar -->
+            <text x="20" y="26" fill="#d8e4f0" font-size="11" font-weight="700" font-family="system-ui">Orders</text>
+            <text x="66" y="26" fill="#5d6b7e" font-size="8" font-family="system-ui">500 orders</text>
+            <rect x="126" y="16" width="74" height="16" rx="4" fill="#0f1620" stroke="#1e2a3a"/>
+            <text x="134" y="27" fill="#7e8ea1" font-size="7" font-family="monospace">2026/06/27</text>
+            <rect x="206" y="16" width="74" height="16" rx="4" fill="#0f1620" stroke="#1e2a3a"/>
+            <text x="214" y="27" fill="#7e8ea1" font-size="7" font-family="monospace">2026/07/27</text>
+            <rect x="288" y="16" width="9" height="9" rx="2" fill="#2f7fe0"/>
+            <text x="301" y="26" fill="#9fb0c4" font-size="7.5" font-family="system-ui">Show committed</text>
+            <rect x="378" y="16" width="82" height="16" rx="4" fill="#16202e" stroke="#26364a"/>
+            <text x="419" y="27" fill="#b6c6d8" font-size="7.5" text-anchor="middle" font-family="system-ui">⤓ Export Excel</text>
+
+            <!-- header row -->
+            <line x1="20" y1="44" x2="460" y2="44" stroke="#1b2634"/>
+            <g fill="#46586e" font-size="7" font-weight="700" font-family="monospace">
+              <text x="24" y="56">DATE</text><text x="86" y="56">STORE</text>
+              <text x="140" y="56">REP</text><text x="188" y="56">ITEMS</text>
+              <text x="288" y="56" text-anchor="end">TOTAL (INC VAT)</text>
+              <text x="300" y="56">STATUS</text>
+            </g>
+            <line x1="20" y1="62" x2="460" y2="62" stroke="#1b2634"/>
+
+            <!-- rows: submitted (amber) and committed into a locked batch (green) -->
+            <g font-family="system-ui" font-size="8" fill="#c3d0e0">
+              <text x="24" y="78">27 Jul</text><text x="86" y="78">D00213</text><text x="140" y="78">R01</text>
+              <text x="200" y="78" text-anchor="end">3</text><text x="288" y="78" text-anchor="end">R 144.16</text>
+              <rect x="300" y="70" width="52" height="12" rx="6" fill="rgba(245,166,35,0.16)"/>
+              <text x="326" y="79" fill="#e0a53a" font-size="7" text-anchor="middle">submitted</text>
+              <path d="M360,77 c1.6,-3.4 3,2.8 4.6,0.4 s2.6,-3.8 4.4,-0.8" fill="none" stroke="#7f9bc4" stroke-width="1" stroke-linecap="round"/>
+
+              <text x="24" y="96">27 Jul</text><text x="86" y="96">D00796</text><text x="140" y="96">R01</text>
+              <text x="200" y="96" text-anchor="end">3</text><text x="288" y="96" text-anchor="end">R 300.74</text>
+              <rect x="300" y="88" width="52" height="12" rx="6" fill="rgba(245,166,35,0.16)"/>
+              <text x="326" y="97" fill="#e0a53a" font-size="7" text-anchor="middle">submitted</text>
+
+              <text x="14" y="114" font-size="7.5">🔒</text>
+              <text x="24" y="114">27 Jul</text><text x="86" y="114">D00384</text><text x="140" y="114">R08</text>
+              <text x="200" y="114" text-anchor="end">5</text><text x="288" y="114" text-anchor="end">R 612.87</text>
+              <rect x="300" y="106" width="66" height="12" rx="6" fill="rgba(48,217,160,0.15)"/>
+              <text x="333" y="115" fill="#4dc79b" font-size="7" text-anchor="middle">BATCH-00007</text>
+              <path d="M374,113 c1.6,-3.4 3,2.8 4.6,0.4 s2.6,-3.8 4.4,-0.8" fill="none" stroke="#7f9bc4" stroke-width="1" stroke-linecap="round"/>
+
+              <text x="14" y="132" font-size="7.5">🔒</text>
+              <text x="24" y="132">27 Jul</text><text x="86" y="132">D00095</text><text x="140" y="132">R08</text>
+              <text x="200" y="132" text-anchor="end">1</text><text x="288" y="132" text-anchor="end">R  77.67</text>
+              <rect x="300" y="124" width="66" height="12" rx="6" fill="rgba(48,217,160,0.15)"/>
+              <text x="333" y="133" fill="#4dc79b" font-size="7" text-anchor="middle">BATCH-00007</text>
+
+              <text x="14" y="150" font-size="7.5">🔒</text>
+              <text x="24" y="150">27 Jul</text><text x="86" y="150">D00576</text><text x="140" y="150">R08</text>
+              <text x="200" y="150" text-anchor="end">6</text><text x="288" y="150" text-anchor="end">R 874.67</text>
+              <rect x="300" y="142" width="66" height="12" rx="6" fill="rgba(48,217,160,0.15)"/>
+              <text x="333" y="151" fill="#4dc79b" font-size="7" text-anchor="middle">BATCH-00007</text>
+              <path d="M374,149 c1.6,-3.4 3,2.8 4.6,0.4 s2.6,-3.8 4.4,-0.8" fill="none" stroke="#7f9bc4" stroke-width="1" stroke-linecap="round"/>
+
+              <text x="24" y="168">27 Jul</text><text x="86" y="168">D00826</text><text x="140" y="168">R08</text>
+              <text x="200" y="168" text-anchor="end">2</text><text x="288" y="168" text-anchor="end">R 109.07</text>
+              <rect x="300" y="160" width="52" height="12" rx="6" fill="rgba(245,166,35,0.16)"/>
+              <text x="326" y="169" fill="#e0a53a" font-size="7" text-anchor="middle">submitted</text>
+              <path d="M360,167 c1.6,-3.4 3,2.8 4.6,0.4 s2.6,-3.8 4.4,-0.8" fill="none" stroke="#7f9bc4" stroke-width="1" stroke-linecap="round"/>
+            </g>
+            <line x1="20" y1="180" x2="460" y2="180" stroke="#1b2634"/>
+
+            <!-- footer KPIs, as the orders rail shows them -->
+            <g font-family="system-ui">
+              <rect x="20" y="194" width="102" height="34" rx="6" fill="#0f1620" stroke="#1b2634"/>
+              <text x="30" y="211" fill="#e7eef7" font-size="12" font-weight="700">R1.2M</text>
+              <text x="30" y="222" fill="#46586e" font-size="6.5" font-family="monospace">REVENUE</text>
+              <rect x="132" y="194" width="102" height="34" rx="6" fill="#0f1620" stroke="#1b2634"/>
+              <text x="142" y="211" fill="#e7eef7" font-size="12" font-weight="700">2,464</text>
+              <text x="142" y="222" fill="#46586e" font-size="6.5" font-family="monospace">ORDERS</text>
+              <rect x="244" y="194" width="102" height="34" rx="6" fill="#0f1620" stroke="#1b2634"/>
+              <text x="254" y="211" fill="#e7eef7" font-size="12" font-weight="700">R506</text>
+              <text x="254" y="222" fill="#46586e" font-size="6.5" font-family="monospace">AVG ORDER</text>
+              <rect x="356" y="194" width="104" height="34" rx="6" fill="#0f1620" stroke="#1b2634"/>
+              <text x="366" y="211" fill="#4dc79b" font-size="12" font-weight="700">49%</text>
+              <text x="366" y="222" fill="#46586e" font-size="6.5" font-family="monospace">COMMITTED</text>
+            </g>
+
+            <!-- revenue trend, the same shape the rail draws -->
+            <text x="20" y="248" fill="#46586e" font-size="7" font-weight="700" font-family="monospace">REVENUE TREND</text>
+            <path d="M20,290 L20,268 L44,262 L68,265 L92,258 L116,288 L140,288 L164,264 L188,260 L212,262 L236,288
+                     L260,288 L284,259 L308,256 L332,261 L356,288 L380,288 L404,258 L428,254 L452,266 L460,262 L460,290 Z"
+                  fill="rgba(79,142,247,0.16)"/>
+            <path d="M20,268 L44,262 L68,265 L92,258 L116,288 L140,288 L164,264 L188,260 L212,262 L236,288
+                     L260,288 L284,259 L308,256 L332,261 L356,288 L380,288 L404,258 L428,254 L452,266 L460,262"
+                  fill="none" stroke="#4f8ef7" stroke-width="1.4"/>
+            <text x="460" y="248" fill="#5d6b7e" font-size="6.5" text-anchor="end" font-family="monospace">peak R68.4k</text>
+          </svg>
         </div>
       </div>
     </div>
@@ -814,7 +973,85 @@
       <div class="f">
         <div class="mockup">
           <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span><span class="ct">ORBIT — <span>Products &amp; Pricing</span></span></div>
-          <img src="ScreenShots/sfa-03-products.png" alt="ORBIT product catalogue with codes, categories, barcodes and VAT flags" loading="lazy" width="1600" height="1000">
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg"
+               style="display:block;width:100%;background:#001626;"
+               aria-label="ORBIT product catalogue with codes, categories, barcodes and VAT flags, and a price per customer tier">
+            <!-- toolbar -->
+            <text x="20" y="26" fill="#d8e4f0" font-size="11" font-weight="700" font-family="system-ui">Products</text>
+            <text x="76" y="26" fill="#5d6b7e" font-size="8" font-family="system-ui">(150)</text>
+            <rect x="330" y="15" width="48" height="16" rx="4" fill="#1d4ed8" fill-opacity="0.85"/>
+            <text x="354" y="26" fill="#eaf1fb" font-size="7.5" text-anchor="middle" font-family="system-ui">⤒ Upload</text>
+            <rect x="384" y="15" width="76" height="16" rx="4" fill="#16202e" stroke="#26364a"/>
+            <text x="422" y="26" fill="#b6c6d8" font-size="7.5" text-anchor="middle" font-family="system-ui">+ Add product</text>
+
+            <!-- header -->
+            <line x1="20" y1="40" x2="460" y2="40" stroke="#1b2634"/>
+            <g fill="#46586e" font-size="7" font-weight="700" font-family="monospace">
+              <text x="24" y="52">CODE</text><text x="104" y="52">NAME</text>
+              <text x="196" y="52">UNIT</text><text x="232" y="52">CATEGORY</text>
+              <text x="316" y="52">BARCODE</text><text x="410" y="52">VAT</text><text x="436" y="52">ACTIVE</text>
+            </g>
+            <line x1="20" y1="58" x2="460" y2="58" stroke="#1b2634"/>
+
+            <g font-family="system-ui" font-size="7.5" fill="#c3d0e0">
+              <text x="24" y="73" font-family="monospace" fill="#8fb8fb">FMBEV0001</text><text x="104" y="73">Cola</text>
+              <text x="196" y="73" fill="#8b98a8">case</text><text x="232" y="73" fill="#8b98a8">Beverages</text>
+              <text x="316" y="73" font-family="monospace" fill="#6f7f92" font-size="7">6000131407977</text>
+              <text x="410" y="73" fill="#4dc79b">Yes</text><text x="436" y="73" fill="#4dc79b">Yes</text>
+
+              <text x="24" y="89" font-family="monospace" fill="#8fb8fb">FMBEV0002</text><text x="104" y="89">Lemonade</text>
+              <text x="196" y="89" fill="#8b98a8">case</text><text x="232" y="89" fill="#8b98a8">Beverages</text>
+              <text x="316" y="89" font-family="monospace" fill="#6f7f92" font-size="7">6004606354977</text>
+              <text x="410" y="89" fill="#4dc79b">Yes</text><text x="436" y="89" fill="#4dc79b">Yes</text>
+
+              <text x="24" y="105" font-family="monospace" fill="#8fb8fb">FMDRY0028</text><text x="104" y="105">Tea Bags</text>
+              <text x="196" y="105" fill="#8b98a8">pack</text><text x="232" y="105" fill="#8b98a8">Dry Goods</text>
+              <text x="316" y="105" font-family="monospace" fill="#6f7f92" font-size="7">6001630767761</text>
+              <text x="410" y="105" fill="#4dc79b">Yes</text><text x="436" y="105" fill="#4dc79b">Yes</text>
+
+              <text x="24" y="121" font-family="monospace" fill="#8fb8fb">FMHOM0030</text><text x="104" y="121">Bleach</text>
+              <text x="196" y="121" fill="#8b98a8">case</text><text x="232" y="121" fill="#8b98a8">Home Care</text>
+              <text x="316" y="121" font-family="monospace" fill="#6f7f92" font-size="7">6003961891446</text>
+              <text x="410" y="121" fill="#4dc79b">Yes</text><text x="436" y="121" fill="#4dc79b">Yes</text>
+
+              <text x="24" y="137" font-family="monospace" fill="#8fb8fb">FMPER0036</text><text x="104" y="137">Body Lotion</text>
+              <text x="196" y="137" fill="#8b98a8">each</text><text x="232" y="137" fill="#8b98a8">Personal Care</text>
+              <text x="316" y="137" font-family="monospace" fill="#6f7f92" font-size="7">6008156603516</text>
+              <text x="410" y="137" fill="#e0a53a">No</text><text x="436" y="137" fill="#4dc79b">Yes</text>
+            </g>
+            <line x1="20" y1="148" x2="460" y2="148" stroke="#1b2634"/>
+
+            <!-- one price per customer tier: the point of the section -->
+            <text x="20" y="170" fill="#46586e" font-size="7" font-weight="700" font-family="monospace">PRICE LIST · PER CUSTOMER TYPE</text>
+            <g fill="#46586e" font-size="7" font-weight="700" font-family="monospace">
+              <text x="24" y="188">PRODUCT</text>
+              <text x="250" y="188" text-anchor="end">RETAIL</text>
+              <text x="330" y="188" text-anchor="end">WHOLESALE</text>
+              <text x="440" y="188" text-anchor="end">KEY ACCOUNT</text>
+            </g>
+            <line x1="20" y1="194" x2="460" y2="194" stroke="#1b2634"/>
+            <g font-family="system-ui" font-size="7.5" fill="#c3d0e0">
+              <text x="24" y="209">Cola</text>
+              <text x="250" y="209" text-anchor="end" font-family="monospace">R 9.44</text>
+              <text x="330" y="209" text-anchor="end" font-family="monospace">R 8.56</text>
+              <text x="440" y="209" text-anchor="end" font-family="monospace">R 7.98</text>
+              <text x="24" y="225">Lemonade</text>
+              <text x="250" y="225" text-anchor="end" font-family="monospace">R 10.18</text>
+              <text x="330" y="225" text-anchor="end" font-family="monospace">R 9.21</text>
+              <text x="440" y="225" text-anchor="end" font-family="monospace">R 8.60</text>
+              <text x="24" y="241">Tea Bags</text>
+              <text x="250" y="241" text-anchor="end" font-family="monospace">R 11.29</text>
+              <text x="330" y="241" text-anchor="end" font-family="monospace">R 10.22</text>
+              <text x="440" y="241" text-anchor="end" font-family="monospace">R 9.54</text>
+            </g>
+
+            <!-- effective-dated: prices change without rewriting history -->
+            <rect x="20" y="258" width="440" height="26" rx="6"
+                  fill="rgba(79,142,247,0.08)" stroke="rgba(79,142,247,0.26)"/>
+            <text x="32" y="275" fill="#8fb8fb" font-size="7.5" font-family="system-ui">
+              Effective from 2026/07/01 · change a price centrally and every rep is current at once
+            </text>
+          </svg>
         </div>
       </div>
       <div class="spot-text f d1">
@@ -848,7 +1085,110 @@
       <div class="f d1">
         <div class="mockup">
           <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span><span class="ct">ORBIT — <span>Sales Dashboard</span></span></div>
-          <img src="ScreenShots/sfa-02-dashboard.png" alt="ORBIT live sales dashboard: revenue KPIs, category and rep breakdowns, store-type split" loading="lazy" width="1600" height="1000">
+          <svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg"
+               style="display:block;width:100%;background:#001626;"
+               aria-label="ORBIT live sales dashboard: revenue KPIs, revenue trend, product category and rep breakdowns, and a store-type split">
+            <!-- period filter -->
+            <text x="20" y="24" fill="#d8e4f0" font-size="11" font-weight="700" font-family="system-ui">Sales dashboard</text>
+            <g font-family="system-ui" font-size="7">
+              <rect x="336" y="14" width="26" height="14" rx="4" fill="#16202e" stroke="#26364a"/>
+              <text x="349" y="24" fill="#8b98a8" text-anchor="middle">7d</text>
+              <rect x="366" y="14" width="30" height="14" rx="4" fill="#1d4ed8" fill-opacity="0.9"/>
+              <text x="381" y="24" fill="#eaf1fb" text-anchor="middle">30d</text>
+              <rect x="400" y="14" width="30" height="14" rx="4" fill="#16202e" stroke="#26364a"/>
+              <text x="415" y="24" fill="#8b98a8" text-anchor="middle">90d</text>
+              <rect x="434" y="14" width="26" height="14" rx="4" fill="#16202e" stroke="#26364a"/>
+              <text x="447" y="24" fill="#8b98a8" text-anchor="middle">1y</text>
+            </g>
+
+            <!-- KPI cards -->
+            <g font-family="system-ui">
+              <rect x="20" y="36" width="106" height="30" rx="5" fill="#0f1620" stroke="#1b2634"/>
+              <text x="29" y="52" fill="#e7eef7" font-size="11" font-weight="700">R1.2M</text>
+              <text x="29" y="61" fill="#46586e" font-size="6" font-family="monospace">REVENUE (INCL VAT)</text>
+              <rect x="132" y="36" width="106" height="30" rx="5" fill="#0f1620" stroke="#1b2634"/>
+              <text x="141" y="52" fill="#e7eef7" font-size="11" font-weight="700">2,464</text>
+              <text x="141" y="61" fill="#46586e" font-size="6" font-family="monospace">ORDERS</text>
+              <rect x="244" y="36" width="106" height="30" rx="5" fill="#0f1620" stroke="#1b2634"/>
+              <text x="253" y="52" fill="#e7eef7" font-size="11" font-weight="700">139,659</text>
+              <text x="253" y="61" fill="#46586e" font-size="6" font-family="monospace">UNITS SOLD</text>
+              <rect x="356" y="36" width="104" height="30" rx="5" fill="#0f1620" stroke="#1b2634"/>
+              <text x="365" y="52" fill="#e7eef7" font-size="11" font-weight="700">933</text>
+              <text x="365" y="61" fill="#46586e" font-size="6" font-family="monospace">STORES ORDERING</text>
+            </g>
+
+            <!-- revenue trend -->
+            <text x="20" y="84" fill="#46586e" font-size="7" font-weight="700" font-family="monospace">REVENUE TREND</text>
+            <path d="M20,146 L20,116 L44,108 L68,112 L92,100 L116,144 L140,144 L164,110 L188,104 L212,107
+                     L236,144 L260,144 L284,103 L308,99 L332,106 L356,144 L380,144 L404,101 L428,96
+                     L452,112 L460,106 L460,146 Z" fill="rgba(79,142,247,0.16)"/>
+            <path d="M20,116 L44,108 L68,112 L92,100 L116,144 L140,144 L164,110 L188,104 L212,107
+                     L236,144 L260,144 L284,103 L308,99 L332,106 L356,144 L380,144 L404,101 L428,96
+                     L452,112 L460,106" fill="none" stroke="#4f8ef7" stroke-width="1.4"/>
+            <text x="20" y="156" fill="#5d6b7e" font-size="6.5" font-family="monospace">28 Jun</text>
+            <text x="240" y="156" fill="#5d6b7e" font-size="6.5" text-anchor="middle" font-family="monospace">peak R68.4k</text>
+            <text x="460" y="156" fill="#5d6b7e" font-size="6.5" text-anchor="end" font-family="monospace">27 Jul</text>
+
+            <!-- two breakdown columns, as the real dashboard lays them out -->
+            <text x="20" y="176" fill="#46586e" font-size="7" font-weight="700" font-family="monospace">BY PRODUCT CATEGORY</text>
+            <g font-family="system-ui" font-size="7" fill="#9fb0c4">
+              <text x="20" y="192">Beverages</text>
+              <rect x="86" y="185" width="120" height="7" rx="3" fill="#1b2634"/>
+              <rect x="86" y="185" width="120" height="7" rx="3" fill="#d9534f"/>
+              <text x="212" y="192" fill="#6f7f92" font-family="monospace" font-size="6.5">R267.7k</text>
+              <text x="20" y="206">Staples</text>
+              <rect x="86" y="199" width="120" height="7" rx="3" fill="#1b2634"/>
+              <rect x="86" y="199" width="116" height="7" rx="3" fill="#4f8ef7"/>
+              <text x="212" y="206" fill="#6f7f92" font-family="monospace" font-size="6.5">R258.8k</text>
+              <text x="20" y="220">Dry Goods</text>
+              <rect x="86" y="213" width="120" height="7" rx="3" fill="#1b2634"/>
+              <rect x="86" y="213" width="78" height="7" rx="3" fill="#43b07c"/>
+              <text x="212" y="220" fill="#6f7f92" font-family="monospace" font-size="6.5">R173.7k</text>
+              <text x="20" y="234">Home Care</text>
+              <rect x="86" y="227" width="120" height="7" rx="3" fill="#1b2634"/>
+              <rect x="86" y="227" width="64" height="7" rx="3" fill="#e0a53a"/>
+              <text x="212" y="234" fill="#6f7f92" font-family="monospace" font-size="6.5">R142.4k</text>
+            </g>
+
+            <text x="256" y="176" fill="#46586e" font-size="7" font-weight="700" font-family="monospace">BY REP</text>
+            <g font-family="system-ui" font-size="7" fill="#9fb0c4">
+              <text x="256" y="192">Maria Pillay</text>
+              <rect x="322" y="185" width="94" height="7" rx="3" fill="#1b2634"/>
+              <rect x="322" y="185" width="94" height="7" rx="3" fill="#d9534f"/>
+              <text x="460" y="192" fill="#6f7f92" font-family="monospace" font-size="6.5" text-anchor="end">R188.8k</text>
+              <text x="256" y="206">Liam Pillay</text>
+              <rect x="322" y="199" width="94" height="7" rx="3" fill="#1b2634"/>
+              <rect x="322" y="199" width="84" height="7" rx="3" fill="#4f8ef7"/>
+              <text x="460" y="206" fill="#6f7f92" font-family="monospace" font-size="6.5" text-anchor="end">R169.3k</text>
+              <text x="256" y="220">Kwame Pillay</text>
+              <rect x="322" y="213" width="94" height="7" rx="3" fill="#1b2634"/>
+              <rect x="322" y="213" width="84" height="7" rx="3" fill="#43b07c"/>
+              <text x="460" y="220" fill="#6f7f92" font-family="monospace" font-size="6.5" text-anchor="end">R169.3k</text>
+              <text x="256" y="234">Grace Adams</text>
+              <rect x="322" y="227" width="94" height="7" rx="3" fill="#1b2634"/>
+              <rect x="322" y="227" width="82" height="7" rx="3" fill="#e0a53a"/>
+              <text x="460" y="234" fill="#6f7f92" font-family="monospace" font-size="6.5" text-anchor="end">R168.4k</text>
+            </g>
+
+            <!-- store-type share -->
+            <text x="20" y="258" fill="#46586e" font-size="7" font-weight="700" font-family="monospace">STORE-TYPE SHARE</text>
+            <rect x="20" y="264" width="440" height="10" rx="4" fill="#1b2634"/>
+            <path d="M24,264 h229 v10 h-229 a4,4 0 0 1 -4,-4 v-2 a4,4 0 0 1 4,-4 z" fill="#d9534f"/>
+            <path d="M253,264 h203 a4,4 0 0 1 4,4 v2 a4,4 0 0 1 -4,4 h-203 z" fill="#4f8ef7"/>
+            <g font-family="system-ui" font-size="7">
+              <rect x="20" y="284" width="7" height="7" rx="2" fill="#d9534f"/>
+              <text x="32" y="291" fill="#9fb0c4">Retail <tspan font-weight="700" fill="#c3d0e0">R655.5k</tspan> · 53%</text>
+              <rect x="150" y="284" width="7" height="7" rx="2" fill="#4f8ef7"/>
+              <text x="162" y="291" fill="#9fb0c4">Wholesale <tspan font-weight="700" fill="#c3d0e0">R592.1k</tspan> · 47%</text>
+            </g>
+
+            <!-- finance-ready totals -->
+            <rect x="20" y="300" width="440" height="22" rx="6"
+                  fill="rgba(48,217,160,0.07)" stroke="rgba(48,217,160,0.24)"/>
+            <text x="32" y="315" fill="#4dc79b" font-size="7.5" font-family="system-ui">
+              VAT R129.0k · 49% committed to batches · ready for finance
+            </text>
+          </svg>
         </div>
       </div>
     </div>
@@ -890,7 +1230,7 @@
       <div class="f">
         <div class="mockup">
           <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span></div>
-          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#0a0e14;" aria-label="Flow-through updates mockup">
+          <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#001626;" aria-label="Flow-through updates mockup">
             <text x="20" y="30" fill="#d8e4f0" font-size="11" font-weight="700" font-family="system-ui">Data changes</text>
             <rect x="360" y="16" width="104" height="20" rx="10" fill="rgba(245,166,35,0.16)" stroke="rgba(245,166,35,0.5)"/>
             <text x="412" y="30" fill="#f0b429" font-size="8.5" text-anchor="middle" font-family="system-ui">⟳ 3 changes</text>
@@ -909,7 +1249,7 @@
             <rect x="300" y="159" width="70" height="15" rx="7" fill="rgba(79,142,247,0.18)"/><text x="335" y="170" fill="#8fb8fb" font-size="7.5" text-anchor="middle" font-family="system-ui">territory</text>
             <rect x="376" y="159" width="66" height="15" rx="7" fill="rgba(76,175,125,0.18)"/><text x="409" y="170" fill="#7fd0a6" font-size="7.5" text-anchor="middle" font-family="system-ui">cadence</text>
             <!-- apply -->
-            <rect x="336" y="196" width="128" height="26" rx="6" fill="#ff500a"/>
+            <rect x="336" y="196" width="128" height="26" rx="6" fill="#0080c7"/>
             <text x="400" y="213" fill="white" font-size="9" font-weight="700" text-anchor="middle" font-family="system-ui">Apply changes</text>
             <!-- result -->
             <line x1="20" y1="240" x2="460" y2="240" stroke="#242e40"/>
@@ -928,7 +1268,76 @@
           <li>Removed stores drop out of routes and future visits automatically</li>
           <li>Dynamic plans absorb changes on the next generated day; Repeating routes are re-optimised in place</li>
           <li>Completed and in-progress visits are always preserved</li>
+          <li>Per-store day restrictions are respected — a Monday-only customer stays on a Monday</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI ASSISTANT ── -->
+<section id="assistant" class="alt">
+  <div class="container">
+    <div class="spot flip">
+      <div class="f">
+        <div class="mockup">
+          <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span>
+            <span class="ct">ORBIT — <span>Assistant</span></span></div>
+          <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg"
+               style="display:block;width:100%;background:#001626;"
+               aria-label="Assistant answering a question with a chart">
+            <!-- the question -->
+            <rect x="150" y="18" width="310" height="30" rx="12" fill="#22355a"/>
+            <text x="305" y="37" fill="#dce8f6" font-size="9.5" text-anchor="middle"
+                  font-family="system-ui">Break the stores down by store type</text>
+            <!-- the answer -->
+            <rect x="20" y="62" width="380" height="24" rx="11" fill="#141b26"/>
+            <text x="32" y="78" fill="#c9d6e6" font-size="9" font-family="system-ui">998 stores across two store types.</text>
+            <!-- chart -->
+            <text x="20" y="108" fill="#46586e" font-size="8" font-weight="700" font-family="monospace">STORES BY TYPE</text>
+            <text x="20" y="130" fill="#9fb0c4" font-size="9" font-family="system-ui">Wholesale</text>
+            <rect x="96" y="121" width="300" height="11" rx="4" fill="#1b2634"/>
+            <rect x="96" y="121" width="300" height="11" rx="4" fill="#4f7fd4"/>
+            <text x="404" y="130" fill="#6f7f92" font-size="8.5" font-family="monospace">512</text>
+            <text x="20" y="152" fill="#9fb0c4" font-size="9" font-family="system-ui">Retail</text>
+            <rect x="96" y="143" width="300" height="11" rx="4" fill="#1b2634"/>
+            <rect x="96" y="143" width="285" height="11" rx="4" fill="#2f9e6b"/>
+            <text x="404" y="152" fill="#6f7f92" font-size="8.5" font-family="monospace">486</text>
+            <!-- provenance -->
+            <line x1="20" y1="176" x2="460" y2="176" stroke="#1b2634"/>
+            <text x="20" y="194" fill="#5d6b7e" font-size="8" font-family="system-ui">▸ How this was worked out · 969 tokens · 6.7s</text>
+            <text x="20" y="212" fill="#46586e" font-size="7.5" font-family="monospace">↳ store_stats  group_by=customer_type</text>
+            <!-- scope notice -->
+            <rect x="20" y="234" width="440" height="26" rx="6" fill="rgba(48,217,160,0.08)" stroke="rgba(48,217,160,0.28)"/>
+            <text x="32" y="251" fill="#59c9a2" font-size="8.5" font-family="system-ui">Scoped to this partition · read-only · never sees another customer's data</text>
+            <!-- input -->
+            <rect x="20" y="276" width="360" height="28" rx="7" fill="#0f1620" stroke="#1e2a3a"/>
+            <text x="34" y="294" fill="#3f4d5e" font-size="9" font-family="system-ui">Ask about ORBIT or this partition…</text>
+            <rect x="392" y="276" width="68" height="28" rx="7" fill="#2f4b86"/>
+            <text x="426" y="294" fill="#eaf1fb" font-size="9" text-anchor="middle" font-family="system-ui">Ask</text>
+          </svg>
+        </div>
+      </div>
+      <div class="spot-text f d1">
+        <span class="pill">New · AI Assistant</span>
+        <h2>Ask your data a question.</h2>
+        <p>Every screen has an assistant that answers in plain language — how to use ORBIT, or
+           what's actually in your data. Answers come back as text, a table or a chart,
+           whichever fits the question.</p>
+        <ul class="checks">
+          <li>Answers from your live data — store counts, visit completion, orders by rep or product</li>
+          <li>Explains the product too, so new planners stop waiting on a manual</li>
+          <li><strong>Scoped to the partition you're in.</strong> It cannot read another
+              customer's data, and it never changes anything</li>
+          <li>Respects each user's role — a controller can't ask it for the margins their screens hide</li>
+          <li>Shows its working: every figure lists the lookup that produced it</li>
+          <li>Full usage log for administrators — who asked what, when, and what it cost</li>
+        </ul>
+        <div class="asst-chips">
+          <span class="asst-chip">How many stores are in each region?</span>
+          <span class="asst-chip">Which products sold most last month?</span>
+          <span class="asst-chip">How do I cut territories?</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1055,17 +1464,25 @@
       <div class="road-card f">
         <div class="road-ic ic-blue">🔌</div>
         <div>
-          <span class="rtag t-soon">Coming Soon</span>
-          <div class="road-h">Integrations &amp; API</div>
-          <p class="road-p">Push visits and pull results through a clean API — already ingesting external visits today, with CRM and ERP connectors on the way.</p>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">REST API &amp; ERP hand-off</div>
+          <p class="road-p">A documented REST API for stores, reps, visits, plans and orders — pull committed order batches straight into finance, or take them as Excel. It runs both ways: orders raised in your ERP push back into ORBIT.</p>
         </div>
       </div>
       <div class="road-card f d1">
         <div class="road-ic ic-amber">🤝</div>
         <div>
-          <span class="rtag t-soon">Coming Soon</span>
+          <span class="rtag t-dev">Available Now</span>
           <div class="road-h">Reseller Programme</div>
-          <p class="road-p">White-label ORBIT under your brand. A partner portal for managing client accounts, custom subdomains, and co-marketing assets. Recurring commission on every subscription.</p>
+          <p class="road-p">White-label ORBIT under your own brand — app name, colours, logo and subdomain — with a partner console for managing client accounts and recurring commission on every subscription.</p>
+        </div>
+      </div>
+      <div class="road-card f">
+        <div class="road-ic ic-purple">✨</div>
+        <div>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">AI assistant</div>
+          <p class="road-p">Ask questions about your own data — or about how ORBIT works — and get back text, a table or a chart. Scoped to your partition, limited by your role, read-only, and fully logged.</p>
         </div>
       </div>
     </div>
@@ -1080,7 +1497,7 @@
       <h2>Priced per rep — pick your mode</h2>
       <p>A simple per-rep monthly rate, with planning seats for your office team included. Run territory &amp; route planning on its own, or add Field Sales for full order-taking — each mode is priced separately, so you only pay for what you run.</p>
     </div>
-    <div class="p-grid" style="grid-template-columns:repeat(2,1fr);max-width:840px;margin-left:auto;margin-right:auto;">
+    <div class="p-grid two">
       <div class="p-card f">
         <div class="p-tier">Mode 1 · Per rep / month</div>
         <div class="p-scale">Territory &amp; Route Planning</div>
@@ -1183,10 +1600,10 @@
       <div class="ft-brand">
         <a class="logo" href="#">
           <svg width="24" height="24" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-            <circle cx="15" cy="15" r="4" fill="#ff500a"/>
-            <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#ff500a" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
-            <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#ff500a" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
-            <circle cx="26" cy="9" r="1.8" fill="#ff500a" opacity="0.85"/>
+            <circle cx="15" cy="15" r="4" fill="#0080c7"/>
+            <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#0080c7" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+            <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#0080c7" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+            <circle cx="26" cy="9" r="1.8" fill="#19afff" opacity="0.85"/>
           </svg>
           ORBIT
         </a>
