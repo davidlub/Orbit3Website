@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="ORBIT">
+  <!-- Solid tile rather than a transparent mark: a blue-on-transparent glyph
+       disappears against a dark tab bar, and browser chrome can be either. -->
+  <rect width="32" height="32" rx="7" fill="#001626"/>
+
+  <!-- Three elements only. An earlier version added a tilted orbital ellipse and
+       it was the right idea at 48px and mud at 16px, where every stroke lands on
+       one or two pixels. Ring + centre + satellite still reads as an orbit. -->
+
+  <!-- Territory boundary -->
+  <circle cx="16" cy="16" r="8.6" fill="none" stroke="#19afff" stroke-width="2.8"/>
+
+  <!-- Depot at the centre -->
+  <circle cx="16" cy="16" r="2.9" fill="#ffffff"/>
+
+  <!-- Orbiting store. The navy stroke is what keeps it from fusing into the ring
+       at small sizes — it cuts its own gap wherever it crosses. -->
+  <circle cx="24.9" cy="9.4" r="3.1" fill="#19afff" stroke="#001626" stroke-width="1.9"/>
+</svg>
