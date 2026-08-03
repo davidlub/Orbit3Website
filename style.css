@@ -187,13 +187,6 @@ nav.up { border-bottom-color:var(--border); box-shadow:0 1px 20px rgba(0,22,38,0
 .ct { margin-left:10px; font-family:var(--mono); font-size:0.7rem; color:#5b718c; flex:1; }
 .ct span { color:#8ea6c2; }
 
-/* ── Trust strip ── */
-#trust { padding:38px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); background:var(--surface); }
-.trust-label { text-align:center; font-size:0.67rem; font-family:var(--mono); letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:26px; }
-.trust-logos { display:flex; justify-content:center; align-items:center; gap:52px; flex-wrap:wrap; }
-.tlogo { font-family:var(--serif); font-size:0.9rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--text-3); opacity:0.55; transition:opacity 0.24s, color 0.24s; }
-.tlogo:hover { opacity:1; color:var(--text-2); }
-
 /* ── How it works ── */
 .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; position:relative; }
 .steps::before {
