@@ -21,6 +21,290 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- ORBIT icon sprite.
+     Hand-drawn monoline set on a 24px grid, stroke 1.7, round caps and joins.
+     A solid dot always means a store or a stop, exactly as in the product shots
+     further down the page, so the icons and the screenshots speak one language.
+     Every shape strokes in `currentColor`: a chip sets `color` and the icon
+     follows, which is what lets one sprite serve the blue feature chips and the
+     four tinted roadmap chips without duplication.
+     Presentation attributes rather than CSS classes on purpose — `<use>` clones
+     into a shadow tree that author stylesheets cannot select into, so only
+     inherited properties (`color`) cross the boundary. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+
+    <!-- ── Territory cutting ────────────────────────────────────────────── -->
+
+    <!-- Balanced territories: a beam that is level, carrying equal loads. -->
+    <symbol id="i-balance" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 6.2V20"/>
+      <path d="M8.2 20h7.6"/>
+      <path d="M4 8.4h16"/>
+      <path d="M4 8.4 1.7 13h4.6z"/>
+      <path d="M20 8.4 17.7 13h4.6z"/>
+      <circle cx="12" cy="6.2" r="1.5" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Contiguity: one closed hull, no islands, stores inside it. -->
+    <symbol id="i-contiguous" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8.8 2.6 17.4 4.6l3.8 5.6-2.6 8.2-8.6 1.2L3.2 15 2.4 7.6z"/>
+      <circle cx="8.4" cy="8.6" r="1.35" fill="currentColor" stroke="none"/>
+      <circle cx="14.4" cy="12.4" r="1.35" fill="currentColor" stroke="none"/>
+      <circle cx="8.8" cy="15.4" r="1.35" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Interactive editing: a folded map with a pencil on it. -->
+    <symbol id="i-edit-map" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9.2 5.2 3.2 3.2v14.2l6 2 3.4-1.1"/>
+      <path d="M9.2 5.2 15.4 3.2l5.4 1.8v4.4"/>
+      <path d="M9.2 5.2v14.2M15.4 3.2v6.6"/>
+      <path d="m19.6 12.2 2.2 2.2-5.8 5.8-3 .8.8-3z"/>
+      <circle cx="6.2" cy="10.4" r="1.2" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Tactical scheduling: a route threaded through a calendar. -->
+    <symbol id="i-calendar-route" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4.6" width="18" height="16.4" rx="2.6"/>
+      <path d="M3 9.4h18M8 2.8v3.6M16 2.8v3.6"/>
+      <path d="M6.8 17.6c2.4 0 2-3.4 4.4-3.4s2.2 -2 4.4-2"/>
+      <circle cx="6.8" cy="17.6" r="1.25" fill="currentColor" stroke="none"/>
+      <circle cx="15.6" cy="12.2" r="1.25" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Multiple scenarios: the same cut, kept side by side and compared. -->
+    <symbol id="i-scenarios" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8.4 4.2h9.4a2.4 2.4 0 0 1 2.4 2.4v9.4"/>
+      <rect x="3.2" y="7.6" width="12.8" height="12.8" rx="2.4"/>
+      <circle cx="9.6" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Excel: the sheet goes out and comes back in. -->
+    <symbol id="i-excel" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.4" y="3.8" width="11.4" height="16.4" rx="2.1"/>
+      <path d="M2.4 8.6h11.4M2.4 15h11.4M8.1 8.6v11.6"/>
+      <path d="M16.6 9.2h5.4m0 0-2.1-2.1m2.1 2.1-2.1 2.1"/>
+      <path d="M22 15.4h-5.4m0 0 2.1-2.1m-2.1 2.1 2.1 2.1"/>
+    </symbol>
+
+    <!-- Flow-through: a sync cycle closing around a live route. -->
+    <symbol id="i-flow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.6 12a8.4 8.4 0 0 1 14.3-6"/>
+      <path d="M20.4 3.6v4.8h-4.8"/>
+      <path d="M20.4 12a8.4 8.4 0 0 1-14.3 6"/>
+      <path d="M3.6 20.4v-4.8h4.8"/>
+      <path d="m9.6 13.4 4.8-2.8"/>
+      <circle cx="9.6" cy="13.4" r="1.4" fill="currentColor" stroke="none"/>
+      <circle cx="14.4" cy="10.6" r="1.4" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Repeating & Dynamic: one dial, a needle that can be set either way. -->
+    <symbol id="i-modes" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.8"/>
+      <path d="m15.8 8.2-2.2 5.4-5.4 2.2 2.2-5.4z"/>
+      <circle cx="12" cy="12" r="1.15" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Rep app: the route in a pocket. -->
+    <symbol id="i-phone-route" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5.8" y="2.2" width="12.4" height="19.6" rx="2.8"/>
+      <path d="M10.4 4.8h3.2"/>
+      <path d="M8.8 17.4c2 0 1.6-3 3.6-3s1.6-1.8 3-1.8"/>
+      <circle cx="8.8" cy="17.4" r="1.2" fill="currentColor" stroke="none"/>
+      <circle cx="15.4" cy="12.6" r="1.2" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Master data: one store of record, in tiers. -->
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="12" cy="6" rx="7.8" ry="3.1"/>
+      <path d="M4.2 6v5.9c0 1.71 3.49 3.1 7.8 3.1s7.8-1.39 7.8-3.1V6"/>
+      <path d="M4.2 11.9v6c0 1.71 3.49 3.1 7.8 3.1s7.8-1.39 7.8-3.1v-6"/>
+    </symbol>
+
+    <!-- Visit tracking: a place, confirmed. -->
+    <symbol id="i-visit-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21.6s7.2-6.3 7.2-11.5a7.2 7.2 0 1 0-14.4 0c0 5.2 7.2 11.5 7.2 11.5z"/>
+      <path d="m8.9 10.2 2.2 2.2 4-4.4"/>
+    </symbol>
+
+    <!-- ── Field sales ──────────────────────────────────────────────────── -->
+
+    <!-- Signed on site. -->
+    <symbol id="i-signature" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.4 15.8c1.6 0 2.1-1.5 2.9-4.1s1.3-6.1 2.7-6.1c1.3 0 .7 4.7-.1 7.1s-1.5 4-2.7 4c-1 0-.5-1.4 1.1-2.3 1.9-1 3.6-1.1 5-.5"/>
+      <path d="M14.3 14.4c.8-1 1.7-1.7 2.6-1.7.8 0 .6 1 1.4 1s1.6-.8 2.4-1.8"/>
+      <path d="M3 20.4h18"/>
+    </symbol>
+
+    <!-- VAT: a receipt with the rate on it. -->
+    <symbol id="i-vat" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5.5 2.8h13v18.6l-2.17-1.6-2.16 1.6-2.17-1.6-2.16 1.6-2.17-1.6-2.17 1.6z"/>
+      <circle cx="9.9" cy="8.6" r="1.5"/>
+      <circle cx="14.1" cy="13.4" r="1.5"/>
+      <path d="m15.2 7.4-6.4 7.2"/>
+    </symbol>
+
+    <!-- Committed batch handed off. -->
+    <symbol id="i-batch" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.4 7.6 12 3.2l8.6 4.4v8.8L12 20.8l-8.6-4.4z"/>
+      <path d="M3.4 7.6 12 12l8.6-4.4M12 12v8.8"/>
+    </symbol>
+
+    <!-- Invoice, emailed. -->
+    <symbol id="i-invoice-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6.8 11.4V2.8h10.4v8.6"/>
+      <path d="M9.2 6h5.6M9.2 8.8h5.6"/>
+      <path d="M2.6 11.4h18.8v7.8a2 2 0 0 1-2 2H4.6a2 2 0 0 1-2-2z"/>
+      <path d="m2.6 11.4 9.4 6.2 9.4-6.2"/>
+    </symbol>
+
+    <!-- Open API. -->
+    <symbol id="i-api" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m8.4 6.6-5.2 5.4 5.2 5.4"/>
+      <path d="m15.6 6.6 5.2 5.4-5.2 5.4"/>
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Offline-first: no signal, still selling. -->
+    <symbol id="i-offline" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8.4 14.8a5.2 5.2 0 0 1 6.4-.5"/>
+      <path d="M5 11.2a10.2 10.2 0 0 1 12.6-1"/>
+      <circle cx="12" cy="18.6" r="1.5" fill="currentColor" stroke="none"/>
+      <path d="M3.4 3.4 20.6 20.6"/>
+    </symbol>
+
+    <!-- ── Industries ───────────────────────────────────────────────────── -->
+
+    <!-- Independent store. -->
+    <symbol id="i-shopfront" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.6 9.6v11h16.8v-11"/>
+      <path d="M2.2 9.6 4.6 4.2h14.8l2.4 5.4z"/>
+      <path d="M9.4 20.6v-6.2h5.2v6.2"/>
+    </symbol>
+
+    <!-- Distribution: rigid truck. -->
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 16.2V7.4h11.4v8.8"/>
+      <path d="M13.4 10.6h4l3.6 3.4v2.2h-2.2"/>
+      <path d="M9 16.2h6"/>
+      <circle cx="6.8" cy="17.6" r="2.1"/>
+      <circle cx="17.2" cy="17.6" r="2.1"/>
+    </symbol>
+
+    <!-- Field service. -->
+    <symbol id="i-toolbox" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.6" y="8.4" width="18.8" height="11.8" rx="2.2"/>
+      <path d="M8.6 8.4V6.2a2 2 0 0 1 2-2h2.8a2 2 0 0 1 2 2v2.2"/>
+      <path d="M2.6 13.4h18.8"/>
+      <rect x="10.1" y="11.4" width="3.8" height="4" rx="1.1" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Pharmaceutical. -->
+    <symbol id="i-pharma" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <g transform="rotate(-42 12 12)">
+        <rect x="2.4" y="8.6" width="19.2" height="6.8" rx="3.4"/>
+        <path d="M5.8 8.6H12v6.8H5.8a3.4 3.4 0 0 1 0-6.8z" fill="currentColor" stroke="none"/>
+        <path d="M12 8.6v6.8"/>
+      </g>
+    </symbol>
+
+    <!-- Retail operations: the audit, not the building. A second storefront here
+         collided with i-shopfront two cards away, and the copy is about stock
+         checks and compliance rather than premises. -->
+    <symbol id="i-audit" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 4H6.4a2 2 0 0 0-2 2v13.4a2 2 0 0 0 2 2h11.2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H15"/>
+      <rect x="8.8" y="2.2" width="6.4" height="3.6" rx="1.2"/>
+      <path d="m8.2 12.4 1.7 1.7 3.4-3.6"/>
+      <path d="M8.4 17.8h7.4"/>
+    </symbol>
+
+    <!-- Van sales. -->
+    <symbol id="i-van" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.6 16.4v-4.8c0-.5.2-1 .5-1.4l3-3.2c.4-.4.9-.6 1.5-.6h10.6c.9 0 1.7.6 2 1.5l1.6 5c.1.2.1.5.1.7v2.8h-2.3"/>
+      <path d="M8.9 16.4h6.3"/>
+      <path d="M3.4 10.6h6V6.4"/>
+      <circle cx="6.6" cy="17.6" r="2.1"/>
+      <circle cx="17.6" cy="17.6" r="2.1"/>
+    </symbol>
+
+    <!-- ── Roadmap ─────────────────────────────────────────────────────── -->
+
+    <!-- Daily planning: a calendar that is live. -->
+    <symbol id="i-calendar-live" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4.6" width="18" height="16.4" rx="2.6"/>
+      <path d="M3 9.4h18M8 2.8v3.6M16 2.8v3.6"/>
+      <rect x="6.2" y="11.8" width="4.4" height="3.8" rx="1.1" fill="currentColor" stroke="none"/>
+      <path d="M13.4 13.7h4.4M6.4 18.2h4.2M13.4 18.2h4.4"/>
+    </symbol>
+
+    <!-- Team accounts: one cloud, many tenants. -->
+    <symbol id="i-cloud-team" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7.2 14.4h9.6a3.7 3.7 0 0 0 .4-7.37 5.6 5.6 0 0 0-10.8-1.1A3.74 3.74 0 0 0 7.2 14.4z"/>
+      <path d="M12 14.4v2.2"/>
+      <path d="M5.8 19v-1a1.4 1.4 0 0 1 1.4-1.4h9.6A1.4 1.4 0 0 1 18.2 18v1"/>
+      <circle cx="5.8" cy="20.6" r="1.5" fill="currentColor" stroke="none"/>
+      <circle cx="12" cy="20.6" r="1.5" fill="currentColor" stroke="none"/>
+      <circle cx="18.2" cy="20.6" r="1.5" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Photos from the field. -->
+    <symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8.4 7 10 4.2h4L15.6 7"/>
+      <rect x="2.6" y="7" width="18.8" height="13.4" rx="2.4"/>
+      <circle cx="12" cy="13.6" r="4"/>
+      <circle cx="12" cy="13.6" r="1.4" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- Reseller programme: two books, one shared account. -->
+    <symbol id="i-partners" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8.8" cy="12" r="5.6"/>
+      <circle cx="15.2" cy="12" r="5.6"/>
+      <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <!-- AI assistant. -->
+    <symbol id="i-ai" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10.2 2.8 12 8l5.2 1.8L12 11.6l-1.8 5.2-1.8-5.2L3.2 9.8 8.4 8z"/>
+      <path d="m17.6 15 .9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9z"/>
+    </symbol>
+
+    <!-- Confirmation. -->
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9.2"/>
+      <path d="m7.8 12.4 2.9 2.9 5.5-6.8"/>
+    </symbol>
+
+  </defs>
+</svg>
 
 <!-- ── NAVIGATION ── -->
 <nav id="nav">
@@ -413,77 +697,77 @@
     </div>
     <div class="feat-cols">
       <div class="feat-item f">
-        <div class="feat-icon-wrap">⚖️</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-balance"/></svg></div>
         <div>
           <h3>Balanced territories</h3>
           <p>Achieves ±7% weight balance across all territories. No rep gets a massive workload while another sits idle.</p>
         </div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">🗺️</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-contiguous"/></svg></div>
         <div>
           <h3>Geographic contiguity</h3>
           <p>No fragmented islands. Every territory is a single connected region — because disconnected territories waste drive time and confuse reps.</p>
         </div>
       </div>
       <div class="feat-item f">
-        <div class="feat-icon-wrap">✏️</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-edit-map"/></svg></div>
         <div>
           <h3>Interactive map editing</h3>
           <p>Drag stores between territories, polygon-select entire areas, and reassign in one click. Full undo history keeps everything reversible.</p>
         </div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">📅</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar-route"/></svg></div>
         <div>
           <h3>Tactical scheduling</h3>
           <p>Day-by-day visit schedules optimized for travel distance and working hours. Handles variable hours, depots, and multi-week planning periods.</p>
         </div>
       </div>
       <div class="feat-item f">
-        <div class="feat-icon-wrap">🔁</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-scenarios"/></svg></div>
         <div>
           <h3>Multiple scenarios</h3>
           <p>Create and compare different territory configurations side by side. Run 2–30 territory counts at once and choose what works best for your business.</p>
         </div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">📊</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-excel"/></svg></div>
         <div>
           <h3>Excel integration</h3>
           <p>Import from your existing spreadsheet format. Export results back to Excel for your team. No new systems to learn — plug into what you already use.</p>
         </div>
       </div>
       <div class="feat-item f">
-        <div class="feat-icon-wrap">🔄</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-flow"/></svg></div>
         <div>
           <h3>Flow-through updates</h3>
           <p>Add, remove or edit stores in master data and ORBIT shows exactly what changed — then flows it into live plans: new stores slotted, dropped stores removed, routes and visits updated. No full replan.</p>
         </div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">🧭</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-modes"/></svg></div>
         <div>
           <h3>Repeating &amp; Dynamic routes</h3>
           <p>Run a fixed <strong>Repeating</strong> calendar cycle, or let <strong>Dynamic</strong> mode build each day from store urgency and last-visit dates. Two planning styles, one tool.</p>
         </div>
       </div>
       <div class="feat-item f">
-        <div class="feat-icon-wrap">📱</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone-route"/></svg></div>
         <div>
           <h3>Rep mobile app</h3>
           <p>An offline-capable web app: reps see their route, navigate, and mark Start / Finish per stop. GPS is captured on every tap and synced back automatically — even after working with no signal.</p>
         </div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">🗄️</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-database"/></svg></div>
         <div>
           <h3>Master data &amp; regions</h3>
           <p>One organisation-wide source of truth for stores and reps, partitioned into regions. Edit inline, bulk-upload, and build every scenario from the same clean data.</p>
         </div>
       </div>
       <div class="feat-item f">
-        <div class="feat-icon-wrap">📍</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visit-pin"/></svg></div>
         <div>
           <h3>Visit tracking</h3>
           <p>Every actual visit is logged — from the mobile app, planning edits, historical last-visit dates, or an external API — with GPS and timestamps, searchable and exportable.</p>
@@ -1186,27 +1470,27 @@
     <!-- SFA feature grid -->
     <div class="feat-cols" style="margin-top:88px">
       <div class="feat-item f">
-        <div class="feat-icon-wrap">✍️</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-signature"/></svg></div>
         <div><h3>Signed on site</h3><p>Capture the owner's signature on the phone to confirm each order. Editing an order's lines clears the signature, so what's signed always matches what's sold.</p></div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">🧾</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-vat"/></svg></div>
         <div><h3>VAT done right</h3><p>Per-Division VAT rate, per-product VAT flags and a VAT-inclusive order value — snapshotted at capture so history stays correct even when prices change.</p></div>
       </div>
       <div class="feat-item f">
-        <div class="feat-icon-wrap">📦</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-batch"/></svg></div>
         <div><h3>Commit &amp; hand off to your ERP</h3><p>Group confirmed orders into a batch that locks them against edits and hands a clean, auditable set to your accounting or ERP system.</p></div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">📧</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-invoice-mail"/></svg></div>
         <div><h3>Emailed PDF invoices</h3><p>Each committed order can be rendered to a branded PDF and emailed to the store automatically — or downloaded on demand, even without an address on file.</p></div>
       </div>
       <div class="feat-item f">
-        <div class="feat-icon-wrap">🔌</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-api"/></svg></div>
         <div><h3>Open API</h3><p>List and ingest orders, products, prices and visits over a clean REST API — feed ORBIT from your ERP, or push its data into your BI and dispatch systems.</p></div>
       </div>
       <div class="feat-item f d1">
-        <div class="feat-icon-wrap">📴</div>
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-offline"/></svg></div>
         <div><h3>Offline-first capture</h3><p>The same installable rep app takes orders with no signal all day and syncs the moment it reconnects — no lost sales in low-coverage territory.</p></div>
       </div>
     </div>
@@ -1343,27 +1627,27 @@
     </div>
     <div class="ind-grid">
       <div class="ind-card f">
-        <div class="ind-em">🏪</div>
+        <div class="ind-em"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-shopfront"/></svg></div>
         <div><h3>Sales &amp; Merchandising</h3><p>Manage rep territories across retail, wholesale, and independent channels. Balance call frequency with drive time.</p></div>
       </div>
       <div class="ind-card f d1">
-        <div class="ind-em">🚚</div>
+        <div class="ind-em"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-truck"/></svg></div>
         <div><h3>FMCG &amp; Distribution</h3><p>Balance delivery routes across customers with different visit frequencies and order volumes.</p></div>
       </div>
       <div class="ind-card f d2">
-        <div class="ind-em">🔧</div>
+        <div class="ind-em"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-toolbox"/></svg></div>
         <div><h3>Field Service</h3><p>Ensure technicians cover their zones without excessive travel between sites or overlapping regions.</p></div>
       </div>
       <div class="ind-card f">
-        <div class="ind-em">💊</div>
+        <div class="ind-em"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pharma"/></svg></div>
         <div><h3>Pharmaceutical</h3><p>Ensure every pharmacy, clinic, and hospital gets the right rep visiting on a reliable schedule.</p></div>
       </div>
       <div class="ind-card f d1">
-        <div class="ind-em">🏬</div>
+        <div class="ind-em"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"/></svg></div>
         <div><h3>Retail Operations</h3><p>Territory-cut field teams for promotions, audits, stock checks, and in-store merchandising programs.</p></div>
       </div>
       <div class="ind-card f d2">
-        <div class="ind-em">🚐</div>
+        <div class="ind-em"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-van"/></svg></div>
         <div><h3>Van Sales</h3><p>Optimize daily driver routes across dense urban store networks. Minimize kilometres, maximize deliveries.</p></div>
       </div>
     </div>
@@ -1398,7 +1682,7 @@
     </div>
     <div class="road-grid">
       <div class="road-card f">
-        <div class="road-ic ic-blue">📱</div>
+        <div class="road-ic ic-blue"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone-route"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
           <div class="road-h">Rep Mobile App</div>
@@ -1406,7 +1690,7 @@
         </div>
       </div>
       <div class="road-card f d1">
-        <div class="road-ic ic-green">📆</div>
+        <div class="road-ic ic-green"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar-live"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
           <div class="road-h">Daily Planning — Repeating &amp; Dynamic</div>
@@ -1414,7 +1698,7 @@
         </div>
       </div>
       <div class="road-card f">
-        <div class="road-ic ic-purple">☁️</div>
+        <div class="road-ic ic-purple"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cloud-team"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
           <div class="road-h">Team accounts, regions &amp; roles</div>
@@ -1422,7 +1706,7 @@
         </div>
       </div>
       <div class="road-card f d1">
-        <div class="road-ic ic-amber">📷</div>
+        <div class="road-ic ic-amber"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg></div>
         <div>
           <span class="rtag t-soon">Coming Soon</span>
           <div class="road-h">Photos from the field</div>
@@ -1430,7 +1714,7 @@
         </div>
       </div>
       <div class="road-card f">
-        <div class="road-ic ic-blue">🔌</div>
+        <div class="road-ic ic-blue"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-api"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
           <div class="road-h">REST API &amp; ERP hand-off</div>
@@ -1438,7 +1722,7 @@
         </div>
       </div>
       <div class="road-card f d1">
-        <div class="road-ic ic-amber">🤝</div>
+        <div class="road-ic ic-amber"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-partners"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
           <div class="road-h">Reseller Programme</div>
@@ -1446,7 +1730,7 @@
         </div>
       </div>
       <div class="road-card f">
-        <div class="road-ic ic-purple">✨</div>
+        <div class="road-ic ic-purple"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ai"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
           <div class="road-h">AI assistant</div>
@@ -1565,7 +1849,7 @@
             <a href="mailto:info@opsi.co.za">info@opsi.co.za</a>.
           </div>
           <div class="form-ok" id="form-ok">
-            <div class="ok-ico">✅</div>
+            <div class="ok-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg></div>
             <div class="ok-head">Request received!</div>
             <p>We'll be in touch within one business day to schedule your session.</p>
           </div>
