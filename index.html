@@ -945,24 +945,31 @@
             <!-- Central territory backdrop -->
             <polygon points="188,25 450,20 462,158 392,200 208,195 186,142"
               fill="#30d9a0" fill-opacity="0.10" stroke="#30d9a0" stroke-width="1.5" stroke-opacity="0.45"/>
-            <!-- Monday route (static in mockup) -->
-            <polyline points="222,65 268,48 310,72 344,58 376,82 348,118 312,142 282,162 258,148 228,172 262,188 308,178 344,198 375,175 405,148 440,132"
+            <!-- Monday route (static in mockup). A <polygon> rather than a
+                 <polyline> so the tour closes: the rep leaves the depot at 08:00
+                 and returns to it, which is what the optimiser actually produces
+                 and what the sidebar's "Store A1 (Depot)" first stop implies.
+                 Re-ordered into a single non-crossing circuit at the same time —
+                 the old zigzag left the rep stranded on the far side of the
+                 territory. -->
+            <polygon points="222,65 273,56 302,62 319,49 337,60 362,55 396,62 414,89 436,124 394,147 373,165 350,174 324,166 300,173 280,159 237,152"
               fill="none" stroke="#4d9ef8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
             <!-- Route stops -->
             <g fill="#4d9ef8">
-              <circle cx="222" cy="65" r="4"/>
-              <circle cx="268" cy="48" r="3.2"/><circle cx="310" cy="72" r="3.2"/>
-              <circle cx="344" cy="58" r="3.2"/><circle cx="376" cy="82" r="3.2"/>
-              <circle cx="348" cy="118" r="3.2"/><circle cx="312" cy="142" r="3.2"/>
-              <circle cx="282" cy="162" r="3.2"/><circle cx="258" cy="148" r="3.2"/>
-              <circle cx="228" cy="172" r="3.2"/><circle cx="262" cy="188" r="3.2"/>
-              <circle cx="308" cy="178" r="3.2"/><circle cx="344" cy="198" r="3.2"/>
-              <circle cx="375" cy="175" r="3.2"/><circle cx="405" cy="148" r="3.2"/>
-              <circle cx="440" cy="132" r="3.2"/>
+              <circle cx="222" cy="65" r="4"/><circle cx="273" cy="56" r="3.2"/>
+              <circle cx="302" cy="62" r="3.2"/><circle cx="319" cy="49" r="3.2"/>
+              <circle cx="337" cy="60" r="3.2"/><circle cx="362" cy="55" r="3.2"/>
+              <circle cx="396" cy="62" r="3.2"/><circle cx="414" cy="89" r="3.2"/>
+              <circle cx="436" cy="124" r="3.2"/><circle cx="394" cy="147" r="3.2"/>
+              <circle cx="373" cy="165" r="3.2"/><circle cx="350" cy="174" r="3.2"/>
+              <circle cx="324" cy="166" r="3.2"/><circle cx="300" cy="173" r="3.2"/>
+              <circle cx="280" cy="159" r="3.2"/><circle cx="237" cy="152" r="3.2"/>
             </g>
             <!-- Start ring -->
             <circle cx="222" cy="65" r="9" fill="none" stroke="#4d9ef8" stroke-width="1.5" stroke-opacity="0.5"/>
-            <text x="225" y="57" fill="#4d9ef8" font-size="6.5" font-family="monospace">Start 08:00</text>
+            <!-- Above the depot, not beside it: the first leg now runs east and
+                 would strike through a label sitting at the depot's shoulder. -->
+            <text x="202" y="47" fill="#4d9ef8" font-size="6.5" font-family="monospace">Start 08:00</text>
             <!-- Other stores (faded) -->
             <g fill="white" fill-opacity="0.12">
               <circle cx="200" cy="220" r="2.5"/><circle cx="232" cy="248" r="2.5"/>
@@ -1043,8 +1050,9 @@
             <!-- mini map -->
             <rect x="300" y="0" width="180" height="320" fill="#080c12"/>
             <polygon points="318,40 456,32 468,150 396,196 330,182 312,110" fill="#4d9ef8" fill-opacity="0.08" stroke="#4d9ef8" stroke-width="1.2" stroke-opacity="0.4"/>
-            <polyline points="340,70 378,56 420,80 400,120 356,140 388,168 430,150" fill="none" stroke="#30d9a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <g fill="#30d9a0"><circle cx="340" cy="70" r="4"/><circle cx="378" cy="56" r="3"/><circle cx="420" cy="80" r="3"/><circle cx="400" cy="120" r="3"/><circle cx="356" cy="140" r="3"/><circle cx="388" cy="168" r="3"/><circle cx="430" cy="150" r="3"/></g>
+            <!-- Closed tour: the day starts and ends at the same depot. -->
+            <polygon points="340,70 383,50 409,72 450,96 426,135 383,167 354,132" fill="none" stroke="#30d9a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#30d9a0"><circle cx="340" cy="70" r="4"/><circle cx="383" cy="50" r="3"/><circle cx="409" cy="72" r="3"/><circle cx="450" cy="96" r="3"/><circle cx="426" cy="135" r="3"/><circle cx="383" cy="167" r="3"/><circle cx="354" cy="132" r="3"/></g>
           </svg>
         </div>
       </div>
@@ -1104,8 +1112,9 @@
             <text x="232" y="253" fill="#46586e" font-size="10" text-anchor="end" font-family="system-ui">▸</text>
             <!-- mini map footer -->
             <rect x="16" y="272" width="228" height="112" rx="9" fill="#080c12" stroke="#242e40"/>
-            <polyline points="40,320 78,300 120,330 158,308 196,336 220,312" fill="none" stroke="#4d9ef8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <g fill="#4d9ef8"><circle cx="40" cy="320" r="4"/><circle cx="78" cy="300" r="3"/><circle cx="120" cy="330" r="3"/><circle cx="158" cy="308" r="3"/><circle cx="196" cy="336" r="3"/><circle cx="220" cy="312" r="3"/></g>
+            <!-- Closed tour: the rep's day comes back to where it began. -->
+            <polygon points="40,320 105,287 143,301 226,331 148,357 101,367" fill="none" stroke="#4d9ef8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#4d9ef8"><circle cx="40" cy="320" r="4"/><circle cx="105" cy="287" r="3"/><circle cx="143" cy="301" r="3"/><circle cx="226" cy="331" r="3"/><circle cx="148" cy="357" r="3"/><circle cx="101" cy="367" r="3"/></g>
           </svg>
         </div>
       </div>
