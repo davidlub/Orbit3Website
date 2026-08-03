@@ -161,6 +161,13 @@ nav.up { border-bottom-color:var(--border); box-shadow:0 1px 20px rgba(0,22,38,0
   pointer-events:none;
 }
 .hero-grid { display:grid; grid-template-columns:1fr 0.9fr; gap:60px; align-items:center; position:relative; z-index:1; }
+/* The product name on its own line above the proposition. Letter-spaced so it
+   reads as the wordmark rather than the first word of the sentence — the same
+   device the video title cards use. Left in navy: the eyebrow above and "run"
+   below are already blue, and a third blue element competes with both. */
+.hero-brand {
+  display:block; letter-spacing:0.07em; margin-bottom:0.06em;
+}
 .hero-em {
   font-style:italic;
   background:linear-gradient(115deg,var(--accent) 0%,var(--accent-br) 100%);
@@ -266,26 +273,15 @@ nav.up { border-bottom-color:var(--border); box-shadow:0 1px 20px rgba(0,22,38,0
 .ind-card h3 { font-size:0.94rem; margin-bottom:5px; }
 .ind-card p { font-size:0.82rem; line-height:1.58; }
 
-/* ── Testimonials ── */
-.testi-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:38px; }
-.testi { background:var(--card); border:1px solid var(--border); border-radius:var(--r-lg); padding:38px; box-shadow:var(--shadow-sm); }
-.testi-q { font-size:1rem; line-height:1.78; font-style:italic; font-family:var(--serif); color:var(--ink); margin-bottom:26px; position:relative; padding-left:24px; }
-.testi-q::before {
-  content:''; position:absolute; left:0; top:4px; bottom:4px; width:2px;
-  background:linear-gradient(to bottom, var(--accent) 0%, transparent 100%);
-  border-radius:2px;
-}
-.testi-who { display:flex; gap:13px; align-items:center; }
-.testi-av { width:42px; height:42px; border-radius:var(--r); background:var(--a-pale); border:1px solid rgba(0,128,199,0.2); color:var(--accent); font-family:var(--mono); font-size:0.72rem; font-weight:500; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.testi-nm { font-weight:600; font-size:0.89rem; color:var(--ink); }
-.testi-co { font-size:0.79rem; color:var(--text-3); margin-top:1px; }
 .stat-bar {
   background:var(--ink); color:#fff;
   border-radius:var(--r-lg); padding:50px;
   display:flex; align-items:center; justify-content:center; gap:64px; flex-wrap:wrap;
   box-shadow:var(--shadow-md);
 }
-.stat-val { font-family:var(--mono); font-size:3rem; font-weight:500; color:#ff8a52; line-height:1; font-variant-numeric:tabular-nums; letter-spacing:-0.02em; }
+/* Light blue, not the brand blue: this sits on the navy bar, where #0080c7 is
+   too close to the ground to read. The same choice the product shots make. */
+.stat-val { font-family:var(--mono); font-size:3rem; font-weight:500; color:var(--accent-br); line-height:1; font-variant-numeric:tabular-nums; letter-spacing:-0.02em; }
 .stat-lbl { font-size:0.82rem; color:rgba(255,255,255,0.6); margin-top:9px; }
 .stat-div { width:1px; height:58px; background:rgba(255,255,255,0.16); }
 
@@ -423,7 +419,6 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
      section used screenshots; every mockup is SVG now, so the exception is gone.) */
   .mockup { display:none; }
   .ind-grid { grid-template-columns:repeat(2,1fr); }
-  .testi-grid { grid-template-columns:1fr; }
   .road-grid { grid-template-columns:1fr; }
   .p-grid, .p-grid.two { grid-template-columns:1fr; max-width:400px; margin-left:auto; margin-right:auto; }
   .demo-wrap { grid-template-columns:1fr; }
