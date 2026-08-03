@@ -481,3 +481,14 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
 }
 .asst-chip::before { content:'“'; color:var(--text-3); }
 .asst-chip::after  { content:'”'; color:var(--text-3); }
+
+/* Netlify Forms honeypot — must exist in the DOM but never be seen or focusable. */
+.hidden-field { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* Submission failure. Deliberately not styled as a toast: it has to stay on
+   screen next to the form the visitor is about to retry. */
+.form-err {
+  margin-top:14px; padding:12px 14px; border-radius:var(--r);
+  background:#fdecea; border:1px solid #f5c2bd; color:#8c2f26; font-size:0.88rem;
+}
+.form-err a { color:#8c2f26; font-weight:600; text-decoration:underline; }

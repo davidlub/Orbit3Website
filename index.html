@@ -1513,12 +1513,20 @@
           <li>Free feasibility assessment for your store count and geography</li>
           <li>No software to install — we share our screen</li>
         </ul>
-        <p class="demo-note">Or email us directly at <a href="mailto:david.lubinsky@opsi.co.za">david.lubinsky@opsi.co.za</a></p>
+        <p class="demo-note">Or email us directly at <a href="mailto:info@opsi.co.za">info@opsi.co.za</a></p>
       </div>
       <div class="f d1">
         <div class="form-card">
           <h3>Book your free demo</h3>
-          <form id="dform" novalidate>
+          <!-- Netlify Forms: the platform parses this markup at deploy time and
+               captures every submission. `form-name` is required because we submit
+               by fetch rather than a native POST; bot-field is the honeypot. -->
+          <form id="dform" name="demo-request" method="POST"
+                data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="demo-request">
+            <p class="hidden-field" aria-hidden="true">
+              <label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <div class="fg-row">
               <div class="fg">
                 <label for="fn">Full name *</label>
@@ -1550,6 +1558,12 @@
             </div>
             <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Request My Demo →</button>
           </form>
+          <!-- Shown only when the POST fails, so a lost enquiry is never reported
+               as a success. Points at the address that always works. -->
+          <div class="form-err" id="form-err" style="display:none">
+            That didn't send — please try again, or email us at
+            <a href="mailto:info@opsi.co.za">info@opsi.co.za</a>.
+          </div>
           <div class="form-ok" id="form-ok">
             <div class="ok-ico">✅</div>
             <div class="ok-head">Request received!</div>
@@ -1603,7 +1617,7 @@
           <li><a href="#">Documentation</a></li>
           <li><a href="#">Video Tutorials</a></li>
           <li><a href="#">FAQs</a></li>
-          <li><a href="mailto:david.lubinsky@opsi.co.za">Email Support</a></li>
+          <li><a href="mailto:info@opsi.co.za">Email Support</a></li>
         </ul>
       </div>
     </div>
