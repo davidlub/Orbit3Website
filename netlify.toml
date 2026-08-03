@@ -1,0 +1,44 @@
+# Netlify configuration for the ORBIT marketing site.
+#
+# Kept in the repo rather than only in Netlify's UI so the deploy is reproducible
+# and reviewable. A static site with its files at the repo root: no build step,
+# nothing to install, publish the root as-is.
+
+[build]
+  publish = "."
+  command = ""
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true          # /billing serves billing.html
+
+# ── Caching ─────────────────────────────────────────────────────────────────
+# The videos and their posters are content-addressed by name and only change
+# when the videos are re-cut, so they can be cached hard. Netlify already sets
+# strong validators on everything else; HTML must revalidate so a copy edit is
+# live on the next visit rather than after a cache expiry.
+
+[[headers]]
+  for = "/videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ── Baseline security headers ───────────────────────────────────────────────
+# Static marketing site: no framing, no MIME sniffing, no referrer leakage to
+# third parties. No CSP here — the page loads Google Fonts and nothing else, and
+# a wrong CSP silently breaks type, which is worse than the header's absence.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"
