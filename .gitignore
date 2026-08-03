@@ -1,0 +1,14 @@
+# Local tooling
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Superseded: the SFA screenshots were replaced by inline SVG mockups, so the
+# raster versions are no longer referenced by the site.
+ScreenShots/
+
+# Video masters stay in the ORBIT code repo under Videos/out. Only the
+# web-encoded copies under videos/ belong here, and those ARE committed —
+# this repo is the deployable site.
+*.mkv
