@@ -245,6 +245,9 @@ nav.up { border-bottom-color:var(--border); box-shadow:0 1px 20px rgba(0,22,38,0
 .spot.flip > * { direction:ltr; }
 .spot-text h2 { margin-bottom:16px; }
 .spot-text > p { margin-bottom:28px; font-size:1.02rem; }
+/* A footnote under a checks list: smaller and quieter than the lead paragraph. */
+.spot-text > p.spot-note { margin:22px 0 0; font-size:0.82rem; color:var(--text-3); line-height:1.6; }
+.spot-text > p.spot-note b { color:var(--text-2); }
 .checks { list-style:none; display:flex; flex-direction:column; gap:11px; }
 /* The tick is absolutely positioned rather than a flex sibling. As a flex row, any
    inline <strong> in the text became its own flex item and broke the bullet into

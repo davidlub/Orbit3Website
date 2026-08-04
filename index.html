@@ -329,6 +329,7 @@
       <li><a href="#features">Features</a></li>
       <li><a href="#daily">Daily Planning</a></li>
       <li><a href="#sfa">Field Sales</a></li>
+      <li><a href="#evidence">Photos &amp; Surveys</a></li>
       <li><a href="#assistant">Assistant</a></li>
       <li><a href="billing.html">Pricing</a></li>
     </ul>
@@ -644,6 +645,7 @@
           <li>Multi-week tactical route optimisation</li>
           <li>Repeating &amp; Dynamic daily planning</li>
           <li>Offline rep app with GPS visit tracking</li>
+          <li>Visit photos with on-device review &amp; comments</li>
           <li>Flow-through updates from your master data</li>
         </ul>
       </div>
@@ -655,6 +657,7 @@
           <li>Everything in Territory &amp; Route Planning</li>
           <li>Product catalogue &amp; tiered price lists</li>
           <li>On-visit orders with VAT &amp; signature capture</li>
+          <li>In-store surveys &amp; audits, reported per rep and store type</li>
           <li>Live sales dashboard &amp; analytics</li>
           <li>Commit to batches &amp; hand off to your ERP</li>
         </ul>
@@ -1126,6 +1129,7 @@
           <li>See today's stops in order, with contact, address and tap-to-call phone</li>
           <li>One tap to Start and Finish each visit — dwell time captured automatically</li>
           <li>GPS recorded on every button press, flagging off-location visits</li>
+          <li>Photograph the shelf and answer your survey, right on the visit</li>
           <li>Fully offline: work all day with no coverage, syncs the moment you reconnect</li>
           <li>Turn-by-turn hand-off to the phone's maps app for navigation</li>
         </ul>
@@ -1511,6 +1515,94 @@
   </div>
 </section>
 
+<!-- ── EVIDENCE: PHOTOS & SURVEYS ── -->
+<section id="evidence" class="alt">
+  <div class="container">
+    <div class="spot">
+      <div class="f">
+        <div class="mockup" style="max-width:300px;margin:0 auto;">
+          <svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;background:#001626;border-radius:22px;" aria-label="Rep app mockup showing the survey and photo tiles on a visit">
+            <rect x="0" y="0" width="260" height="300" rx="22" fill="#001626" stroke="#242e40" stroke-width="1.5"/>
+            <rect x="98" y="10" width="64" height="8" rx="4" fill="#1a2230"/>
+            <!-- visit header -->
+            <circle cx="34" cy="42" r="9" fill="#12241c"/><text x="34" y="45" fill="#30d9a0" font-size="8" text-anchor="middle" font-family="system-ui">7</text>
+            <text x="52" y="40" fill="#d8e4f0" font-size="10" font-weight="600" font-family="system-ui">Spar Rosebank</text>
+            <text x="52" y="52" fill="#46586e" font-size="7.5" font-family="system-ui">09:12–09:31 · 19 min</text>
+            <rect x="196" y="32" width="38" height="15" rx="7.5" fill="rgba(76,175,125,0.2)"/>
+            <text x="215" y="43" fill="#30d9a0" font-size="7.5" text-anchor="middle" font-family="system-ui">Done</text>
+
+            <!-- tile: store details (folded) -->
+            <rect x="16" y="66" width="228" height="30" rx="8" fill="#101722" stroke="#242e40"/>
+            <text x="30" y="85" fill="#7a90aa" font-size="10" font-family="system-ui">🏬</text>
+            <text x="50" y="85" fill="#d8e4f0" font-size="9" font-weight="600" font-family="system-ui">Store details</text>
+            <path d="M231 78 l5 3.5 -5 3.5" fill="none" stroke="#46586e" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- tile: order -->
+            <rect x="16" y="102" width="228" height="38" rx="8" fill="#101722" stroke="#242e40"/>
+            <text x="30" y="125" fill="#7a90aa" font-size="10" font-family="system-ui">🛒</text>
+            <text x="50" y="120" fill="#d8e4f0" font-size="9" font-weight="600" font-family="system-ui">Order</text>
+            <text x="50" y="131" fill="#30d9a0" font-size="7" font-family="system-ui">2 items · ✓ Submitted</text>
+            <text x="234" y="124" fill="#d8e4f0" font-size="9" font-weight="700" text-anchor="end" font-family="system-ui">R997.69</text>
+
+            <!-- tile: survey -->
+            <rect x="16" y="146" width="228" height="38" rx="8" fill="#101722" stroke="#242e40"/>
+            <text x="30" y="169" fill="#7a90aa" font-size="10" font-family="system-ui">📋</text>
+            <text x="50" y="164" fill="#d8e4f0" font-size="9" font-weight="600" font-family="system-ui">Shelf audit</text>
+            <text x="50" y="175" fill="#30d9a0" font-size="7" font-family="system-ui">✓ Sent · 6 questions</text>
+            <path d="M231 161 l5 3.5 -5 3.5" fill="none" stroke="#46586e" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- tile: photos, with strip -->
+            <rect x="16" y="190" width="228" height="94" rx="8" fill="#101722" stroke="rgba(255,255,255,0.16)"/>
+            <text x="30" y="212" fill="#7a90aa" font-size="10" font-family="system-ui">📷</text>
+            <text x="50" y="208" fill="#d8e4f0" font-size="9" font-weight="600" font-family="system-ui">Add photo</text>
+            <text x="50" y="219" fill="#f0b429" font-size="7" font-family="system-ui">⏳ 1 waiting to send</text>
+            <text x="176" y="212" fill="#46586e" font-size="7.5" text-anchor="end" font-family="system-ui">3 of 4</text>
+            <line x1="186" y1="196" x2="186" y2="226" stroke="#242e40" stroke-width="1"/>
+            <text x="215" y="212" fill="#4d9ef8" font-size="8" font-weight="600" text-anchor="middle" font-family="system-ui">Review</text>
+            <!-- three shelf thumbnails: stylised gondola bays -->
+            <g>
+              <rect x="50" y="232" width="42" height="42" rx="6" fill="#0b1119" stroke="#2a3242"/>
+              <rect x="55" y="240" width="9" height="27" rx="1.5" fill="#2d4a63"/>
+              <rect x="66" y="244" width="9" height="23" rx="1.5" fill="#3d6483"/>
+              <rect x="77" y="238" width="9" height="29" rx="1.5" fill="#2d4a63"/>
+            </g>
+            <g>
+              <rect x="98" y="232" width="42" height="42" rx="6" fill="#0b1119" stroke="#2a3242"/>
+              <rect x="103" y="246" width="9" height="21" rx="1.5" fill="#3d6483"/>
+              <rect x="114" y="240" width="9" height="27" rx="1.5" fill="#2d4a63"/>
+              <rect x="125" y="252" width="9" height="15" rx="1.5" fill="#54408a"/>
+            </g>
+            <g>
+              <rect x="146" y="232" width="42" height="42" rx="6" fill="#0b1119" stroke="#e0a800"/>
+              <rect x="151" y="242" width="9" height="25" rx="1.5" fill="#2d4a63"/>
+              <rect x="162" y="248" width="9" height="19" rx="1.5" fill="#3d6483"/>
+              <rect x="173" y="238" width="9" height="29" rx="1.5" fill="#2d4a63"/>
+              <circle cx="184" cy="270" r="7" fill="#0b1119"/>
+              <text x="184" y="273" fill="#f0b429" font-size="8" text-anchor="middle" font-family="system-ui">⏳</text>
+            </g>
+
+          </svg>
+        </div>
+      </div>
+      <div class="spot-text f d1">
+        <span class="pill">Photos &amp; Surveys</span>
+        <h2>See what your rep saw.</h2>
+        <p>A visit that comes back as "done" tells you nothing about the shelf. Reps photograph what they find and answer the questions you set — offline, in the store, without a second app.</p>
+        <ul class="checks">
+          <li><b>Photos of the shelf, the display, the problem</b> — captured offline, with GPS and a timestamp</li>
+          <li><b>Reviewed before they send</b> — the rep views, comments on or deletes each photo on the phone first</li>
+          <li><b>A cap you control</b> — per division, or per store type, so a key account can warrant more evidence than a kiosk</li>
+          <li><b>Surveys built by you</b> — tick boxes, pick-lists, a 1–5 scale, counts and free text, targeted per store type</li>
+          <li><b>Answers that can't be fudged</b> — a required survey blocks finishing the visit, enforced on the server, not just in the app</li>
+          <li><b>Reported the moment it lands</b> — one row per response, one column per question, and a dashboard by rep, store type and date</li>
+          <li><b>Attach photos to the order PDF</b> — on your download, never on the copy the customer receives</li>
+        </ul>
+        <p class="spot-note">Photos are included in both modes. Surveys are part of <b>Field Sales</b>, because they are targeted by store type.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── FLOW-THROUGH UPDATES ── -->
 <section id="updates">
   <div class="container">
@@ -1728,6 +1820,14 @@
         </div>
       </div>
       <div class="road-card f">
+        <div class="road-ic ic-green"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"/></svg></div>
+        <div>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">In-store surveys</div>
+          <p class="road-p">Build a questionnaire per store type — tick boxes, pick-lists, a 1–5 scale, counts and free text. Reps answer it offline on the visit; the office gets a results table and a dashboard by rep, store type and date.</p>
+        </div>
+      </div>
+      <div class="road-card f d1">
         <div class="road-ic ic-blue"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-api"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
