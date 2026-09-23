@@ -1,0 +1,3 @@
+# PDFs contain no NUL bytes, so git guesses they are text and would rewrite
+# their line endings. Never convert them.
+*.pdf binary

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ORBIT — Territory Planning, Routes &amp; Field Sales</title>
-  <meta name="description" content="ORBIT builds geographically balanced sales territories and daily routes, puts each rep's day on their phone, and — in Field Sales mode — turns every visit into an order with catalogue, tiered pricing, signatures and a live dashboard. Includes an AI assistant that answers questions about your own data.">
+  <meta name="description" content="ORBIT builds geographically balanced sales territories and daily routes, puts each rep's day on their phone, and — in Field Sales mode — turns every visit into an order with catalogue, tiered pricing, stock availability, signatures and a live dashboard. Reps work a list of prospects on the same round and convert leads in the field. Includes an AI assistant that answers questions about your own data.">
   <meta property="og:title" content="ORBIT — Territory Planning, Routes &amp; Field Sales">
   <meta property="og:description" content="Balanced territories, routes your reps can actually drive, and orders taken where the sale happens. Watch the 90-second tour.">
   <meta property="og:type" content="website">
@@ -301,6 +301,32 @@
       <path d="m17.6 15 .9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9z"/>
     </symbol>
 
+    <!-- Prospects: a pin that is not yet a store. The plus is the call
+         nobody has made yet. -->
+    <symbol id="i-prospect" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21.3c4.1-4.6 6.2-7.9 6.2-10.5a6.2 6.2 0 1 0-12.4 0c0 2.6 2.1 5.9 6.2 10.5Z"/>
+      <path d="M12 8.1v5.2"/>
+      <path d="M9.4 10.7h5.2"/>
+    </symbol>
+
+    <!-- Stock availability: cases on hand, mirrored from the supplying system. -->
+    <symbol id="i-stock" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="8" y="2.9" width="8" height="7.4" rx="1.4"/>
+      <rect x="2.7" y="13.4" width="8" height="7.4" rx="1.4"/>
+      <rect x="13.3" y="13.4" width="8" height="7.4" rx="1.4"/>
+    </symbol>
+
+    <!-- Re-optimising mid-round: the same stops, re-ordered from where the rep
+         is now. The arc is the re-run; the line inside is the new route. -->
+    <symbol id="i-reoptimise" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.4 12a8.4 8.4 0 1 1-2.5-6"/>
+      <path d="M20.8 3.9v4.5h-4.5"/>
+      <path d="m7.9 15.1 3-4.6 2.4 2.9 2.2-2.5"/>
+    </symbol>
+
     <!-- Confirmation. -->
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
@@ -347,7 +373,7 @@
       <div class="hero-content">
         <div><span class="pill">Territory Planning · Routes · Field Sales</span></div>
         <h1><span class="hero-brand">ORBIT</span>Plan the routes. Then <span class="hero-em">run</span> the sales day.</h1>
-        <p class="hero-lead">Upload your store network and ORBIT builds balanced territories, schedules every visit — repeating or dynamic — and puts each route on the rep's phone. Switch on <strong>Field Sales</strong> and that same route takes orders: your catalogue, tiered pricing, signatures and a live sales dashboard. Ask the built-in <strong>assistant</strong> anything about your own data.</p>
+        <p class="hero-lead">Upload your store network and ORBIT builds balanced territories, schedules every visit — repeating or dynamic — and puts each route on the rep's phone. Switch on <strong>Field Sales</strong> and that same route takes orders: your catalogue, tiered pricing, live stock, signatures and a live sales dashboard. Reps work your <strong>prospect list</strong> on the same round and take a lead on as a customer where they stand. Ask the built-in <strong>assistant</strong> anything about your own data.</p>
         <div class="hero-ctas">
           <a href="#demo" class="btn btn-primary btn-lg">Request a Demo</a>
           <a href="#videos" class="btn btn-ghost btn-lg">▶ Watch the 90-second tour</a>
@@ -583,7 +609,7 @@
           Your browser can't play this video.
         </video>
       </div>
-      <p class="vid-cap"><strong>Meet ORBIT</strong> — the whole platform in 1:18.</p>
+      <p class="vid-cap"><strong>Meet ORBIT</strong> — the whole platform in 1:30.</p>
     </div>
 
     <div class="vid-grid">
@@ -658,6 +684,8 @@
           <li>Product catalogue &amp; tiered price lists</li>
           <li>On-visit orders with VAT &amp; signature capture</li>
           <li>In-store surveys &amp; audits, reported per rep and store type</li>
+          <li>Stock availability mirrored from your ERP</li>
+          <li>Prospecting: lead lists, field capture &amp; conversion to a customer</li>
           <li>Live sales dashboard &amp; analytics</li>
           <li>Commit to batches &amp; hand off to your ERP</li>
         </ul>
@@ -772,6 +800,20 @@
         <div>
           <h3>Master data &amp; regions</h3>
           <p>One organisation-wide source of truth for stores and reps, partitioned into regions. Edit inline, bulk-upload, and build every scenario from the same clean data.</p>
+        </div>
+      </div>
+      <div class="feat-item f">
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-prospect"/></svg></div>
+        <div>
+          <h3>Prospects &amp; new business</h3>
+          <p>Keep a list of shops you don't sell to yet. Reps see the ones nearest their route, call on them, and can take a lead on as a customer in the field — while the office watches coverage per rep.</p>
+        </div>
+      </div>
+      <div class="feat-item f d1">
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-reoptimise"/></svg></div>
+        <div>
+          <h3>Re-optimise mid-round</h3>
+          <p>A day rarely runs to plan. From the rep's current position, ORBIT re-sequences everything still outstanding for the shortest drive home and rewrites the ETAs — in the same records the office is watching.</p>
         </div>
       </div>
       <div class="feat-item f">
@@ -1131,8 +1173,11 @@
           <li>GPS recorded on every button press, flagging off-location visits</li>
           <li>Photograph the shelf and answer your survey, right on the visit</li>
           <li>Fully offline: work all day with no coverage, syncs the moment you reconnect</li>
-          <li>Turn-by-turn hand-off to the phone's maps app for navigation</li>
+          <li>Tap a stop&rsquo;s address and the phone&rsquo;s own maps app takes it from there — the pin, not the spreadsheet&rsquo;s address text, wherever there is one</li>
+          <li><b>Re-optimise the rest of the day</b> — one tap re-orders every stop still outstanding for the shortest drive from where the rep is standing, back to their home, and rewrites each ETA. Rep-added stops and prospect calls are re-ordered with the rest</li>
+          <li><b>Whole day, or rest of day</b> — one switch on the list and the same one on the map: the record of where they have been, or the plan from here with the run home</li>
         </ul>
+        <p class="spot-note">Re-optimising runs on the server, not the phone: the new order is written to the same visits the office is looking at, so the two can never disagree about the route.</p>
       </div>
     </div>
   </div>
@@ -1349,19 +1394,24 @@
       <div class="spot-text f d1">
         <span class="pill">Catalogue &amp; Pricing</span>
         <h2>Your catalogue and price lists, centrally managed.</h2>
-        <p>Load your products once and set a price per customer tier. Reps always sell at the right price, VAT is handled for you, and a central change reaches every phone instantly.</p>
+        <p>Load your products once and set a price per customer tier. Reps always sell at the right price, they can see what is actually in the warehouse, VAT is handled for you, and a central change reaches every phone instantly.</p>
         <ul class="checks">
           <li>Full product catalogue — units, categories and barcodes</li>
           <li>Customer types (pricing tiers): wholesale, retail, key account…</li>
           <li>A price &amp; cost per product, per tier — bulk-uploaded from Excel</li>
           <li>Per-product VAT flags for correct, auditable tax</li>
           <li>Change a price centrally and every rep is up to date at once</li>
+          <li><b>Stock the rep can trust</b> — <em>In stock</em>, <em>Low</em> or <em>Out of stock</em> beside every line, mirrored from your ERP on an hourly feed, with the time it was read shown above the picker</li>
+          <li><b>A signal, not a number</b> — a figure read at 06:00 and quoted at 15:00 is a promise to a shopkeeper you can&rsquo;t keep, so the rep sees the status and the office keeps the quantity</li>
+          <li><b>Out of stock still takes the order</b> — dimmed and with a warning, because a forward order is usually right and the feed sometimes isn&rsquo;t</li>
+          <li><b>A low-stock band per SKU</b>, falling back to your division&rsquo;s — so a slow-moving line and a fast one don&rsquo;t share one threshold</li>
         </ul>
+        <p class="spot-note">No stock feed? The badges simply don&rsquo;t appear. ORBIT <b>mirrors</b> your supplying system and never claims to own the stock &mdash; nothing here reserves or decrements.</p>
       </div>
     </div>
 
     <!-- Sales dashboard -->
-    <div class="spot">
+    <div class="spot" style="margin-bottom:100px">
       <div class="spot-text f">
         <span class="pill">Live Sales Dashboard</span>
         <h2>See the sales day as it happens.</h2>
@@ -1501,13 +1551,17 @@
       </div>
       <div class="feat-item f d1">
         <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-invoice-mail"/></svg></div>
-        <div><h3>Emailed PDF invoices</h3><p>Each committed order can be rendered to a branded PDF and emailed to the store automatically — or downloaded on demand, even without an address on file.</p></div>
+        <div><h3>Emailed PDF invoices</h3><p>Each committed order can be rendered to a branded PDF and emailed to the store automatically — or downloaded on demand, even without an address on file. <a href="#samples">See a real one &rarr;</a></p></div>
       </div>
       <div class="feat-item f">
+        <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-stock"/></svg></div>
+        <div><h3>Stock availability</h3><p>In stock, Low or Out of stock against every line, mirrored hourly from your ERP or set by hand where there is no feed. Reps stop promising what the warehouse hasn&rsquo;t got.</p></div>
+      </div>
+      <div class="feat-item f d1">
         <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-api"/></svg></div>
         <div><h3>Open API</h3><p>List and ingest orders, products, prices and visits over a clean REST API — feed ORBIT from your ERP, or push its data into your BI and dispatch systems.</p></div>
       </div>
-      <div class="feat-item f d1">
+      <div class="feat-item f">
         <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-offline"/></svg></div>
         <div><h3>Offline-first capture</h3><p>The same installable rep app takes orders with no signal all day and syncs the moment it reconnects — no lost sales in low-coverage territory.</p></div>
       </div>
@@ -1515,8 +1569,216 @@
   </div>
 </section>
 
+<!-- ── PROSPECTING ── -->
+<section id="prospects" class="alt">
+  <div class="container">
+    <div class="sh f">
+      <span class="pill">New · Prospecting</span>
+      <h2>Service the network &mdash; and grow it on the same round.</h2>
+      <p>A planned day only covers the shops you already sell to. Load your leads, or let reps add the ones they walk past, and ORBIT works them into the route they are already driving &mdash; then shows the office which leads have been called on and which haven&rsquo;t.</p>
+    </div>
+
+    <!-- Two spots: what the rep sees standing in the street, then what the
+         office sees. -->
+    <div class="spot" style="margin-bottom:100px">
+      <div class="f">
+        <div class="mockup" style="max-width:300px;margin:0 auto;">
+          <svg viewBox="0 0 260 400" xmlns="http://www.w3.org/2000/svg"
+               style="display:block;width:100%;background:#001626;border-radius:22px;"
+               aria-label="Rep app prospects sheet: unvisited leads nearest first, each showing how far it is from the rep and how far off today's route, and the amber Prospect stop that results from tapping one">
+            <rect x="0" y="0" width="260" height="400" rx="22" fill="#001626" stroke="#242e40" stroke-width="1.5"/>
+            <rect x="98" y="10" width="64" height="8" rx="4" fill="#1a2230"/>
+
+            <!-- sheet header: the two counters a rep actually acts on -->
+            <text x="20" y="46" fill="#d8e4f0" font-size="13" font-weight="700" font-family="system-ui">Prospects</text>
+            <rect x="188" y="34" width="52" height="17" rx="8.5" fill="#f0b429"/>
+            <text x="214" y="46" fill="#2a1c00" font-size="8.5" font-weight="700" text-anchor="middle" font-family="system-ui">+ Add</text>
+            <text x="20" y="64" fill="#7a90aa" font-size="8" font-family="system-ui">68 unvisited in your patch · 19 called in 30 days</text>
+
+            <!-- category pills, straight off the customer's own spreadsheet -->
+            <g font-family="system-ui" font-size="7.5">
+              <rect x="16" y="74" width="30" height="16" rx="8" fill="#2a2412" stroke="#5c4a12"/>
+              <text x="31" y="85" fill="#f0b429" text-anchor="middle">All</text>
+              <rect x="50" y="74" width="54" height="16" rx="8" fill="#101722" stroke="#242e40"/>
+              <text x="77" y="85" fill="#7a90aa" text-anchor="middle">Pharmacy</text>
+              <rect x="108" y="74" width="42" height="16" rx="8" fill="#101722" stroke="#242e40"/>
+              <text x="129" y="85" fill="#7a90aa" text-anchor="middle">Spaza</text>
+              <rect x="154" y="74" width="56" height="16" rx="8" fill="#101722" stroke="#242e40"/>
+              <text x="182" y="85" fill="#7a90aa" text-anchor="middle">Forecourt</text>
+              <rect x="214" y="74" width="26" height="16" rx="8" fill="#101722" stroke="#242e40"/>
+              <text x="227" y="85" fill="#7a90aa" text-anchor="middle">Café</text>
+            </g>
+
+            <!-- Sorted nearest-first, which is why the highlighted lead sits
+                 second: it is further from the rep than row 1 and still the one
+                 worth taking, because it is almost on the route already. That
+                 contradiction is the whole point of the screen. -->
+            <rect x="16" y="98" width="228" height="48" rx="9" fill="#101722" stroke="#242e40"/>
+            <text x="28" y="116" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">Medirite Auckland Park</text>
+            <rect x="176" y="105" width="60" height="14" rx="7" fill="#0f1620" stroke="#2a3242"/>
+            <text x="206" y="115" fill="#7a90aa" font-size="7" text-anchor="middle" font-family="system-ui">Pharmacy</text>
+            <text x="28" y="131" fill="#7a90aa" font-size="7.5" font-family="system-ui">1.8 km from you</text>
+            <text x="28" y="141" fill="#8f9fb2" font-size="7.5" font-family="system-ui">↳ 2.4 km off your route</text>
+
+            <rect x="16" y="152" width="228" height="56" rx="9" fill="#151208" stroke="#e0a800"/>
+            <text x="28" y="170" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">Kwikspar Melville</text>
+            <rect x="176" y="159" width="60" height="14" rx="7" fill="#101722" stroke="#2a3242"/>
+            <text x="206" y="169" fill="#8fb8fb" font-size="7" text-anchor="middle" font-family="system-ui">Forecourt</text>
+            <text x="28" y="185" fill="#7a90aa" font-size="7.5" font-family="system-ui">4.1 km from you</text>
+            <text x="28" y="200" fill="#30d9a0" font-size="7.5" font-weight="700" font-family="system-ui">↳ 300 m off your next stop</text>
+            <rect x="180" y="187" width="56" height="16" rx="8" fill="#f0b429"/>
+            <text x="208" y="198" fill="#2a1c00" font-size="7.5" font-weight="700" text-anchor="middle" font-family="system-ui">+ today</text>
+
+            <rect x="16" y="214" width="228" height="48" rx="9" fill="#101722" stroke="#242e40"/>
+            <text x="28" y="232" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">Shell Empire Road</text>
+            <rect x="176" y="221" width="60" height="14" rx="7" fill="#0f1620" stroke="#2a3242"/>
+            <text x="206" y="231" fill="#7a90aa" font-size="7" text-anchor="middle" font-family="system-ui">Forecourt</text>
+            <text x="28" y="247" fill="#7a90aa" font-size="7.5" font-family="system-ui">6.9 km from you</text>
+            <text x="28" y="257" fill="#8f9fb2" font-size="7.5" font-family="system-ui">↳ 5.1 km off your route</text>
+
+            <!-- …and what a tap produces: an amber stop, with no order tile. -->
+            <text x="20" y="282" fill="#46586e" font-size="6.5" font-weight="700" font-family="monospace">DROPPED INTO TODAY&#39;S ROUND</text>
+            <rect x="16" y="288" width="228" height="90" rx="9" fill="#101722" stroke="#e0a800"/>
+            <circle cx="34" cy="308" r="9" fill="#2a2012"/>
+            <text x="34" y="311" fill="#f0b429" font-size="8" text-anchor="middle" font-family="system-ui">6</text>
+            <text x="52" y="305" fill="#d8e4f0" font-size="9.5" font-weight="600" font-family="system-ui">Kwikspar Melville</text>
+            <rect x="188" y="299" width="48" height="15" rx="7.5" fill="rgba(240,180,41,0.18)"/>
+            <text x="212" y="310" fill="#f0b429" font-size="7.5" text-anchor="middle" font-family="system-ui">Prospect</text>
+            <text x="52" y="317" fill="#7a90aa" font-size="7" font-family="system-ui">inserted after stop 5 · 14:20</text>
+            <rect x="28" y="326" width="102" height="17" rx="6" fill="#0f1620" stroke="#242e40"/>
+            <text x="40" y="338" fill="#9fb0c4" font-size="7.5" font-family="system-ui">📋 Prospect survey</text>
+            <rect x="136" y="326" width="66" height="17" rx="6" fill="#0f1620" stroke="#242e40"/>
+            <text x="148" y="338" fill="#9fb0c4" font-size="7.5" font-family="system-ui">📷 Photos</text>
+            <rect x="28" y="349" width="174" height="17" rx="6" fill="rgba(48,217,160,0.12)" stroke="rgba(48,217,160,0.38)"/>
+            <text x="40" y="361" fill="#4dc79b" font-size="7.5" font-weight="600" font-family="system-ui">🤝 Take on as a customer</text>
+          </svg>
+        </div>
+      </div>
+      <div class="spot-text f d1">
+        <span class="pill">In the Rep&rsquo;s Hand</span>
+        <h2>The nearest lead is rarely the cheapest call.</h2>
+        <p>Standing in the street the rep gets every unvisited lead in their patch, nearest first &mdash; and against each one, how far it would pull them off the route they are already driving.</p>
+        <ul class="checks">
+          <li><b>Two distances, not one</b> &mdash; how far the lead is from the rep now, <em>and</em> how far off the nearest stop on today&rsquo;s route. A shop 4 km away but 300 m off the next stop is nearly free, and nothing else on the screen says so</li>
+          <li><b>Tap it and it&rsquo;s on the round</b> &mdash; the stop drops in after the last completed one, with its own ETA, badged <b>Prospect</b> so it never reads as a store visit</li>
+          <li><b>Filtered by channel</b> &mdash; pharmacy, spaza, forecourt: your own categories, straight off the spreadsheet, with nothing to configure</li>
+          <li><b>A lead they just walked past</b> &mdash; reps capture new prospects on the spot. Their GPS is the location, and categories are offered rather than typed, so one channel doesn&rsquo;t become three spellings</li>
+          <li><b>Duplicates refused at the door</b> &mdash; anything within 120 m is shown back to the rep first, existing <em>stores</em> included, so a shop you already sell to can&rsquo;t sit in the figures as an uncalled opportunity</li>
+          <li><b>A real visit record</b> &mdash; the prospect survey, photos, GPS and times, exactly as a store visit. No order tile, because a lead has no price list &mdash; refused on the server too, not just hidden in the app</li>
+          <li><b>Take on as a customer</b> &mdash; convert the lead where the rep is standing and take the first order on the same visit. The office fills in the ERP account number afterwards</li>
+        </ul>
+        <p class="spot-note">Prospecting is part of <b>Field Sales</b> &mdash; it is order-taking work, so a planning-only division never sees it.</p>
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="spot-text f">
+        <span class="pill">Prospect Coverage</span>
+        <h2>Which leads have been called on &mdash; and which haven&rsquo;t.</h2>
+        <p>A name, a pin and a note about why it&rsquo;s worth a call is enough to upload. ORBIT works out which rep each lead belongs to, and turns the list into a coverage picture you can hold someone to.</p>
+        <ul class="checks">
+          <li><b>No allocation step</b> &mdash; a lead belongs to whichever rep owns the nearest store in the live plan. Nothing to assign, and every lead reaches exactly one rep &mdash; which is what makes &ldquo;outstanding by rep&rdquo; add up</li>
+          <li><b>Called versus outstanding, per rep</b>, filterable by any combination of channels, with an Excel export of every prospect call behind it</li>
+          <li><b>Partial uploads are safe</b> &mdash; a sheet of corrected coordinates updates coordinates and leaves your categories, notes and phone numbers alone</li>
+          <li><b>The field&rsquo;s record can&rsquo;t be overwritten</b> &mdash; who called and when is stamped by ORBIT and is not an import column, so re-uploading the source list can never un-visit a lead</li>
+          <li><b>On the tactical map</b> &mdash; switch the lead layer on over your routes and the white space in a territory is simply visible</li>
+          <li><b>Conversions stay traceable</b> &mdash; the call that won the customer is kept, survey and all, and the new store is flagged <b>from prospect</b> until the office has completed its details</li>
+        </ul>
+      </div>
+      <div class="f d1">
+        <div class="mockup">
+          <div class="chrome"><span class="cd cr"></span><span class="cd cy"></span><span class="cd cg"></span>
+            <span class="ct">ORBIT &mdash; <span>Prospect Visits</span></span></div>
+          <svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg"
+               style="display:block;width:100%;background:#001626;"
+               aria-label="ORBIT prospect coverage dashboard: leads on the list, calls made and leads still outstanding, broken down per rep with an unassigned row">
+            <!-- channel multi-select and the Excel export -->
+            <text x="20" y="24" fill="#d8e4f0" font-size="11" font-weight="700" font-family="system-ui">Prospect coverage</text>
+            <g font-family="system-ui" font-size="7">
+              <rect x="288" y="14" width="58" height="14" rx="4" fill="#16202e" stroke="#26364a"/>
+              <text x="317" y="24" fill="#8fb8fb" text-anchor="middle">Pharmacy ×</text>
+              <rect x="350" y="14" width="46" height="14" rx="4" fill="#16202e" stroke="#26364a"/>
+              <text x="373" y="24" fill="#8fb8fb" text-anchor="middle">Spaza ×</text>
+              <rect x="400" y="14" width="60" height="14" rx="4" fill="#1d4ed8" fill-opacity="0.9"/>
+              <text x="430" y="24" fill="#eaf1fb" text-anchor="middle">⭳ Excel</text>
+            </g>
+
+            <!-- the three numbers -->
+            <g font-family="system-ui">
+              <rect x="20" y="36" width="140" height="32" rx="5" fill="#0f1620" stroke="#1b2634"/>
+              <text x="30" y="54" fill="#e7eef7" font-size="12" font-weight="700">512</text>
+              <text x="30" y="63" fill="#46586e" font-size="6" font-family="monospace">LEADS ON THE LIST</text>
+              <rect x="170" y="36" width="140" height="32" rx="5" fill="#0f1620" stroke="#1b2634"/>
+              <text x="180" y="54" fill="#4dc79b" font-size="12" font-weight="700">138</text>
+              <text x="180" y="63" fill="#46586e" font-size="6" font-family="monospace">CALLED ON</text>
+              <rect x="320" y="36" width="140" height="32" rx="5" fill="#0f1620" stroke="#1b2634"/>
+              <text x="330" y="54" fill="#f0b429" font-size="12" font-weight="700">374</text>
+              <text x="330" y="63" fill="#46586e" font-size="6" font-family="monospace">STILL OUTSTANDING</text>
+            </g>
+
+            <!-- Per-rep bars. The amber run is the rep's whole lead load and the
+                 green overlay the calls made, so a bar reads as progress rather
+                 than as two unrelated quantities side by side. -->
+            <text x="20" y="90" fill="#46586e" font-size="7" font-weight="700" font-family="monospace">CALLED VS OUTSTANDING, BY REP</text>
+            <g font-family="system-ui" font-size="8.5">
+              <text x="20" y="107" fill="#9fb0c4">Thabo Mokoena</text>
+              <rect x="118" y="98" width="320" height="11" rx="4" fill="#1b2634"/>
+              <rect x="118" y="98" width="314" height="11" rx="4" fill="#d9a324"/>
+              <rect x="118" y="98" width="120" height="11" rx="4" fill="#2f9e6b"/>
+              <text x="444" y="107" fill="#6f7f92" font-size="7.5" font-family="monospace">42/110</text>
+
+              <text x="20" y="131" fill="#9fb0c4">Naledi Khumalo</text>
+              <rect x="118" y="122" width="320" height="11" rx="4" fill="#1b2634"/>
+              <rect x="118" y="122" width="263" height="11" rx="4" fill="#d9a324"/>
+              <rect x="118" y="122" width="109" height="11" rx="4" fill="#2f9e6b"/>
+              <text x="444" y="131" fill="#6f7f92" font-size="7.5" font-family="monospace">38/92</text>
+
+              <text x="20" y="155" fill="#9fb0c4">Sipho Dlamini</text>
+              <rect x="118" y="146" width="320" height="11" rx="4" fill="#1b2634"/>
+              <rect x="118" y="146" width="315" height="11" rx="4" fill="#d9a324"/>
+              <rect x="118" y="146" width="89" height="11" rx="4" fill="#2f9e6b"/>
+              <text x="444" y="155" fill="#6f7f92" font-size="7.5" font-family="monospace">31/110</text>
+
+              <text x="20" y="179" fill="#9fb0c4">Anele Botha</text>
+              <rect x="118" y="170" width="320" height="11" rx="4" fill="#1b2634"/>
+              <rect x="118" y="170" width="251" height="11" rx="4" fill="#d9a324"/>
+              <rect x="118" y="170" width="77" height="11" rx="4" fill="#2f9e6b"/>
+              <text x="444" y="179" fill="#6f7f92" font-size="7.5" font-family="monospace">27/88</text>
+
+              <!-- Surfaced rather than hidden: a lead reaches a rep only once
+                   that rep's plan is live. -->
+              <text x="20" y="203" fill="#5d6b7e">Unassigned</text>
+              <text x="20" y="213" fill="#3f4d5e" font-size="6" font-family="monospace">NO LIVE PLAN YET</text>
+              <rect x="118" y="194" width="320" height="11" rx="4" fill="#1b2634"/>
+              <rect x="118" y="194" width="320" height="11" rx="4" fill="#4a4335"/>
+              <text x="444" y="203" fill="#6f7f92" font-size="7.5" font-family="monospace">0/112</text>
+            </g>
+
+            <g font-family="system-ui" font-size="7">
+              <rect x="20" y="226" width="7" height="7" rx="2" fill="#2f9e6b"/>
+              <text x="32" y="233" fill="#9fb0c4">Called on</text>
+              <rect x="98" y="226" width="7" height="7" rx="2" fill="#d9a324"/>
+              <text x="110" y="233" fill="#9fb0c4">Outstanding</text>
+            </g>
+
+            <rect x="20" y="246" width="440" height="26" rx="6"
+                  fill="rgba(240,180,41,0.07)" stroke="rgba(240,180,41,0.26)"/>
+            <text x="32" y="263" fill="#d3a43a" font-size="8" font-family="system-ui">
+              Every lead is owned by the rep whose nearest store it sits by — so the totals add up
+            </text>
+
+            <line x1="20" y1="286" x2="460" y2="286" stroke="#1b2634"/>
+            <text x="20" y="302" fill="#5d6b7e" font-size="8" font-family="system-ui">Prospect visits · 1–31 Aug · 138 calls, each with its survey, photos and GPS</text>
+            <text x="20" y="317" fill="#46586e" font-size="7.5" font-family="monospace">↳ 6 leads taken on as customers this month</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── EVIDENCE: PHOTOS & SURVEYS ── -->
-<section id="evidence" class="alt">
+<section id="evidence">
   <div class="container">
     <div class="spot">
       <div class="f">
@@ -1596,15 +1858,221 @@
           <li><b>Answers that can't be fudged</b> — a required survey blocks finishing the visit, enforced on the server, not just in the app</li>
           <li><b>Reported the moment it lands</b> — one row per response, one column per question, and a dashboard by rep, store type and date</li>
           <li><b>Attach photos to the order PDF</b> — on your download, never on the copy the customer receives</li>
+          <li><b>One record per visit</b> — the photos, the survey, the order, the GPS and the times all on a single visit row, so &ldquo;what happened at this store?&rdquo; has one answer rather than four screens</li>
         </ul>
         <p class="spot-note">Photos are included in both modes. Surveys are part of <b>Field Sales</b>, because they are targeted by store type.</p>
       </div>
+    </div>
+
+    <!-- ── SAMPLE DOCUMENTS ──────────────────────────────────────────────
+         Two real PDFs out of one visit, so a prospect can read the actual
+         output rather than take our word for the screenshots. The previews are
+         drawn rather than screenshotted, in keeping with the rest of the page,
+         and abbreviate the real files — which is why the download sits on the
+         same card as the picture of it. -->
+    <div class="doc-block" id="samples" style="scroll-margin-top:96px">
+      <div class="sh f">
+        <span class="pill">Sample Documents</span>
+        <h2>One visit. Two documents.</h2>
+        <p>Both of these came out of a single call at a single store. One is the order the shopkeeper signs for; the other is the record your office keeps. Open either &mdash; they are the real files, not pictures of them.</p>
+      </div>
+      <div class="doc-grid">
+
+        <a class="doc-card f" href="samples/orbit-sales-order-sample.pdf" target="_blank" rel="noopener">
+          <div class="doc-paper">
+            <svg viewBox="0 0 420 594" xmlns="http://www.w3.org/2000/svg"
+                 aria-label="Preview of an ORBIT sales order PDF: division name, customer and account details, five priced lines, VAT split out, and the customer's signature">
+              <rect x="0" y="0" width="420" height="594" fill="#ffffff"/>
+              <g font-family="Helvetica, Arial, sans-serif">
+                <text x="40" y="52" fill="#e2601a" font-size="11" font-weight="700">Harare</text>
+                <text x="40" y="76" fill="#111111" font-size="19" font-weight="700">SALES ORDER</text>
+                <text x="380" y="74" fill="#555555" font-size="8" text-anchor="end">2026-09-01</text>
+                <line x1="40" y1="90" x2="380" y2="90" stroke="#222222" stroke-width="1.1"/>
+
+                <g font-size="6.4" fill="#8a8a8a">
+                  <text x="40" y="110">CUSTOMER</text>
+                  <text x="40" y="126">ACCOUNT</text>
+                  <text x="40" y="142">ADDRESS</text>
+                  <text x="40" y="158">SALES REP</text>
+                  <text x="40" y="174">PRICE TIER</text>
+                </g>
+                <g font-size="8" fill="#111111">
+                  <text x="118" y="110">Market Cash &amp; Carry</text>
+                  <text x="118" y="126">D00610</text>
+                  <text x="118" y="142">18 Church St, Harare</text>
+                  <text x="118" y="158">Ravi Adams</text>
+                  <text x="118" y="174">Retail</text>
+                </g>
+
+                <g font-size="7" font-weight="700" fill="#111111">
+                  <text x="40" y="204">Code</text>
+                  <text x="96" y="204">Description</text>
+                  <text x="292" y="204" text-anchor="end">Qty</text>
+                  <text x="336" y="204" text-anchor="end">Price</text>
+                  <text x="380" y="204" text-anchor="end">Amount</text>
+                </g>
+                <line x1="40" y1="210" x2="380" y2="210" stroke="#222222" stroke-width="0.9"/>
+
+                <g font-size="7.2" fill="#111111">
+                  <text x="40" y="228">FMBEV0006</text><text x="96" y="228">Energy Drink</text>
+                  <text x="292" y="228" text-anchor="end">25</text><text x="336" y="228" text-anchor="end">$7.77</text><text x="380" y="228" text-anchor="end">$194.25</text>
+                  <line x1="40" y1="234" x2="380" y2="234" stroke="#ebebeb"/>
+                  <text x="40" y="250">FMBEV0041</text><text x="96" y="250">Orange Soda Small</text>
+                  <text x="292" y="250" text-anchor="end">80</text><text x="336" y="250" text-anchor="end">$4.93</text><text x="380" y="250" text-anchor="end">$394.40</text>
+                  <line x1="40" y1="256" x2="380" y2="256" stroke="#ebebeb"/>
+                  <text x="40" y="272">FMSTA0021</text><text x="96" y="272">Salt *</text>
+                  <text x="292" y="272" text-anchor="end">25</text><text x="336" y="272" text-anchor="end">$9.94</text><text x="380" y="272" text-anchor="end">$248.50</text>
+                  <line x1="40" y1="278" x2="380" y2="278" stroke="#ebebeb"/>
+                  <text x="40" y="294">FMSTA0057</text><text x="96" y="294">Sugar Small *</text>
+                  <text x="292" y="294" text-anchor="end">14</text><text x="336" y="294" text-anchor="end">$12.33</text><text x="380" y="294" text-anchor="end">$172.62</text>
+                  <line x1="40" y1="300" x2="380" y2="300" stroke="#ebebeb"/>
+                  <text x="40" y="316">FMSTA0093</text><text x="96" y="316">Maize Meal Large *</text>
+                  <text x="292" y="316" text-anchor="end">44</text><text x="336" y="316" text-anchor="end">$15.49</text><text x="380" y="316" text-anchor="end">$681.56</text>
+                </g>
+
+                <g font-size="7.4" fill="#333333">
+                  <text x="336" y="342" text-anchor="end">Subtotal</text>
+                  <text x="380" y="342" text-anchor="end">$1,691.33</text>
+                  <text x="336" y="358" text-anchor="end">VAT (15%)</text>
+                  <text x="380" y="358" text-anchor="end">$88.30</text>
+                </g>
+                <line x1="240" y1="366" x2="380" y2="366" stroke="#222222" stroke-width="0.9"/>
+                <g font-size="8.4" font-weight="700" fill="#111111">
+                  <text x="336" y="382" text-anchor="end">TOTAL</text>
+                  <text x="380" y="382" text-anchor="end">$1,779.63</text>
+                </g>
+                <text x="40" y="404" fill="#8a8a8a" font-size="6.4">* VAT-exempt item</text>
+
+                <!-- signed on the phone, at the counter -->
+                <path d="M148 462c-6-16 10-28 20-20s-4 30-16 28-10-30 8-38 34 6 42 22 10 26 20 22 6-24 16-24 8 20 18 20 14-12 20-20"
+                      fill="none" stroke="#1b1b1b" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M172 486c26-14 60-24 96-26" fill="none" stroke="#1b1b1b" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M196 428c10 22 12 40 6 54" fill="none" stroke="#1b1b1b" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M232 424c6 20 4 36-4 50" fill="none" stroke="#1b1b1b" stroke-width="1.2" stroke-linecap="round"/>
+                <text x="40" y="512" fill="#6a6a6a" font-size="6.6">Received &amp; confirmed by Smth · 2026-09-01T18:26:44</text>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <span class="doc-kind">The order</span>
+            <h3>Sales order PDF</h3>
+            <p>Headed with the division, priced at that store&rsquo;s own tier, VAT split out and exempt lines marked, and signed on the phone at the counter. Emailed to the store on commit, or downloaded whenever you want it.</p>
+            <span class="doc-dl">Open the sample &rarr;</span>
+          </div>
+        </a>
+
+        <a class="doc-card f d1" href="samples/orbit-visit-record-sample.pdf" target="_blank" rel="noopener">
+          <div class="doc-paper">
+            <svg viewBox="0 0 420 594" xmlns="http://www.w3.org/2000/svg"
+                 aria-label="Preview of an ORBIT visit record PDF: the visit's times and reference, the store's details, the order taken, the survey answers, and the photos captured">
+              <rect x="0" y="0" width="420" height="594" fill="#ffffff"/>
+              <g font-family="Helvetica, Arial, sans-serif">
+                <text x="40" y="48" fill="#e2601a" font-size="9.5" font-weight="700">Harare</text>
+                <text x="380" y="48" fill="#666666" font-size="7.5" text-anchor="end">Visit record</text>
+                <text x="40" y="76" fill="#111111" font-size="17" font-weight="700">Market Cash &amp; Carry</text>
+                <text x="40" y="90" fill="#7a7a7a" font-size="7">2026-09-01 · rep Ravi Adams · Harare</text>
+                <line x1="40" y1="104" x2="380" y2="104" stroke="#e2e2e2"/>
+
+                <text x="46" y="126" fill="#111111" font-size="9" font-weight="700">The visit</text>
+                <g font-size="6.6" fill="#8a8a8a">
+                  <text x="40" y="144">Date</text>
+                  <text x="40" y="158">Source</text>
+                  <text x="40" y="172">Visit reference</text>
+                </g>
+                <g font-size="7.4" fill="#111111">
+                  <text x="128" y="144">2026-09-01</text>
+                  <text x="128" y="158">mobile</text>
+                  <text x="128" y="172">R07-260901-D00610</text>
+                </g>
+
+                <text x="46" y="196" fill="#111111" font-size="9" font-weight="700">Store</text>
+                <g font-size="6.6" fill="#8a8a8a">
+                  <text x="40" y="214">Store ID</text>
+                  <text x="40" y="228">Customer type</text>
+                  <text x="40" y="242">Address</text>
+                  <text x="40" y="256">Contact</text>
+                </g>
+                <g font-size="7.4" fill="#111111">
+                  <text x="128" y="214">D00610</text>
+                  <text x="128" y="228">Retail</text>
+                  <text x="128" y="242">18 Church St, Harare</text>
+                  <text x="128" y="256">Sipho Jacobs</text>
+                </g>
+
+                <text x="46" y="282" fill="#111111" font-size="9" font-weight="700">Order</text>
+                <g font-size="6.4" font-weight="700" fill="#666666">
+                  <text x="40" y="298">Code</text><text x="96" y="298">Description</text>
+                  <text x="300" y="298" text-anchor="end">Qty</text><text x="380" y="298" text-anchor="end">Total</text>
+                </g>
+                <line x1="40" y1="303" x2="380" y2="303" stroke="#e2e2e2"/>
+                <g font-size="6.8" fill="#111111">
+                  <text x="40" y="317">FMBEV0006</text><text x="96" y="317">Energy Drink</text>
+                  <text x="300" y="317" text-anchor="end">25</text><text x="380" y="317" text-anchor="end">$194.25</text>
+                  <text x="40" y="331">FMBEV0041</text><text x="96" y="331">Orange Soda Small</text>
+                  <text x="300" y="331" text-anchor="end">80</text><text x="380" y="331" text-anchor="end">$394.40</text>
+                  <text x="40" y="345">FMSTA0021</text><text x="96" y="345">Salt</text>
+                  <text x="300" y="345" text-anchor="end">25</text><text x="380" y="345" text-anchor="end">$248.50</text>
+                  <text x="40" y="359">FMSTA0057</text><text x="96" y="359">Sugar Small</text>
+                  <text x="300" y="359" text-anchor="end">14</text><text x="380" y="359" text-anchor="end">$172.62</text>
+                  <text x="40" y="373">FMSTA0093</text><text x="96" y="373">Maize Meal Large</text>
+                  <text x="300" y="373" text-anchor="end">44</text><text x="380" y="373" text-anchor="end">$681.56</text>
+                </g>
+                <line x1="40" y1="380" x2="380" y2="380" stroke="#e2e2e2"/>
+                <g font-size="7.4" fill="#111111">
+                  <text x="40" y="394">Total</text>
+                  <text x="380" y="394" font-weight="700" text-anchor="end">$1,779.63</text>
+                </g>
+                <text x="40" y="406" fill="#8a8a8a" font-size="6">status submitted · signed by Smth</text>
+
+                <text x="46" y="430" fill="#111111" font-size="9" font-weight="700">Survey</text>
+                <text x="46" y="443" fill="#444444" font-size="7">Retail shelf check</text>
+                <g font-size="6.4" font-weight="700" fill="#666666">
+                  <text x="40" y="457">Question</text><text x="228" y="457">Answer</text>
+                </g>
+                <line x1="40" y1="462" x2="380" y2="462" stroke="#e2e2e2"/>
+                <g font-size="6.8" fill="#111111">
+                  <text x="40" y="476">Shelf clean and faced up?</text><text x="228" y="476">Yes</text>
+                  <text x="40" y="490">Shelf position</text><text x="228" y="490">Eye level</text>
+                  <text x="40" y="504">Lines out of stock</text><text x="228" y="504">Home care</text>
+                  <text x="40" y="518">Owner sentiment</text><text x="228" y="518">4 of 5</text>
+                  <text x="40" y="532">Anything else?</text><text x="228" y="532">Needs merchandising material</text>
+                </g>
+
+                <!-- the photo appendix, on its own page in the real file -->
+                <text x="46" y="556" fill="#111111" font-size="8" font-weight="700">Photos (3)</text>
+                <g>
+                  <rect x="40" y="562" width="38" height="26" rx="2" fill="#f3f4f6" stroke="#dcdcdc"/>
+                  <rect x="44" y="572" width="6" height="14" rx="1" fill="#c3ccd6"/>
+                  <rect x="52" y="568" width="6" height="18" rx="1" fill="#aab7c4"/>
+                  <rect x="60" y="574" width="6" height="12" rx="1" fill="#c3ccd6"/>
+                  <rect x="84" y="562" width="38" height="26" rx="2" fill="#f3f4f6" stroke="#dcdcdc"/>
+                  <rect x="88" y="570" width="6" height="16" rx="1" fill="#aab7c4"/>
+                  <rect x="96" y="576" width="6" height="10" rx="1" fill="#c3ccd6"/>
+                  <rect x="104" y="568" width="6" height="18" rx="1" fill="#aab7c4"/>
+                  <rect x="128" y="562" width="38" height="26" rx="2" fill="#f3f4f6" stroke="#dcdcdc"/>
+                  <rect x="132" y="572" width="6" height="14" rx="1" fill="#c3ccd6"/>
+                  <rect x="140" y="566" width="6" height="20" rx="1" fill="#aab7c4"/>
+                  <rect x="148" y="574" width="6" height="12" rx="1" fill="#c3ccd6"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <span class="doc-kind">The record</span>
+            <h3>Visit record PDF</h3>
+            <p>Everything one call produced, on one document: when the rep arrived and left, where the phone was standing, the store&rsquo;s details, the order taken, every survey answer, and the photos with their captions and timestamps.</p>
+            <span class="doc-dl">Open the sample &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+      <p class="doc-note">Both samples are ORBIT demo data. Your documents carry your own logo, currency and division name.</p>
     </div>
   </div>
 </section>
 
 <!-- ── FLOW-THROUGH UPDATES ── -->
-<section id="updates">
+<section id="updates" class="alt">
   <div class="container">
     <div class="spot">
       <div class="f">
@@ -1656,7 +2124,7 @@
 </section>
 
 <!-- ── AI ASSISTANT ── -->
-<section id="assistant" class="alt">
+<section id="assistant">
   <div class="container">
     <div class="spot flip">
       <div class="f">
@@ -1711,6 +2179,7 @@
               customer's data, and it never changes anything</li>
           <li>Respects each user's role — a controller can't ask it for the margins their screens hide</li>
           <li>Shows its working: every figure lists the lookup that produced it</li>
+          <li>Shows its progress as it goes — each lookup appears as it lands, instead of a blank screen and a spinner</li>
           <li>Full usage log for administrators — who asked what, when, and what it cost</li>
         </ul>
         <div class="asst-chips">
@@ -1724,7 +2193,7 @@
 </section>
 
 <!-- ── INDUSTRIES ── -->
-<section id="industries">
+<section id="industries" class="alt">
   <div class="container">
     <div class="sh f">
       <span class="pill">Industries</span>
@@ -1761,7 +2230,7 @@
 </section>
 
 <!-- ── TESTIMONIALS ── -->
-<section id="testimonials" class="alt">
+<section id="testimonials">
   <div class="container">
     <div class="sh f">
       <span class="pill">Results</span>
@@ -1779,7 +2248,7 @@
 </section>
 
 <!-- ── ROADMAP ── -->
-<section id="roadmap">
+<section id="roadmap" class="alt">
   <div class="container">
     <div class="sh f">
       <span class="pill">Recently Shipped</span>
@@ -1788,6 +2257,30 @@
     </div>
     <div class="road-grid">
       <div class="road-card f">
+        <div class="road-ic ic-amber"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-prospect"/></svg></div>
+        <div>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">Prospecting &amp; lead conversion</div>
+          <p class="road-p">Work a list of shops you don't sell to yet. Reps see the unvisited ones nearest their route, add one to the day, capture new leads on the spot, and can take a lead on as a customer and order from it immediately. The office gets coverage per rep and an Excel export.</p>
+        </div>
+      </div>
+      <div class="road-card f d1">
+        <div class="road-ic ic-green"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-stock"/></svg></div>
+        <div>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">Stock availability</div>
+          <p class="road-p">In stock, Low or Out of stock beside every catalogue line, mirrored from your ERP on an hourly feed — or typed in where there is no feed — with a low-stock band per SKU. Reps stop promising what the warehouse hasn't got.</p>
+        </div>
+      </div>
+      <div class="road-card f">
+        <div class="road-ic ic-blue"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-reoptimise"/></svg></div>
+        <div>
+          <span class="rtag t-dev">Available Now</span>
+          <div class="road-h">Re-optimise the rest of the day</div>
+          <p class="road-p">One tap re-sequences every stop still outstanding — planned, rep-added and prospect calls alike — for the shortest drive from where the rep is now back to their home, and rewrites every ETA in the records the office is watching.</p>
+        </div>
+      </div>
+      <div class="road-card f d1">
         <div class="road-ic ic-blue"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone-route"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
@@ -1795,7 +2288,7 @@
           <p class="road-p">An offline-capable web app — no app store. Reps see their route, mark Start/Finish per stop, and capture GPS on every tap. Plans publish instantly and sync back the moment there's signal.</p>
         </div>
       </div>
-      <div class="road-card f d1">
+      <div class="road-card f">
         <div class="road-ic ic-green"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar-live"/></svg></div>
         <div>
           <span class="rtag t-dev">Available Now</span>
@@ -1856,7 +2349,7 @@
 </section>
 
 <!-- ── PRICING ── -->
-<section id="pricing" class="alt">
+<section id="pricing">
   <div class="container">
     <div class="p-intro f">
       <span class="pill">Pricing</span>
@@ -1886,6 +2379,8 @@
           <li>Everything in Territory &amp; Route Planning</li>
           <li>Product catalogue &amp; tiered price lists</li>
           <li>On-visit orders with VAT &amp; signatures</li>
+          <li>Stock availability from your ERP feed</li>
+          <li>Prospecting, field lead capture &amp; conversion</li>
           <li>Live sales dashboard &amp; analytics</li>
           <li>Commit to batches, ERP hand-off &amp; PDF invoices</li>
           <li>Priority support &amp; quarterly review</li>
@@ -1910,6 +2405,7 @@
           <li>See your own territories optimized live in the session</li>
           <li>Free feasibility assessment for your store count and geography</li>
           <li>No software to install — we share our screen</li>
+          <li>Prefer to see it in your own language? We can generate the demo data in it</li>
         </ul>
         <p class="demo-note">Or email us directly at <a href="mailto:info@opsi.co.za">info@opsi.co.za</a></p>
       </div>
@@ -1996,6 +2492,7 @@
           <li><a href="#editions">Two Modes</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#sfa">Field Sales</a></li>
+          <li><a href="#prospects">Prospecting</a></li>
           <li><a href="#industries">Industries</a></li>
           <li><a href="billing.html">Pricing</a></li>
         </ul>
