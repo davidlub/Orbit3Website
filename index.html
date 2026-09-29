@@ -708,7 +708,7 @@
       <div class="step f d1">
         <div class="step-n">1</div>
         <h3>Load your master data</h3>
-        <p>Import stores and reps from Excel into your organisation's master data, grouped by region. GPS, call frequencies, contract dates, pre-assigned groups and shopping centres are all respected — and never split.</p>
+        <p>Import stores and reps from Excel into your organisation's master data, grouped by region. GPS, call frequencies, visit windows, contract dates, pre-assigned groups and shopping centres are all respected — and never split.</p>
       </div>
       <div class="step f d2">
         <div class="step-n">2</div>
@@ -758,7 +758,7 @@
         <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar-route"/></svg></div>
         <div>
           <h3>Tactical scheduling</h3>
-          <p>Day-by-day visit schedules optimized for travel distance and working hours. Handles variable hours, depots, and multi-week planning periods.</p>
+          <p>Day-by-day visit schedules optimized for travel distance and working hours. Handles variable hours, depots, store visit windows and multi-week planning periods.</p>
         </div>
       </div>
       <div class="feat-item f">
@@ -814,7 +814,7 @@
         <div class="feat-icon-wrap"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-reoptimise"/></svg></div>
         <div>
           <h3>Re-optimise mid-round</h3>
-          <p>A day rarely runs to plan. From the rep's current position, ORBIT re-sequences everything still outstanding for the shortest drive home and rewrites the ETAs — in the same records the office is watching.</p>
+          <p>A day rarely runs to plan. From the rep's current position, ORBIT re-sequences everything still outstanding for the shortest drive home — still inside every store's visit window — and rewrites the ETAs, in the same records the office is watching.</p>
         </div>
       </div>
       <div class="feat-item f">
@@ -1033,6 +1033,7 @@
         <ul class="checks">
           <li>Day-by-day route optimization across your full planning period</li>
           <li>Configurable working hours per day — even different hours each day</li>
+          <li><strong>Store visit windows</strong> — set the hours each store can be called on (<em>weekday mornings</em>, <em>closed over lunch</em>, <em>Saturdays till one</em>) and every route lands inside them. A rep who arrives early waits; a visit that can't fit is moved to a day that can take it, or flagged — never dropped</li>
           <li>Start from territory centre or a single shared depot</li>
           <li>Multi-week planning periods from 1 to 8 weeks</li>
           <li>Compare coverage and distance across all territories side by side</li>
@@ -1110,6 +1111,7 @@
           <li><strong>Repeating</strong> — a fixed weekly cycle mapped across the planning period, so reps follow a predictable, recurring beat.</li>
           <li><strong>Dynamic</strong> — each day is built fresh from store <em>urgency</em>: days since last visit versus the target cadence, seeded by each store's last-visit date.</li>
           <li>Contract start/end dates gate visits automatically — nothing is scheduled outside a store's active window.</li>
+          <li>Store visit windows hold every day: a store is only planned when it's open and the rep can reach it in time — otherwise it waits for a day that works.</li>
           <li>Working days, leave, and per-rep hours are all respected.</li>
           <li>A live dashboard tracks completed vs due, tempo, and off-location visits.</li>
         </ul>
@@ -1175,7 +1177,7 @@
           <li>Photograph the shelf and answer your survey, right on the visit</li>
           <li>Fully offline: work all day with no coverage, syncs the moment you reconnect</li>
           <li>Tap a stop&rsquo;s address and the phone&rsquo;s own maps app takes it from there — the pin, not the spreadsheet&rsquo;s address text, wherever there is one</li>
-          <li><b>Re-optimise the rest of the day</b> — one tap re-orders every stop still outstanding for the shortest drive from where the rep is standing, back to their home, and rewrites each ETA. Rep-added stops and prospect calls are re-ordered with the rest</li>
+          <li><b>Re-optimise the rest of the day</b> — one tap re-orders every stop still outstanding for the shortest drive from where the rep is standing, back to their home, and rewrites each ETA — without missing a store's visit window. Rep-added stops and prospect calls are re-ordered with the rest</li>
           <li><b>Whole day, or rest of day</b> — one switch on the list and the same one on the map: the record of where they have been, or the plan from here with the run home</li>
         </ul>
         <p class="spot-note">Re-optimising runs on the server, not the phone: the new order is written to the same visits the office is looking at, so the two can never disagree about the route.</p>
@@ -2294,7 +2296,7 @@
         <div>
           <span class="rtag t-dev">Available Now</span>
           <div class="road-h">Daily Planning — Repeating &amp; Dynamic</div>
-          <p class="road-p">Take a plan live on a real calendar: a fixed Repeating cycle, or Dynamic days built from store urgency and last-visit dates. Contract windows and rep hours respected automatically.</p>
+          <p class="road-p">Take a plan live on a real calendar: a fixed Repeating cycle, or Dynamic days built from store urgency and last-visit dates. Contract dates, store visit windows and rep hours respected automatically.</p>
         </div>
       </div>
       <div class="road-card f">
