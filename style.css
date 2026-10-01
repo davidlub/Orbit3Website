@@ -477,17 +477,14 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
 @keyframes dot-in { from { opacity:0; } to { opacity:1; } }
 @keyframes pulse { 0%,100% { opacity:0.7; } 50% { opacity:0.15; } }
 
-.anim-t1 { stroke-dasharray:525; stroke-dashoffset:525; animation:route-draw 2.0s cubic-bezier(0.4,0,0.2,1) 0.5s forwards; }
-.anim-t2 { stroke-dasharray:610; stroke-dashoffset:610; animation:route-draw 2.0s cubic-bezier(0.4,0,0.2,1) 1.0s forwards; }
-.anim-t3 { stroke-dasharray:675; stroke-dashoffset:675; animation:route-draw 2.0s cubic-bezier(0.4,0,0.2,1) 1.5s forwards; }
-.anim-t4 { stroke-dasharray:720; stroke-dashoffset:720; animation:route-draw 2.0s cubic-bezier(0.4,0,0.2,1) 2.0s forwards; }
-.anim-t5 { stroke-dasharray:565; stroke-dashoffset:565; animation:route-draw 2.0s cubic-bezier(0.4,0,0.2,1) 2.5s forwards; }
+/* Each route is drawn with pathLength="1", so one rule fits every length. */
+.hr-route { stroke-dasharray:1; stroke-dashoffset:1; animation:route-draw 2.0s cubic-bezier(0.4,0,0.2,1) forwards; }
 
 .r-dot { opacity:0; animation:dot-in 0.3s ease forwards; }
 .r-pulse { animation:pulse 2s ease-in-out infinite; }
 
 @media (prefers-reduced-motion:reduce) {
-  .anim-t1,.anim-t2,.anim-t3,.anim-t4,.anim-t5 { animation:none; stroke-dashoffset:0; }
+  .hr-route { animation:none; stroke-dashoffset:0; }
   .r-dot { opacity:1; animation:none; }
   .r-pulse { animation:none; }
   .f { opacity:1; transform:none; transition:none; }
