@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBIT — Privacy Policy</title>
+  <meta name="description" content="The OPSI Systems Privacy Policy and Cookie Policy, covering ORBIT: how personal information is collected, used, protected and retained, and your rights under POPIA and GDPR.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#001626">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Legal-page pieces, on the site's tokens. */
+    .legal-hero { padding:150px 0 30px; text-align:center; }
+    .legal-hero h1 { font-family:var(--serif); font-weight:800; font-size:clamp(2rem,4.6vw,3.1rem); line-height:1.1; letter-spacing:-0.02em; color:var(--text); margin:18px auto 0; max-width:18ch; }
+    .legal-hero .meta { margin-top:16px; font-family:var(--mono); font-size:0.82rem; color:var(--text-3); }
+
+    section.legal { padding:40px 0 110px; }
+    .legal-grid { display:grid; grid-template-columns:240px minmax(0,1fr); gap:56px; align-items:start; }
+
+    .toc { position:sticky; top:96px; max-height:calc(100vh - 120px); overflow:auto; font-size:0.82rem; padding-right:6px; }
+    .toc h4 { font-size:0.65rem; font-family:var(--mono); font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:12px; }
+    .toc ol { list-style:none; display:flex; flex-direction:column; gap:7px; }
+    .toc a { color:var(--text-2); }
+    .toc a:hover { color:var(--accent); text-decoration:none; }
+
+    .doc { max-width:780px; }
+    .doc .notice { background:var(--a-pale); border:1px solid rgba(0,128,199,0.22); border-radius:14px; padding:20px 22px; margin-bottom:28px; color:var(--text); font-size:0.95rem; }
+    .doc h2 { font-size:1.3rem; font-weight:700; color:var(--text); margin:46px 0 14px; scroll-margin-top:96px; letter-spacing:-0.005em; }
+    .doc h2 .n { font-family:var(--mono); color:var(--accent); font-weight:500; margin-right:10px; }
+    .doc h3 { font-size:1.05rem; color:var(--text); margin:30px 0 10px; }
+    .doc p, .doc li { font-size:0.95rem; line-height:1.75; }
+    .doc p { margin-bottom:12px; }
+    .doc p .cl { font-family:var(--mono); font-size:0.85rem; color:var(--text-3); margin-right:6px; }
+    .doc ul, .doc ol.alpha { margin:4px 0 14px 22px; display:flex; flex-direction:column; gap:6px; }
+    .doc ol.alpha { list-style:lower-alpha; }
+    .doc dl { display:flex; flex-direction:column; gap:10px; }
+    .doc dt { font-weight:700; color:var(--text); font-size:0.95rem; }
+    .doc dd { font-size:0.95rem; line-height:1.75; margin:0 0 4px; }
+    .doc strong { color:var(--text); }
+    .doc h2.part { font-size:1.6rem; font-weight:800; margin:40px 0 6px; }
+    .doc .notice + h2.part { margin-top:8px; }
+    .doc ul ul { margin:6px 0 2px 20px; }
+    .doc .sched { margin-top:70px; padding-top:40px; border-top:1px solid var(--border); }
+
+    .sev { width:100%; border-collapse:collapse; margin:10px 0 18px; font-size:0.9rem; }
+    .sev th, .sev td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--border); }
+    .sev th { font-family:var(--mono); font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); }
+    .sev td { color:var(--text-2); }
+    .sev td:first-child { color:var(--text); font-weight:600; }
+
+    @media (max-width:900px){
+      .legal-grid { grid-template-columns:1fr; gap:24px; }
+      .toc { position:static; max-height:none; border:1px solid var(--border); border-radius:14px; padding:18px 20px; }
+      .toc ol { display:grid; grid-template-columns:1fr 1fr; gap:6px 18px; }
+    }
+    @media (max-width:520px){
+      .toc ol { grid-template-columns:1fr; }
+      .sev th, .sev td { padding:8px 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="index.html" aria-label="ORBIT home">
+      <svg width="28" height="28" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <circle cx="15" cy="15" r="4" fill="#0080c7"/>
+        <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#0080c7" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+        <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#0080c7" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+        <circle cx="26" cy="9" r="1.8" fill="#19afff" opacity="0.95"/>
+      </svg>
+      ORBIT
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#videos">Watch</a></li>
+      <li><a href="index.html#editions">Modes</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#daily">Planning</a></li>
+      <li><a href="index.html#sfa">Field Sales</a></li>
+      <li><a href="index.html#prospects">Prospects</a></li>
+      <li><a href="index.html#evidence">Photos</a></li>
+      <li><a href="index.html#assistant">Assistant</a></li>
+      <li><a href="billing.html">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#demo" class="btn btn-primary btn-nav">Request a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="legal-hero">
+  <div class="container">
+    <div><span class="pill">Legal</span></div>
+    <h1>Privacy Policy &amp; Cookie Policy</h1>
+    <p class="meta">Last modified: 6 July 2023</p>
+  </div>
+</section>
+
+<!-- ── POLICY ── -->
+<!-- The OPSI Systems group policy, as published at opsisystems.com/privacy-policy.
+     The text is kept as published, except "Location Data", which there describes
+     the Tramm driver app and here describes the ORBIT rep app. -->
+<section class="legal">
+  <div class="container">
+    <div class="legal-grid">
+
+      <aside class="toc" aria-label="Contents">
+        <h4>Privacy Policy</h4>
+        <ol>
+          <li><a href="#history">Change history</a></li>
+          <li><a href="#definitions">Definitions</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#purpose">Purpose &amp; scope</a></li>
+          <li><a href="#governance">Governance</a></li>
+          <li><a href="#roles">Roles &amp; responsibilities</a></li>
+          <li><a href="#principles">Policy principles</a></li>
+          <li><a href="#minimisation">Data minimisation</a></li>
+          <li><a href="#accuracy">Accuracy</a></li>
+          <li><a href="#storage">Storage limitation</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#location">Location data</a></li>
+          <li><a href="#rights">Person’s rights</a></li>
+          <li><a href="#protection">Data protection</a></li>
+          <li><a href="#retention-records">Record retention</a></li>
+        </ol>
+        <h4 style="margin-top:22px">Cookie Policy</h4>
+        <ol>
+          <li><a href="#cookies">What are cookies?</a></li>
+          <li><a href="#cookie-use">Why we use cookies</a></li>
+          <li><a href="#cookie-types">Which cookies</a></li>
+          <li><a href="#cookie-disable">Disabling cookies</a></li>
+          <li><a href="#user-rights">User rights</a></li>
+          <li><a href="#retention">Retention</a></li>
+          <li><a href="#third-party">Third-party collection</a></li>
+          <li><a href="#safeguard">Safeguarding</a></li>
+          <li><a href="#eea">Transfer outside the EEA</a></li>
+          <li><a href="#marketing">Marketing</a></li>
+          <li><a href="#corporate">Corporate transaction</a></li>
+          <li><a href="#minors">Minors</a></li>
+          <li><a href="#updates">Updates</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc">
+
+        <div class="notice">
+          OPSI Systems Privacy Policy and Cookie Policy can be found on this page. Clicking on the links will take you to the appropriate section of the page. We reserve the right to periodically amend or revise the Privacy Policy; material changes will be effective immediately upon the display of the revised Privacy policy. The last revision will be reflected in the “Last modified” section. Your continued use of the Platform and our products, following the notification of such amendments on our website, constitutes your acknowledgment and consent of such amendments to the Privacy Policy and Cookie Policy and your agreement to be bound by the terms of such amendments.
+        </div>
+
+        <h2 class="part">Privacy Policy</h2>
+
+        <h2 id="history">Change history</h2>
+        <dl>
+          <dt>30th June 2021</dt>
+          <dd>First released version of the document. Added sections regarding Special Personal Information, Data of Children, Direct Marketing, Automated Processing, and Transferal of Data. Updated the definitions. Miscellaneous additions and changes.</dd>
+          <dt>6th July 2023</dt>
+          <dd>No material changes to content, but converted to an online web page.</dd>
+        </dl>
+
+        <h2 id="definitions">Definitions</h2>
+        <dl>
+          <dt>OPSI</dt>
+          <dd>Opsi Systems (Pty) Ltd and its subsidiaries, including but not limited to OPSI Africa (Pty) Ltd.</dd>
+          <dt>Data Protection Laws</dt>
+          <dd>All applicable law relating to data protection, privacy and security when processing Personal Information under the Agreement. This includes without limitation applicable international and local data protection, privacy, export or data security directives including the Electronic Communications and Transactions Act 25 of 2002, Protection of Personal Information Act 4 of 2013 (POPIA) and the General Data Protection Regulation (GDPR).</dd>
+          <dt>Personal Information</dt>
+          <dd>Personal data is any data recorded electronically or in hard copy that, if viewed on its own or collectively with other data, can be used to uniquely identify an individual or a legal entity.</dd>
+          <dt>Processing</dt>
+          <dd>Any operation, or set of operations, performed on Data by any means, such as collection, recording, organization, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, blocking, erasure or destruction.</dd>
+          <dt>GDPR</dt>
+          <dd>General Data Protection Regulation.</dd>
+          <dt>POPIA</dt>
+          <dd>Protection of Personal Information Act.</dd>
+          <dt>Information Officer (IO)</dt>
+          <dd>The Information Officer as required and defined by POPIA, also filling the role of Data Protection Officer (DPO) for GDPR requirements.</dd>
+          <dt>Child</dt>
+          <dd>A natural person under the age of 18 years.</dd>
+          <dt>Data Subject</dt>
+          <dd>A natural person to whom Personal Information relates. In the context of POPIA, this also includes juristic persons.</dd>
+          <dt>Data Protection Officer (DPO)</dt>
+          <dd>See Information Officer (IO).</dd>
+          <dt>Privacy Notice</dt>
+          <dd>A statement made to a data subject that describes how the organisation collects, uses, retains, and discloses Personal Information. Sometimes referred to as a Privacy Statement.</dd>
+        </dl>
+
+        <h2 id="introduction">Introduction</h2>
+        <p>Data protection and privacy through lawful, legitimate and responsible processing and use of personal data is a fundamental human right under the South African Constitution. The OPSI Privacy Policy outlines the core principles which OPSI endeavours to pursue in relation to the processing of personal data. The principles set out in this Policy ensure that personal data is processed in line with regulatory requirements, industry-wide best practices, and our code of conduct. The Protection of Personal Information Act (POPI Act or POPIA) and the General Data Protection Regulation (GDPR) are the primary pieces of legislation that govern how OPSI collects and processes personal data.</p>
+
+        <h2 id="purpose">Purpose</h2>
+        <p>The purpose of this OPSI Policy is to set out the basic principles relating to the processing of Personal Information. This Policy sets out how OPSI processes the personal data of its staff, trading partners, suppliers, and other third-parties.</p>
+
+        <h3>Scope</h3>
+        <ul>
+          <li>This policy applies to OPSI, its subsidiaries, affiliates and business employees (i.e. employees, directors, senior managers, executives, temporary staff members, agents, consultants, seconded, home-based, casual and agency staff, volunteers and interns), OPSI service providers and OPSI business associates and partners.</li>
+          <li>This policy is intended to assist the directors, officers, employees, and appointed agents of OPSI in assessing the legal position applicable to a particular decision, behaviour, conduct, act or omission.</li>
+        </ul>
+
+        <h3>Consequences of non-compliance</h3>
+        <ul>
+          <li>Wilful and deliberate non-compliance with this policy can expose OPSI to significant regulatory sanctions, fines, criminal and/or civil liability. The reputational damage arising from such non-compliance will negatively affect OPSI’s ability to attract and maintain clients.</li>
+          <li>Employees who fail to comply with this policy may be subject to disciplinary action including dismissal and personal liability such as fines and/or imprisonment under the relevant laws.</li>
+        </ul>
+
+        <h2 id="governance">Governance and implementation</h2>
+        <ul>
+          <li>This policy must be approved by the OPSI Board of Directors.</li>
+          <li>This policy should be reviewed every two years or when a significant event occurs, considering any changes to regulatory requirements and business operations.</li>
+          <li>The Executives and Management of OPSI are responsible for the successful implementation of the provisions of this policy.</li>
+        </ul>
+
+        <h2 id="roles">Roles &amp; responsibilities</h2>
+        <p>Assigning roles and responsibilities is necessary to give effect to the requirements of this policy, as per below:</p>
+
+        <h3>Information Officer</h3>
+        <p>The OPSI Information Officer (IO) is accountable for ensuring that OPSI and its employees comply with the requirements set out in this process.</p>
+        <ul>
+          <li>The IO is responsible for:
+            <ul>
+              <li>Overseeing all dispensations, waivers, and breaches to or of this process.</li>
+              <li>Facilitating the review(s) as set out in the policies or standards.</li>
+              <li>Ensuring this policy is effectively implemented within OPSI.</li>
+              <li>Communicating with data subjects.</li>
+              <li>Working with the regulator in relation to investigations and audits.</li>
+            </ul>
+          </li>
+          <li>The IO may delegate their responsibility (but not accountability) for implementation of this policy to an appropriate OPSI executive.</li>
+        </ul>
+
+        <h3>Board of Directors</h3>
+        <ul>
+          <li>The OPSI Board of Directors is ultimately accountable for ensuring that OPSI and its employees comply with the requirements set out in this policy.</li>
+          <li>In addition, the board must ensure that OPSI complies with all applicable laws, regulations, and supervisory requirements.</li>
+        </ul>
+
+        <h3>Employees</h3>
+        <ul>
+          <li>All employees within OPSI are responsible for complying with this policy.</li>
+        </ul>
+
+        <h2 id="principles">Policy principles</h2>
+
+        <h3>Processing of data</h3>
+        <p>OPSI’s core principles are based on the provisions of POPI and GDPR and must ensure that all personal data is:</p>
+        <ul>
+          <li>Processed lawfully, fairly and in a transparent manner.</li>
+          <li>Collected only for specified, clear and legitimate purposes.</li>
+          <li>Adequate, relevant, and limited to what is necessary in relation to the purposes for which it is to be processed.</li>
+          <li>Accurate and kept up to date where applicable.</li>
+          <li>Not kept in a format which allows identification of a data subject for longer than is necessary for the purposes for which the data is processed.</li>
+          <li>Processed in a manner that ensures its security using appropriate technical and organisational measures to protect against unauthorised or unlawful processing and against accidental loss, destruction or damage.</li>
+        </ul>
+        <p>Additionally, OPSI must ensure that:</p>
+        <ul>
+          <li>Personal Information is not transferred to another country without appropriate safeguards being in place.</li>
+          <li>OPSI allows people to exercise their rights in relation to their personal data. OPSI is responsible for and must be able to demonstrate compliance with all the above principles.</li>
+        </ul>
+
+        <h3>Automated decision making</h3>
+        <p>OPSI only performs automated decision making using Personal Information with the express consent of the data subject, or where such automated decision making is clearly stipulated in an agreement between OPSI and the data subject.</p>
+
+        <h3>Transferal of information</h3>
+        <p>Personal Information may not be transmitted beyond the borders of the Republic of South Africa, or beyond the borders of a European country subject to GDPR, without confirming that the transferal adheres to the following criteria:</p>
+        <ul>
+          <li>The third-parties or services that the data is transferred to adhere to laws and/or policies which are at least as protective as POPIA or GDPR respectively; or</li>
+          <li>The third-parties or services are governed by an agreement with OPSI that dictates the processing of Personal Information in line with the conditions of this Privacy Policy and applicable privacy notices.</li>
+        </ul>
+
+        <h3>Lawfulness, fairness and transparency</h3>
+        <p>When collecting and processing Personal Information for any specific purpose, OPSI must always have a lawful basis for doing so. For processing Personal Information to be lawful, at least one of the following circumstances must be met:</p>
+        <ul>
+          <li>The data subject has given their consent for one or more specific purposes.</li>
+          <li>The processing is necessary for the performance of a contract to which the data subject is a party.</li>
+          <li>To comply with OPSI’s legal obligations.</li>
+          <li>To protect the vital interests of the data subject or another person.</li>
+          <li>To pursue OPSI’s legitimate interests where those interests are not outweighed by the interests and rights of the person.</li>
+        </ul>
+        <p>OPSI should document the above lawful reasons relied upon when processing Personal Information for each specific purpose.</p>
+
+        <h3>Consent as a lawful basis for processing</h3>
+        <p>Consent may not always be the only basis for being able to process data. This will depend on the specified circumstance or scenario. A person’s consent must be:</p>
+        <ul>
+          <li>Specific.</li>
+          <li>Informed (explained in plain and accessible language).</li>
+          <li>Unambiguous.</li>
+          <li>Separate and unbundled from any other terms and conditions provided to the data subject.</li>
+          <li>Freely and genuinely given.</li>
+        </ul>
+
+        <h3>Direct marketing</h3>
+        <p>OPSI may collect the information of persons who have contacted OPSI via marketing channels for information or to initiate a business relationship. OPSI may use such information to communicate with the customer for direct marketing, but only under the following criteria:</p>
+        <ul>
+          <li>The information collected and purpose for use is expressly communicated to the customer.</li>
+          <li>Consent for contact was obtained from the customer.</li>
+          <li>The communication contains contact details for OPSI to ensure the customer is aware of who is contacting them.</li>
+          <li>The communication is limited to the purpose that the customer agreed to, based on the context of the channel of communication.</li>
+          <li>Such data will be deleted following communication with the customer for the purpose described unless retention of the information is required either to render ongoing product and/or business-related services, or for which the customer has agreed.</li>
+          <li>The customer has the means to opt-out of any communications that they receive.</li>
+        </ul>
+
+        <h3>Openness</h3>
+        <ul>
+          <li>A person must be able to withdraw their consent without reservation. Once consent has been given, it will need to be updated where OPSI wishes to process the personal data for a new purpose that is not compatible with the original purpose for which they were collected.</li>
+          <li>Chapter 6 of POPIA and Chapter 3 Section 1 of GDPR requires OPSI to ensure that any information provided to people about how their personal data will be processed (a Privacy Notice) is concise, easily accessible, easy to understand and written in plain language.</li>
+          <li>OPSI must demonstrate transparency by providing people with the appropriate Privacy Notices before it collects and processes their Personal Information and at the appropriate times throughout the processing.</li>
+          <li>Where OPSI obtains any Personal Information about a person from a third party, it must check that it was collected by the third party in accordance with this policy’s requirements and that the sharing of such Personal Information with OPSI was clearly explained.</li>
+        </ul>
+
+        <h2 id="minimisation">Data minimisation</h2>
+        <ul>
+          <li>The Personal Information that OPSI collects and processes must be adequate, relevant and limited to what is necessary in relation to the purposes for which it is to be processed.</li>
+          <li>Personal Information must only be processed when necessary for the performance of duties and tasks and not for any other purposes.</li>
+          <li>Accessing Personal Information where there is no authorisation to do so, or where there is no reason to access, may result in disciplinary action and in certain circumstances may constitute a criminal offence.</li>
+          <li>When collecting Personal Information, there should not be a request that a person provides more Personal Information than is necessary for the intended purposes.</li>
+          <li>Where Personal Information is no longer needed for the specific purposes for which it was collected, such information must be deleted, destroyed and/or anonymised in accordance with OPSI’s Data and Record Retention and Disposal Policy and Information, Data Management and Control Policy.</li>
+        </ul>
+
+        <h3>Special Personal Information</h3>
+        <p>OPSI, in line with the requirements of POPIA, will restrict the collection of special Personal Information to only that which is necessary under legal obligations and with explicit consent of the individual. Special Information includes the following:</p>
+        <ul>
+          <li>Religious or philosophical beliefs</li>
+          <li>Race or ethnic origin</li>
+          <li>Trade union membership</li>
+          <li>Political persuasion</li>
+          <li>Health and sex life</li>
+          <li>Criminal records</li>
+          <li>Biometric information</li>
+        </ul>
+
+        <h3>Data of children</h3>
+        <p>Information of children will only be collected in line with the criteria set in Chapter 3, Part C, Section 35 of POPIA, which includes:</p>
+        <ul>
+          <li>Carried out with the prior consent of a competent person.</li>
+          <li>Necessary for the establishment, exercise, or defence of a right or obligation in law.</li>
+          <li>Necessary to comply with an obligation of international public law.</li>
+          <li>For historical, statistical or research purposes to the extent that:
+            <ul>
+              <li>The purpose serves a public interest and the processing is necessary for the purpose concerned, or it appears to be impossible or would involve a disproportionate effort to ask for consent; and</li>
+              <li>Sufficient guarantees are provided to ensure that the processing does not adversely affect the individual privacy of the child to a disproportionate extent.</li>
+            </ul>
+          </li>
+          <li>Personal Information which has deliberately been made public by the child with the consent of a competent person.</li>
+        </ul>
+
+        <h2 id="accuracy">Accuracy</h2>
+        <ul>
+          <li>Personal Information that OPSI collects and processes must be accurate and, where required, kept up to date.</li>
+          <li>Records must be corrected and/or deleted, without delay, where an error has been discovered.</li>
+          <li>Where appropriate, any inaccurate or expired records should be deleted or destroyed.</li>
+        </ul>
+
+        <h2 id="storage">Storage limitation</h2>
+        <ul>
+          <li>Personal Information must not be kept in a form that identifies a person for longer than what is necessary in relation to the purposes for which it was collected.</li>
+          <li>There must be a regular review of any Personal Information which has been processed to assess whether the purposes for which the information was collected has expired.</li>
+          <li>Where appropriate, reasonable steps must be taken to delete or destroy any personal data that OPSI no longer requires in accordance with OPSI’s Data and Record Retention and Disposal Policy and Information, Data Management and Control Policy.</li>
+          <li>All Privacy Notices should inform data subjects of the period for which their personal data will be stored or how such period will be determined.</li>
+        </ul>
+
+        <h2 id="security">Security of Personal Information</h2>
+        <ul>
+          <li>Personal Information that OPSI collects and processes must be secured by appropriate technical and organisational measures against accidental loss, destruction or damage, and against unauthorised or unlawful processing.</li>
+          <li>OPSI must develop, implement, and maintain appropriate technical and organisational measures for the processing of Personal Information considering:
+            <ul>
+              <li>Nature, scope, context, and purposes for such processing; and</li>
+              <li>The volume of Personal Information processed, and the likelihood and severity of the risks of such processing for the rights of persons.</li>
+            </ul>
+          </li>
+          <li>OPSI must regularly evaluate and test the effectiveness of such measures to ensure that they are adequate and effective.</li>
+          <li>All procedures that OPSI has put in place to maintain the security of Personal Information, from collection to destruction, must be observed and adhered to.</li>
+          <li>Confidentiality, integrity, and availability of Personal Information must be maintained at all times:
+            <ul>
+              <li><strong>Confidentiality</strong> — Only people who need to know and are authorised to process any Personal Information can access it.</li>
+              <li><strong>Integrity</strong> — Personal Information must be accurate and suitable for the intended purposes.</li>
+              <li><strong>Availability</strong> — Those who need to access the Personal Information for authorised purposes can do so.</li>
+            </ul>
+          </li>
+          <li>Sharing Personal Information with third parties is prohibited unless OPSI has agreed to this in advance and there has been an issuance to the respective person of a Privacy Notice beforehand.</li>
+        </ul>
+
+        <h2 id="location">Location data</h2>
+        <p>The ORBIT rep app collects precise location data (GPS coordinates) when a rep performs an action on a visit, such as starting or finishing a visit, taking an order, capturing a photograph or recording a new prospect. Location data is used to record where and when visits took place, to flag visits made away from the store’s location, and to plan and re-optimise the rep’s route. This data is transmitted to the ORBIT platform operated by OPSI and is accessible to the organisation that manages the rep’s territory. The app records location only at those moments; it does not track the rep continuously in the background.</p>
+
+        <h2 id="rights">Person’s rights</h2>
+        <p>Chapter 3(5) of POPIA and Chapter 3 of GDPR provides people with several rights in relation to their information. These rights include:</p>
+        <ul>
+          <li>The right to withdraw consent unconditionally.</li>
+          <li>The right to be informed about how OPSI collects and processes Personal Information.</li>
+          <li>The right to, on request, receive a copy of the Personal Information that OPSI holds.</li>
+          <li>The right to have inaccurate personal data corrected or incomplete information completed, on request.</li>
+          <li>The right to ask OPSI to delete or destroy Personal Information where:
+            <ul>
+              <li>The information is no longer necessary in relation to the purposes for which it was collected.</li>
+              <li>Consent has been withdrawn (where applicable).</li>
+              <li>A person has objected to the processing.</li>
+              <li>The processing was unlawful.</li>
+              <li>The Personal Information must be deleted to comply with a legal obligation.</li>
+              <li>The Personal Information was collected from a person under the age of 13 and they have reached the age of 13.</li>
+            </ul>
+          </li>
+          <li>The right to restrict processing if there is a reasonable belief that the personal data is inaccurate.</li>
+          <li>The right to receive or ask OPSI to transfer Personal Information to a third party.</li>
+          <li>The right to be notified of a Personal Information breach.</li>
+          <li>The right to make a complaint to the Data Protection Authority (GDPR), the Information Regulator of South Africa (POPIA), or another appropriate supervisory authority.</li>
+        </ul>
+
+        <h2 id="protection">Data protection</h2>
+        <p>A Data Protection Impact Assessment (DPIA), also known as a Privacy Impact Assessment, is a process to help identify and minimise the data protection risks involved in projects, processes and activities involving the processing of personal data. DPIAs are required for processing Personal Information likely to result in a high risk to the individuals. A DPIA must:</p>
+        <ul>
+          <li>Describe the nature, scope, context, and purposes of the processing.</li>
+          <li>Assess necessity, proportionality, and compliance measures.</li>
+          <li>Identify and assess risks to individuals.</li>
+          <li>Identify any additional measures to mitigate those risks.</li>
+        </ul>
+
+        <h2 id="retention-records">Record retention</h2>
+        <p>All records pertaining to this policy should be retained in accordance with OPSI’s Data and Record Retention and Disposal Policy and OPSI’s Information, Data Management and Control Policy.</p>
+
+        <div class="sched">
+          <h2 class="part">OPSI Systems’ Cookie Policy</h2>
+          <p>This Cookie Policy explains what cookies are, how we use them on our Website and what your rights and options are to control, use or deactivate them.</p>
+          <p>If you choose to not disable cookies on your web browser or opt-out as described below, we will assume that you accept the use of cookies and our use of the information collected by it.</p>
+
+          <h2 id="cookies">What are cookies?</h2>
+          <p>Cookies are small text files downloaded from websites you visit. These text files are saved on to your computer or mobile device. Cookies enable and allow websites to recognise your device if you click on a next page or return to the website at a later date. This makes it easier for you to use the website and makes your experience more personalised.</p>
+          <p>“First party cookies” are cookies set by the owner of the website you visit. “Third party cookies” are cookies set by parties other than the owner of the website. The purpose of third party cookies is to enable third-party features or functionalities to be provided on or through a website (for example advertising, interactive content, and analytics). Third party cookies recognise your computer when you visit the applicable website or certain other websites.</p>
+          <p>Cookies are only stored on your web browser for a specified amount of time, after which they expire.</p>
+
+          <h2 id="cookie-use">Why does OPSI Systems use cookies?</h2>
+          <p>We use both first party and third party cookies for various reasons. Some first party cookies are needed in order for our website to operate. Other cookies help us to track and target the interest of users of our website in order to enhance the experience on the website.</p>
+
+          <h2 id="cookie-types">Which cookies does OPSI Systems use?</h2>
+          <p>We and our trusted partners use cookies and other technologies in our related services, including when you visit our site or access our services. The site uses the following types of cookies:</p>
+          <table class="sev">
+            <thead><tr><th>Cookie type</th><th>Description</th></tr></thead>
+            <tbody>
+              <tr><td>Session cookies</td><td>Stored only temporarily during a browsing session in order to allow normal use of the system. Deleted from your device when the browser is closed.</td></tr>
+              <tr><td>Persistent cookies</td><td>Read only by the site, saved on your computer for a fixed period and not deleted when the browser is closed. Used where we need to know who you are for repeat visits, for example to store your preferences for the next sign-in.</td></tr>
+              <tr><td>Third-party cookies</td><td>Set by other online services who run content on the page you are viewing, for example by third-party analytics companies who monitor and analyse our web access.</td></tr>
+            </tbody>
+          </table>
+          <p>Cookies do not contain any information that personally identifies you, but Personal Information that we store about you may be linked to the information stored in and obtained from cookies. You may remove cookies by following the instructions of your device preferences; however, if you choose to disable cookies, some features of our site may not operate properly and your online experience may be limited.</p>
+          <p>We also use a tool called “Google Analytics” to collect information about your use of the site. Google Analytics collects information such as how often users access the site, which pages they visit, when they do so, etc. We use the information we obtain from Google Analytics only to improve our site and services. Google Analytics collects the IP address assigned to you on the date you visit sites, rather than your name or other identifying information. We do not combine the information collected through the use of Google Analytics with personally identifiable information.</p>
+
+          <h2 id="cookie-disable">Can I disable cookies?</h2>
+          <p>You can choose to accept or reject cookies. If you choose to disable cookies, certain features of the website might not be available or functional anymore. If you don’t want cookies you can disable them on your web browser. Different browsers have different ways to manage cookies and protect your privacy. You will be able to see your browser’s opt-out options under the Help button.</p>
+          <p>Please note that disabling cookies does not prevent previously set cookies from working on your device. To do this, you have to clear all cookies in your browser settings.</p>
+
+          <h2 id="user-rights">User rights</h2>
+          <p>You may request to:</p>
+          <ul>
+            <li>Receive confirmation as to whether or not personal information concerning you is being processed and access your stored personal information, together with supplementary information.</li>
+            <li>Receive a copy of personal information you directly volunteer to us in a structured, commonly used and machine-readable format.</li>
+            <li>Request rectification of your personal information that is in our control.</li>
+            <li>Request erasure of your personal information.</li>
+            <li>Object to the processing of personal information by us.</li>
+            <li>Request to restrict processing of your personal information by us.</li>
+            <li>Lodge a complaint with a supervisory authority.</li>
+          </ul>
+          <p>Please note that these rights are not absolute and may be subject to our own legitimate interests and regulatory requirements. If you wish to exercise any of the above rights or receive more information, please contact our Data Protection Officer (DPO) at: <a href="mailto:privacy@opsisystems.com">privacy@opsisystems.com</a>.</p>
+
+          <h2 id="retention">Retention</h2>
+          <p>We will retain your personal information for as long as necessary to provide our services, and as necessary to comply with our legal obligations, resolve disputes and enforce our policies. Retention periods will be determined taking into account the type of information that is collected and the purpose for which it is collected, bearing in mind the requirements applicable to the situation and the need to destroy outdated, unused information at the earliest reasonable opportunity. Under applicable regulations, we will keep records containing client personal data, account opening documents, communications and anything else as required by applicable laws and regulations.</p>
+          <p>We may rectify, replenish or remove incomplete or inaccurate information at any time and at our own discretion.</p>
+
+          <h2 id="third-party">Third-party collection of information</h2>
+          <p>Our policy only addresses the use and disclosure of information we collect from you. To the extent you disclose your information to other parties or sites throughout the internet, different rules may apply to their use or disclosure of the information you disclose to them. Accordingly, we encourage you to read the terms and conditions and privacy policy of each third party that you choose to disclose information to.</p>
+          <p>This Privacy Policy does not apply to the practices of companies that we do not own or control, nor to individuals whom we do not employ or manage, including any of the third parties which we may disclose information to as set out in this Privacy Policy.</p>
+
+          <h2 id="safeguard">How do we safeguard your information?</h2>
+          <p>We take great care in implementing and maintaining the security of the site and your information. Although we take reasonable steps to safeguard information, we cannot be responsible for the acts of those who gain unauthorised access or abuse our site, and we make no warranty, express, implied or otherwise, that we will prevent such access.</p>
+
+          <h2 id="eea">Transfer of data outside the EEA</h2>
+          <p>Please note that some data recipients may be located outside the EEA. In such cases we will transfer your data only to such countries as approved by the European Commission as providing an adequate level of data protection, or enter into legal agreements ensuring an adequate level of data protection.</p>
+
+          <h2 id="marketing">Marketing</h2>
+          <p>We may use your Personal Information such as your name, email address, telephone number, etc., ourselves or by using our third-party subcontractors, for the purpose of providing you with promotional materials concerning our services which we believe may interest you.</p>
+          <p>To respect your right to privacy, within such marketing materials we provide you with the means to opt out of receiving further marketing offers from us. If you unsubscribe, we will remove your email address or telephone number from our marketing distribution lists.</p>
+          <p>Please note that even if you have unsubscribed from receiving marketing emails from us, we may send you other types of important email communications without offering you the opportunity to opt out of receiving them. These may include customer service announcements or administrative notices.</p>
+
+          <h2 id="corporate">Corporate transaction</h2>
+          <p>We may share information in the event of a corporate transaction (e.g. sale of a substantial part of our business, merger, consolidation or asset sale). In the event of the above, the transferee or acquiring company will assume the rights and obligations as described in this Privacy Policy.</p>
+
+          <h2 id="minors">Minors</h2>
+          <p>We understand the importance of protecting children’s privacy, especially in an online environment. The site is not designed for or directed at children. Under no circumstances shall we allow the use of our services by minors without prior consent or authorisation by a parent or legal guardian. We do not knowingly collect Personal Information from minors. If a parent or guardian becomes aware that his or her child has provided us with Personal Information without their consent, he or she should contact us at <a href="mailto:privacy@opsisystems.com">privacy@opsisystems.com</a>.</p>
+
+          <h2 id="updates">Updates or amendments to this Cookie Policy</h2>
+          <p>We reserve the right to periodically amend or revise the Cookie Policy; material changes will be effective immediately upon the display of the revised Privacy policy. The last revision will be reflected in the “Last modified” section. Your continued use of the Platform, following the notification of such amendments on our website, constitutes your acknowledgment and consent of such amendments to the Cookie Policy and your agreement to be bound by the terms of such amendments.</p>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="logo" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <circle cx="15" cy="15" r="4" fill="#0080c7"/>
+            <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#0080c7" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+            <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#0080c7" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+            <circle cx="26" cy="9" r="1.8" fill="#19afff" opacity="0.85"/>
+          </svg>
+          ORBIT
+        </a>
+        <p>Intelligent territory planning and rep scheduling for field sales teams. Fewer kilometres. More coverage. Balanced workloads.</p>
+        <p class="ft-opsi">Built by <a href="https://www.opsisystems.com" target="_blank" rel="noopener">OPSI Systems (Pty) Ltd</a></p>
+      </div>
+      <div class="ft-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how">How It Works</a></li>
+          <li><a href="index.html#industries">Industries</a></li>
+          <li><a href="billing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#demo">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="mailto:info@opsi.co.za">Email Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 ORBIT by OPSI Systems (Pty) Ltd. All rights reserved.</span>
+      <div class="ft-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="index.html#demo">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
