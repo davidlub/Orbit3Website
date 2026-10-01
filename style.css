@@ -401,7 +401,6 @@ nav .logo { gap:11px; font-size:1.55rem; }
   box-shadow:0 4px 14px rgba(0,128,199,0.10), 0 20px 50px rgba(0,128,199,0.12);
   position:relative;
 }
-.p-card.pop::before { content:'Most Popular'; position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--accent); color:#fff; font-family:var(--mono); font-size:0.64rem; font-weight:500; text-transform:uppercase; letter-spacing:0.09em; padding:4px 14px; border-radius:var(--r-pill); white-space:nowrap; box-shadow:0 4px 12px rgba(0,128,199,0.3); }
 .p-tier { font-size:0.66rem; font-weight:700; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.13em; color:var(--text-3); margin-bottom:9px; }
 .p-scale { font-family:var(--serif); font-size:1.4rem; font-weight:700; color:var(--ink); margin-bottom:5px; line-height:1.2; letter-spacing:-0.01em; }
 .p-sub { font-size:0.85rem; color:var(--text-3); margin-bottom:26px; }
@@ -409,6 +408,21 @@ nav .logo { gap:11px; font-size:1.55rem; }
 .p-feats li { display:flex; gap:10px; font-size:0.85rem; color:var(--text-2); }
 .p-feats li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
 .p-note { text-align:center; font-size:0.82rem; color:var(--text-3); }
+/* The headline price: rand for South Africa, dollars elsewhere, side by side. */
+.p-price { display:flex; justify-content:center; align-items:center; gap:34px; flex-wrap:wrap; margin:0 auto 14px; }
+.p-amt { display:flex; align-items:flex-start; font-family:var(--serif); font-weight:800; font-size:3.4rem; line-height:1; color:var(--ink); letter-spacing:-0.02em; }
+.p-cur { font-size:1.6rem; font-weight:700; color:var(--accent); margin:6px 4px 0 0; }
+.p-per { font-family:var(--sans); font-size:0.8rem; font-weight:600; line-height:1.4; letter-spacing:0; color:var(--text-3); margin:8px 0 0 12px; text-align:left; }
+.p-or { font-family:var(--mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--text-3); }
+.p-launch { text-align:center; margin-bottom:16px; }
+.p-launch span { display:inline-block; font-family:var(--mono); font-size:0.68rem; font-weight:500; text-transform:uppercase; letter-spacing:0.14em; color:#6f6c05; background:rgba(199,194,20,0.16); border:1px solid rgba(199,194,20,0.5); border-radius:var(--r-pill); padding:4px 14px; }
+.p-note.p-big { font-size:0.92rem; color:var(--text-2); margin-bottom:44px; }
+.p-note.p-big strong { color:var(--ink); }
+.bill-hero .p-note.p-big { margin-bottom:30px; }
+@media (max-width:580px) {
+  .p-price { flex-direction:column; gap:10px; }
+  .p-amt { font-size:2.9rem; }
+}
 
 /* ── Demo ── */
 .demo-wrap { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
@@ -516,7 +530,7 @@ footer { background:var(--surface); border-top:1px solid var(--border); padding:
   .ft-grid { grid-template-columns:1fr; }
   .stat-bar { flex-direction:column; gap:28px; padding:40px; }
   .stat-div { display:none; }
-  .fg-row { grid-template-columns:1fr; }
+  .fg-row { grid-template-columns:1fr; gap:0; }
 }
 
 /* ── VIDEO SHOWCASE ─────────────────────────────────────────────────────────
