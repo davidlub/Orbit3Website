@@ -408,12 +408,11 @@ nav .logo { gap:11px; font-size:1.55rem; }
 .p-feats li { display:flex; gap:10px; font-size:0.85rem; color:var(--text-2); }
 .p-feats li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; }
 .p-note { text-align:center; font-size:0.82rem; color:var(--text-3); }
-/* The headline price: rand for South Africa, dollars elsewhere, side by side. */
+/* The headline price. */
 .p-price { display:flex; justify-content:center; align-items:center; gap:34px; flex-wrap:wrap; margin:0 auto 14px; }
 .p-amt { display:flex; align-items:flex-start; font-family:var(--serif); font-weight:800; font-size:3.4rem; line-height:1; color:var(--ink); letter-spacing:-0.02em; }
 .p-cur { font-size:1.6rem; font-weight:700; color:var(--accent); margin:6px 4px 0 0; }
 .p-per { font-family:var(--sans); font-size:0.8rem; font-weight:600; line-height:1.4; letter-spacing:0; color:var(--text-3); margin:8px 0 0 12px; text-align:left; }
-.p-or { font-family:var(--mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--text-3); }
 .p-launch { text-align:center; margin-bottom:16px; }
 .p-launch span { display:inline-block; font-family:var(--mono); font-size:0.68rem; font-weight:500; text-transform:uppercase; letter-spacing:0.14em; color:#6f6c05; background:rgba(199,194,20,0.16); border:1px solid rgba(199,194,20,0.5); border-radius:var(--r-pill); padding:4px 14px; }
 .p-note.p-big { font-size:0.92rem; color:var(--text-2); margin-bottom:44px; }
