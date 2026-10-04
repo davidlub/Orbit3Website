@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBIT — End-User License Agreement</title>
+  <meta name="description" content="The End-User License Agreement that governs access to and use of ORBIT, the territory planning, route scheduling and field sales platform by Opsi Systems (Pty) Ltd.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#001626">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* EULA-page-specific pieces, on the site's tokens. */
+    .legal-hero { padding:150px 0 30px; text-align:center; }
+    .legal-hero h1 { font-family:var(--serif); font-weight:800; font-size:clamp(2rem,4.6vw,3.1rem); line-height:1.1; letter-spacing:-0.02em; color:var(--text); margin:18px auto 0; max-width:18ch; }
+    .legal-hero .meta { margin-top:16px; font-family:var(--mono); font-size:0.82rem; color:var(--text-3); }
+
+    section.legal { padding:40px 0 110px; }
+    .legal-grid { display:grid; grid-template-columns:240px minmax(0,1fr); gap:56px; align-items:start; }
+
+    .toc { position:sticky; top:96px; max-height:calc(100vh - 120px); overflow:auto; font-size:0.82rem; padding-right:6px; }
+    .toc h4 { font-size:0.65rem; font-family:var(--mono); font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-3); margin-bottom:12px; }
+    .toc ol { list-style:none; display:flex; flex-direction:column; gap:7px; }
+    .toc a { color:var(--text-2); }
+    .toc a:hover { color:var(--accent); text-decoration:none; }
+
+    .doc { max-width:780px; }
+    .doc .notice { background:var(--a-pale); border:1px solid rgba(0,128,199,0.22); border-radius:14px; padding:20px 22px; margin-bottom:28px; color:var(--text); font-size:0.95rem; }
+    .doc h2 { font-size:1.3rem; font-weight:700; color:var(--text); margin:46px 0 14px; scroll-margin-top:96px; letter-spacing:-0.005em; }
+    .doc h2 .n { font-family:var(--mono); color:var(--accent); font-weight:500; margin-right:10px; }
+    .doc h3 { font-size:1.05rem; color:var(--text); margin:30px 0 10px; }
+    .doc p, .doc li { font-size:0.95rem; line-height:1.75; }
+    .doc p { margin-bottom:12px; }
+    .doc p .cl { font-family:var(--mono); font-size:0.85rem; color:var(--text-3); margin-right:6px; }
+    .doc ul, .doc ol.alpha { margin:4px 0 14px 22px; display:flex; flex-direction:column; gap:6px; }
+    .doc ol.alpha { list-style:lower-alpha; }
+    .doc dl { display:flex; flex-direction:column; gap:10px; }
+    .doc dt { font-weight:700; color:var(--text); font-size:0.95rem; }
+    .doc dd { font-size:0.95rem; line-height:1.75; margin:0 0 4px; }
+    .doc strong { color:var(--text); }
+    .doc .sched { margin-top:70px; padding-top:40px; border-top:1px solid var(--border); }
+
+    .sev { width:100%; border-collapse:collapse; margin:10px 0 18px; font-size:0.9rem; }
+    .sev th, .sev td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--border); }
+    .sev th { font-family:var(--mono); font-size:0.72rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-3); }
+    .sev td { color:var(--text-2); }
+    .sev td:first-child { color:var(--text); font-weight:600; }
+
+    @media (max-width:900px){
+      .legal-grid { grid-template-columns:1fr; gap:24px; }
+      .toc { position:static; max-height:none; border:1px solid var(--border); border-radius:14px; padding:18px 20px; }
+      .toc ol { display:grid; grid-template-columns:1fr 1fr; gap:6px 18px; }
+    }
+    @media (max-width:520px){
+      .toc ol { grid-template-columns:1fr; }
+      .sev th, .sev td { padding:8px 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="nav">
+  <div class="nav-in">
+    <a class="logo" href="index.html" aria-label="ORBIT home">
+      <svg width="28" height="28" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+        <circle cx="15" cy="15" r="4" fill="#0080c7"/>
+        <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#0080c7" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+        <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#0080c7" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+        <circle cx="26" cy="9" r="1.8" fill="#19afff" opacity="0.95"/>
+      </svg>
+      ORBIT
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#videos">Watch</a></li>
+      <li><a href="index.html#editions">Modes</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#daily">Planning</a></li>
+      <li><a href="index.html#sfa">Field Sales</a></li>
+      <li><a href="index.html#prospects">Prospects</a></li>
+      <li><a href="index.html#evidence">Photos</a></li>
+      <li><a href="index.html#assistant">Assistant</a></li>
+      <li><a href="billing.html">Pricing</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#demo" class="btn btn-primary btn-nav">Request a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="legal-hero">
+  <div class="container">
+    <div><span class="pill">Legal</span></div>
+    <h1>ORBIT End-User License Agreement</h1>
+    <p class="meta">Last updated: 30 September 2026</p>
+  </div>
+</section>
+
+<!-- ── AGREEMENT ── -->
+<section class="legal">
+  <div class="container">
+    <div class="legal-grid">
+
+      <aside class="toc" aria-label="Contents">
+        <h4>Contents</h4>
+        <ol>
+          <li><a href="#c1">1. Definitions</a></li>
+          <li><a href="#c2">2. Acceptance &amp; authority</a></li>
+          <li><a href="#c3">3. License &amp; hosted service</a></li>
+          <li><a href="#c4">4. Pilots &amp; trials</a></li>
+          <li><a href="#c5">5. Users &amp; security</a></li>
+          <li><a href="#c6">6. Restrictions</a></li>
+          <li><a href="#c7">7. Data inputs &amp; outputs</a></li>
+          <li><a href="#c8">8. Field users &amp; devices</a></li>
+          <li><a href="#c9">9. AI Assistant</a></li>
+          <li><a href="#c10">10. Support &amp; updates</a></li>
+          <li><a href="#c11">11. Fees &amp; billing</a></li>
+          <li><a href="#c12">12. Data ownership</a></li>
+          <li><a href="#c13">13. Data protection</a></li>
+          <li><a href="#c14">14. Confidentiality</a></li>
+          <li><a href="#c15">15. Intellectual property</a></li>
+          <li><a href="#c16">16. Third-party materials</a></li>
+          <li><a href="#c17">17. IP indemnity</a></li>
+          <li><a href="#c18">18. Disclaimers</a></li>
+          <li><a href="#c19">19. Limitation of liability</a></li>
+          <li><a href="#c20">20. Customer indemnities</a></li>
+          <li><a href="#c21">21. Term &amp; termination</a></li>
+          <li><a href="#c22">22. Export &amp; sanctions</a></li>
+          <li><a href="#c23">23. Publicity</a></li>
+          <li><a href="#c24">24. Resellers</a></li>
+          <li><a href="#c25">25. Governing law</a></li>
+          <li><a href="#c26">26. Notices</a></li>
+          <li><a href="#c27">27. General</a></li>
+          <li><a href="#s1">Schedule 1: Support</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc">
+
+        <div class="notice">
+          <strong>Important notice:</strong> By clicking “I accept”, or by accessing, logging into or using ORBIT (including the ORBIT rep app), you agree to this End-User License Agreement on behalf of yourself and, where you use ORBIT for an organisation, on behalf of that organisation. If you do not have authority or do not agree, do not click “I accept” and do not access or use ORBIT.
+        </div>
+
+        <p>Opsi Systems Proprietary Limited, registration number 2008/005488/07, with its principal place of business at 21 Scott Street, Waverley, Johannesburg, South Africa, 2090 (“Opsi”, “we”, “us” or “our”) owns and licenses the ORBIT software product. ORBIT is provided as a cloud-hosted, multi-tenant service operated by Opsi or its hosting providers, on the modes, scope and commercial terms set out in the applicable Order Form.</p>
+
+        <!-- 1 -->
+        <h2 id="c1"><span class="n">1.</span>Definitions</h2>
+        <dl>
+          <dt>Affiliate</dt>
+          <dd>means any entity that directly or indirectly controls, is controlled by, or is under common control with a party.</dd>
+          <dt>Agreement</dt>
+          <dd>means this End-User License Agreement, together with any applicable Order Form, Schedule 1, and any policies or terms incorporated by reference.</dd>
+          <dt>AI Assistant</dt>
+          <dd>means the built-in assistant in ORBIT that answers questions in natural language about how to use ORBIT and about Customer Data, as described in clause 9.</dd>
+          <dt>Authorised User</dt>
+          <dd>means an individual employee, contractor or agent of Customer authorised by Customer to access or use ORBIT for Customer’s internal business purposes, including office planning users and Field Users.</dd>
+          <dt>Billable Rep</dt>
+          <dd>has the meaning given in clause 11.2.</dd>
+          <dt>Customer</dt>
+          <dd>means the legal entity or person on whose behalf ORBIT is accessed or used, including any customer named in an Order Form.</dd>
+          <dt>Customer Data</dt>
+          <dd>means data, information, files and content submitted to, processed by, generated through or stored in ORBIT by or on behalf of Customer or its Authorised Users — including store and outlet master data, territories, routes, visit records, GPS locations, photographs, survey answers, prospects, product catalogues, price lists, stock figures, orders and signatures — excluding Opsi Technology, Usage Data and Aggregated Data.</dd>
+          <dt>Documentation</dt>
+          <dd>means user guides, release notes, help materials, videos and technical documentation (including API documentation) made available by Opsi for ORBIT.</dd>
+          <dt>Fees</dt>
+          <dd>means all subscription, support, professional services and other fees payable for ORBIT under an Order Form or other commercial arrangement.</dd>
+          <dt>Field User</dt>
+          <dd>means an Authorised User, typically a sales representative or merchandiser, who uses the ORBIT rep app on a mobile device to follow routes and record visits, photographs, surveys, prospects or orders.</dd>
+          <dt>Hosted Service</dt>
+          <dd>means access to ORBIT as a service hosted by Opsi or its hosting providers.</dd>
+          <dt>Mode</dt>
+          <dd>means an ORBIT product configuration licensed to Customer, currently <em>Route Planning</em> and <em>Field Sales</em>, as specified in the Order Form.</dd>
+          <dt>ORBIT or “Software”</dt>
+          <dd>means Opsi’s proprietary ORBIT territory planning, route and visit scheduling, field sales, order capture, prospecting, visit evidence, reporting and related software, including the web application, the rep app, the AI Assistant, APIs, modules, interfaces, algorithms, object code, databases, scripts, updates, upgrades, patches and Documentation made available by Opsi.</dd>
+          <dt>Order Form</dt>
+          <dd>means any quote, proposal, statement of work, order, reseller order, purchase order accepted by Opsi, online sign-up, or similar document that identifies the commercial terms, Modes, scope, quantities, term, support level or Fees for ORBIT.</dd>
+          <dt>Opsi Technology</dt>
+          <dd>means ORBIT, the Documentation, and all algorithms, models, engines, code, software, know-how, methodologies, templates, schemas, connectors, libraries, configurations, prompts, improvements, derivative works and related intellectual property owned or licensed by Opsi.</dd>
+          <dt>Personal Information</dt>
+          <dd>has the meaning given in the Protection of Personal Information Act 4 of 2013 (“POPIA”), and includes equivalent concepts under applicable data protection laws.</dd>
+          <dt>Pilot</dt>
+          <dd>means any free or discounted pilot, trial, proof of concept or evaluation of ORBIT, as described in clause 4.</dd>
+          <dt>Usage Data</dt>
+          <dd>means technical, diagnostic, telemetry, performance, security and usage information relating to the configuration, performance, operation or use of ORBIT, including counts of stores, reps and planned visits used for billing.</dd>
+        </dl>
+
+        <!-- 2 -->
+        <h2 id="c2"><span class="n">2.</span>Acceptance, authority and precedence</h2>
+        <p><span class="cl">2.1</span>This Agreement is a legally binding agreement between Opsi and Customer. Each Authorised User who accepts this Agreement does so for themselves and, where applicable, on behalf of Customer.</p>
+        <p><span class="cl">2.2</span>Customer is responsible for ensuring that all Authorised Users comply with this Agreement. Any act or omission by an Authorised User is deemed to be an act or omission by Customer.</p>
+        <p><span class="cl">2.3</span>If an Order Form conflicts with this Agreement, the Order Form prevails only for the specific conflicting commercial term and only for the applicable order. This Agreement prevails over any Customer purchase order, vendor onboarding terms, portal terms or other Customer-supplied terms, unless Opsi expressly signs a written variation referring to this Agreement.</p>
+        <p><span class="cl">2.4</span>Opsi may update this Agreement from time to time. The updated version will apply prospectively from the date it is posted on the ORBIT website, linked in ORBIT, or otherwise notified to Customer. Continued access or use after that date constitutes acceptance of the updated Agreement. Opsi will provide at least 30 days’ prior written notice of any material change. Material adverse changes will not apply retroactively to a prepaid committed term unless required by law or necessary to address an imminent security vulnerability. If Customer does not accept a material change, Customer may terminate the affected subscription by written notice to Opsi within 30 days after receiving notice of the change, and Opsi will refund prepaid unused Fees for the remainder of the then-current committed term.</p>
+
+        <!-- 3 -->
+        <h2 id="c3"><span class="n">3.</span>License grant and hosted service</h2>
+        <p><span class="cl">3.1</span>Subject to Customer’s compliance with this Agreement and payment of all Fees, Opsi grants Customer a limited, non-exclusive, non-transferable, non-sublicensable license during the applicable subscription term to allow Authorised Users to access and use ORBIT solely for Customer’s internal business operations, and only within the Modes, scope, quantities, partitions, territory and other limits in the applicable Order Form.</p>
+        <p><span class="cl">3.2</span>ORBIT is provided as a Hosted Service. Opsi will make ORBIT available remotely through a web browser and the rep app, subject to planned maintenance, emergency maintenance, outages, internet and mobile network conditions, Customer systems and devices, third-party services and events outside Opsi’s reasonable control. ORBIT is multi-tenant: Customer’s data is logically separated from that of other customers.</p>
+        <p><span class="cl">3.3</span>The targeted uptime of the ORBIT Hosted Service is 99.5%, measured over a calendar month, excluding downtime caused by planned maintenance, emergency maintenance, internet or connectivity failures, Customer systems or devices, third-party services, force majeure events, and circumstances outside Opsi’s reasonable control. Opsi does not warrant uninterrupted access. Opsi will use reasonable commercial efforts to notify Customer in advance of scheduled maintenance. The rep app is designed to continue working offline during interruptions and to synchronise when a connection is restored.</p>
+        <p><span class="cl">3.4</span>Access to ORBIT’s APIs is subject to the Documentation and to reasonable rate and usage limits that Opsi may set to protect the service for all customers.</p>
+        <p><span class="cl">3.5</span>No source code, ownership or intellectual property rights are transferred to Customer. All rights not expressly granted are reserved by Opsi and its licensors.</p>
+
+        <!-- 4 -->
+        <h2 id="c4"><span class="n">4.</span>Pilots and trials</h2>
+        <p><span class="cl">4.1</span>Opsi may offer Customer a Pilot, for example on one region using Customer’s own data. The scope and duration of a Pilot are as agreed with Opsi in writing, and Opsi may end a Pilot at any time on notice.</p>
+        <p><span class="cl">4.2</span>A Pilot is provided for evaluation only, “as is”, without any service level, support commitment or warranty. Clause 19.1 applies to any liability relating to a Pilot for which no Fees are paid.</p>
+        <p><span class="cl">4.3</span>If Customer does not proceed to a paid subscription, Opsi may delete Customer Data loaded for the Pilot 30 days after the Pilot ends. If Customer proceeds, Pilot data may be carried into the paid subscription.</p>
+
+        <!-- 5 -->
+        <h2 id="c5"><span class="n">5.</span>Authorised Users, credentials and security</h2>
+        <p><span class="cl">5.1</span>Customer must ensure that each Authorised User uses unique login credentials and keeps those credentials, and any access links issued for the rep app, confidential.</p>
+        <p><span class="cl">5.2</span>Customer must promptly disable access for any person who is no longer authorised and promptly notify Opsi of suspected unauthorised access, credential compromise, lost or stolen devices, security incident or misuse.</p>
+        <p><span class="cl">5.3</span>Customer is responsible for the accuracy, legality, quality and integrity of Customer Data and for all activity under its accounts, whether authorised or unauthorised, except to the extent caused by Opsi’s proven breach of this Agreement.</p>
+        <p><span class="cl">5.4</span>Opsi may suspend or restrict access, without liability, where Opsi reasonably believes that continued access may create a security, legal, operational, intellectual property, payment or third-party risk, or where Customer or an Authorised User materially breaches this Agreement. Where the grounds for suspension are not urgent, Opsi will provide Customer with at least 5 business days’ prior written notice and an opportunity to remedy the issue before suspending access.</p>
+        <p><span class="cl">5.5</span>Opsi may cancel or deactivate login credentials that have been inactive for more than 6 months. Customer is responsible for notifying Opsi if inactive credentials should be retained.</p>
+
+        <!-- 6 -->
+        <h2 id="c6"><span class="n">6.</span>Restrictions</h2>
+        <p><span class="cl">6.1</span>Customer must not, and must not permit any person to:</p>
+        <ul>
+          <li>reverse engineer, decompile, disassemble, translate or attempt to derive source code, algorithms, data structures, underlying ideas or non-public APIs of ORBIT, except to the limited extent that applicable law expressly prohibits this restriction;</li>
+          <li>copy, modify, adapt, translate, enhance, create derivative works from, frame, mirror, scrape or reproduce ORBIT or the Documentation;</li>
+          <li>remove, obscure or alter proprietary notices, branding or intellectual property notices;</li>
+          <li>use ORBIT to provide outsourcing, bureau, managed service, territory-planning-as-a-service, route-planning-as-a-service or similar services to third parties, unless expressly authorised in an Order Form;</li>
+          <li>sublicense, resell, rent, lease, lend, transfer, assign, distribute, encumber or make ORBIT available to any third party;</li>
+          <li>circumvent usage limits, billing measures, security measures, access controls, tenant separation, technical restrictions or monitoring mechanisms, or attempt to access data belonging to another ORBIT customer;</li>
+          <li>benchmark, publish performance comparisons, conduct penetration testing, vulnerability scanning or load testing, or disclose security information about ORBIT without Opsi’s prior written consent;</li>
+          <li>use ORBIT in a manner that is unlawful, harmful, fraudulent, misleading, infringing, defamatory, offensive, unsafe, or that could damage Opsi, the Software, other customers or third-party systems;</li>
+          <li>introduce malware, malicious code, corrupted data or content that infringes third-party rights;</li>
+          <li>use ORBIT, its outputs or the AI Assistant to develop, train or improve a competing product or service; or</li>
+          <li>combine ORBIT with third-party software, hardware, services or datasets in a way that subjects Opsi Technology to open-source, copyleft, disclosure, data sharing or other obligations, or that creates security or licensing risk.</li>
+        </ul>
+        <p><span class="cl">6.2</span>Any breach of this clause is a material breach and may cause irreparable harm for which damages may be inadequate. Opsi may seek urgent injunctive or interdictory relief in addition to any other remedies.</p>
+
+        <!-- 7 -->
+        <h2 id="c7"><span class="n">7.</span>Customer systems, data inputs and outputs</h2>
+        <p><span class="cl">7.1</span>Customer is responsible for procuring, configuring, securing, maintaining and operating all Customer-controlled networks, computers, mobile devices, operating systems, browsers, connectivity, ERP and other third-party systems required to access ORBIT or to exchange data with it.</p>
+        <p><span class="cl">7.2</span>Customer acknowledges that territory, route and visit plans depend on Customer Data, assumptions, constraints, visit frequencies, visit windows, configuration, business rules, map data, third-party data and user decisions. Customer remains responsible for reviewing, validating and implementing any territories, routes, schedules, sequences, reports, recommendations or other outputs generated by ORBIT.</p>
+        <p><span class="cl">7.3</span>ORBIT is a planning, field execution and decision-support tool. It does not replace Customer’s operational judgement, legal compliance, employee safety obligations, road traffic laws, employment obligations, customer commitments or risk management processes.</p>
+        <p><span class="cl">7.4</span>Where Customer uses the Field Sales Mode, Customer is solely responsible for its product catalogue, price lists and price tiers, VAT and other tax settings, discounts, stock availability figures (including figures mirrored from Customer’s ERP), and for the orders, order confirmations, invoices and other documents generated through ORBIT. Those documents are issued by and on behalf of Customer, and Customer is responsible for ensuring that they are accurate and comply with applicable tax, consumer protection and commercial laws.</p>
+        <p><span class="cl">7.5</span>Opsi will use commercially reasonable backup processes for production data, as described in Schedule 1. Customer remains responsible for retaining copies of important source data and for exporting outputs it needs to keep, including through ORBIT’s Excel export and API facilities.</p>
+
+        <!-- 8 -->
+        <h2 id="c8"><span class="n">8.</span>Field users, devices and location data</h2>
+        <p><span class="cl">8.1</span>The ORBIT rep app records the device’s GPS location and a timestamp when a Field User performs actions such as starting or finishing a visit, and records photographs, survey answers, prospect details, orders and customer signatures captured by Field Users. This information forms part of Customer Data.</p>
+        <p><span class="cl">8.2</span>Customer is responsible for informing its Field Users, and any store owners, customers or other persons whose information or signatures are captured, of that processing, and for ensuring that Customer has a lawful basis for it under POPIA, labour law and any other applicable law, including any required notices, policies, consents and consultation with employees or their representatives.</p>
+        <p><span class="cl">8.3</span>The rep app can work offline and stores data on the device until it is synchronised with ORBIT. Opsi is not responsible for data that is lost because a device is lost, stolen, damaged, reset or cleared, or its browser data is removed, before synchronisation completes. Customer is responsible for ensuring that devices used with ORBIT are reasonably secured, for example with a screen lock.</p>
+        <p><span class="cl">8.4</span>Customer must instruct Field Users not to operate the rep app while driving or in any other circumstances where doing so would be unsafe or unlawful.</p>
+        <p><span class="cl">8.5</span>Customer must ensure that photographs and other content captured through ORBIT do not infringe the rights of any person and comply with any restrictions imposed by the stores or premises where they are taken.</p>
+
+        <!-- 9 -->
+        <h2 id="c9"><span class="n">9.</span>AI Assistant</h2>
+        <p><span class="cl">9.1</span>The AI Assistant uses machine learning models to answer questions about how to use ORBIT and about Customer Data that the relevant Authorised User is permitted to access, and may produce text, tables and charts in response.</p>
+        <p><span class="cl">9.2</span>Responses from the AI Assistant are generated automatically and may be inaccurate, incomplete or out of date. Customer must independently verify any response before relying on it for a business, financial, legal or operational decision.</p>
+        <p><span class="cl">9.3</span>To provide the AI Assistant, questions and relevant Customer Data may be processed by third-party AI model providers acting as Opsi’s subcontractors under clause 13.4. Opsi will use providers whose terms do not permit them to use Customer Data to train their general-purpose models.</p>
+        <p><span class="cl">9.4</span>Customer must not use the AI Assistant to generate unlawful, harmful or infringing content, to attempt to obtain information about other customers or about Opsi Technology, or to circumvent any restriction in clause 6.</p>
+        <p><span class="cl">9.5</span>Opsi may change, limit or withdraw the AI Assistant, or apply reasonable usage limits to it, at any time.</p>
+
+        <!-- 10 -->
+        <h2 id="c10"><span class="n">10.</span>Support and updates</h2>
+        <p><span class="cl">10.1</span>Unless an Order Form expressly states otherwise, support is provided remotely during Opsi’s ordinary business hours in South Africa, excluding weekends and public holidays. The standard support terms in Schedule 1 apply to every Customer tenant for which applicable Fees are being paid. Support excludes the items listed in clause 10.4.</p>
+        <p><span class="cl">10.2</span>Because ORBIT is a Hosted Service, Opsi maintains a single current version and applies updates, patches, fixes and enhancements for all customers at its discretion. Opsi does not undertake to provide all new features, Modes, modules or separately priced functionality as part of Customer’s existing subscription.</p>
+        <p><span class="cl">10.3</span>Any service levels, response times, backup commitments, disaster recovery commitments or hosting specifications beyond those in this Agreement apply only if expressly stated in an Order Form or separate service schedule signed or accepted by Opsi.</p>
+        <p><span class="cl">10.4</span>Support excludes training beyond guided onboarding included in an Order Form, implementation, configuration changes, custom reports, enhancements, data cleansing, data correction, map data issues, ERP and other third-party system issues, Customer device and infrastructure issues, user errors, issues caused by Customer Data or business rules, and any work outside the licensed scope, unless Opsi agrees to provide those services for additional fees.</p>
+        <p><span class="cl">10.5</span>Opsi will provide access to existing, relevant Documentation to assist in the proper use of ORBIT. Documentation is provided for informational purposes only and may be updated or revised from time to time at Opsi’s discretion.</p>
+
+        <!-- 11 -->
+        <h2 id="c11"><span class="n">11.</span>Fees, billing and audit</h2>
+        <p><span class="cl">11.1</span>Customer must pay all Fees in accordance with the applicable Order Form. Fees are non-cancellable and non-refundable except as expressly stated in this Agreement or the applicable Order Form.</p>
+        <p><span class="cl">11.2</span>Unless an Order Form states otherwise, subscription Fees are charged monthly per Billable Rep at the rate for the Mode Customer uses. The number of Billable Reps for a month is the greater of (a) the number of reps Customer deploys in ORBIT, and (b) the number of planned store visits per month divided by the visits-per-rep capacity agreed with Customer, subject to any minimum stated in the Order Form. Opsi calculates Billable Reps from a snapshot of Customer’s ORBIT data taken on a fixed date each month, and invoices from that snapshot. The model is explained on the <a href="billing.html">ORBIT pricing page</a>.</p>
+        <p><span class="cl">11.3</span>Fees are invoiced in US dollars (USD), unless the Order Form states otherwise, and are exclusive of VAT and other applicable taxes, which Customer must pay in addition.</p>
+        <p><span class="cl">11.4</span>If Fees are not paid when due, Opsi may charge interest at the maximum rate permitted by law, recover collection costs, suspend access or support, and/or terminate the applicable subscription after reasonable notice, without prejudice to any other rights.</p>
+        <p><span class="cl">11.5</span>Opsi may use Usage Data to verify Customer’s use of ORBIT and its Billable Reps. Opsi may also audit Customer’s use of ORBIT on reasonable notice, or immediately where Opsi reasonably suspects security risk, underpayment, unauthorised use or infringement. If an audit reveals underpayment or overuse, Customer must promptly pay all shortfalls and reasonable audit costs.</p>
+
+        <!-- 12 -->
+        <h2 id="c12"><span class="n">12.</span>Data ownership, usage data and aggregated data</h2>
+        <p><span class="cl">12.1</span>As between the parties, Customer owns Customer Data. Customer grants Opsi and its Affiliates, subcontractors and service providers a non-exclusive right to host, copy, process, transmit, store, analyse, display and use Customer Data as necessary to provide, secure, support, maintain, improve and administer ORBIT and related services, and to comply with law.</p>
+        <p><span class="cl">12.2</span>Opsi may collect and use Usage Data for security, diagnostics, product improvement, capacity planning, support, analytics, compliance, billing and business purposes.</p>
+        <p><span class="cl">12.3</span>Opsi may create, own and use aggregated, statistical, de-identified or anonymised data derived from Customer Data or Usage Data (“Aggregated Data”) for any lawful purpose, including product improvement, benchmarking, research, marketing and analytics, provided that Opsi will not intentionally disclose Aggregated Data in a manner that identifies Customer or any individual without Customer’s consent.</p>
+        <p><span class="cl">12.4</span>Customer is responsible for ensuring that it has all rights, notices, consents and lawful bases required for Opsi and its service providers to process Customer Data and Personal Information in accordance with this Agreement.</p>
+
+        <!-- 13 -->
+        <h2 id="c13"><span class="n">13.</span>Data protection and privacy</h2>
+        <p><span class="cl">13.1</span>Each party must comply with applicable data protection laws, including POPIA, where applicable.</p>
+        <p><span class="cl">13.2</span>In relation to Personal Information contained in Customer Data — including information about Field Users, store contacts, prospects and customers — Customer is the responsible party or controller and Opsi acts as operator or processor, except where Opsi processes Personal Information as an independent responsible party for its own statutory compliance, billing and security monitoring obligations.</p>
+        <p><span class="cl">13.3</span>Opsi will implement reasonable technical and organisational measures designed to protect Personal Information processed by Opsi against unauthorised access, loss, damage or unlawful processing, taking into account the nature of the information, the risks and implementation costs.</p>
+        <p><span class="cl">13.4</span>Customer authorises Opsi to use subcontractors and service providers, including hosting, mapping, email and AI model providers, some of which may be located outside South Africa, to provide ORBIT and related services. Opsi will remain responsible for the performance of its subcontractors to the extent required by this Agreement. Any cross-border transfer of Personal Information will take place only as permitted by section 72 of POPIA.</p>
+        <p><span class="cl">13.5</span>Opsi will notify Customer without undue delay after becoming aware of a confirmed security compromise affecting Personal Information in Customer Data processed by Opsi, and will provide reasonable cooperation as required by applicable law. Customer is responsible for making any notifications to regulators, data subjects or third parties unless applicable law requires Opsi to do so.</p>
+
+        <!-- 14 -->
+        <h2 id="c14"><span class="n">14.</span>Confidentiality</h2>
+        <p><span class="cl">14.1</span>Each party may receive Confidential Information of the other party. Confidential Information includes non-public business, technical, financial, operational, product, pricing, security, roadmap, customer, data and trade secret information, whether disclosed before or after acceptance of this Agreement.</p>
+        <p><span class="cl">14.2</span>The receiving party must protect Confidential Information using at least reasonable care, use it only for purposes of this Agreement, and disclose it only to personnel, Affiliates, advisers, contractors and service providers who need to know it and are bound by confidentiality obligations.</p>
+        <p><span class="cl">14.3</span>Confidential Information does not include information that is publicly available without breach, already known without confidentiality restriction, independently developed without use of the disclosing party’s information, or lawfully received from a third party without confidentiality restriction.</p>
+        <p><span class="cl">14.4</span>The receiving party may disclose Confidential Information where required by law or court order, provided that it gives advance notice where legally permitted and discloses only what is required.</p>
+        <p><span class="cl">14.5</span>The confidentiality obligations survive for five years after termination, except for trade secrets and highly sensitive information, which remain protected for so long as they remain non-public.</p>
+
+        <!-- 15 -->
+        <h2 id="c15"><span class="n">15.</span>Intellectual property</h2>
+        <p><span class="cl">15.1</span>Opsi and its licensors own all rights, title and interest in and to Opsi Technology, including all modifications, improvements, configurations, templates, workflows, reports, scripts, connectors, feedback-derived improvements, derivative works and related intellectual property, whether developed before, during or after the term of this Agreement.</p>
+        <p><span class="cl">15.2</span>Customer may provide suggestions, ideas, enhancement requests or feedback. Opsi may use that feedback without restriction or obligation, and Customer assigns to Opsi any rights it may have in such feedback to the extent necessary for Opsi to do so.</p>
+        <p><span class="cl">15.3</span>Customer must not challenge, assist a challenge to, or register confusingly similar marks, names, domains or intellectual property relating to Opsi or ORBIT.</p>
+
+        <!-- 16 -->
+        <h2 id="c16"><span class="n">16.</span>Third-party materials</h2>
+        <p><span class="cl">16.1</span>ORBIT may interoperate with, link to, depend on, or incorporate third-party software, data, hosting services, map tiles, map and road data, geocoding and routing services, AI models, ERP systems, APIs, open-source components or other third-party materials. Those materials may be subject to separate third-party terms.</p>
+        <p><span class="cl">16.2</span>Opsi is not responsible for third-party materials, third-party data accuracy, availability, changes, outages, price increases or discontinuation, except to the extent expressly stated in an Order Form. Opsi may modify or replace third-party components where reasonably necessary.</p>
+
+        <!-- 17 -->
+        <h2 id="c17"><span class="n">17.</span>Limited IP infringement indemnity</h2>
+        <p><span class="cl">17.1</span>Subject to clauses 17.2 to 17.5, Opsi will defend Customer against a third-party claim alleging that Customer’s authorised use of ORBIT infringes that third party’s South African copyright, patent or trade mark, and will pay damages finally awarded by a court or agreed in settlement by Opsi.</p>
+        <p><span class="cl">17.2</span>Customer must promptly notify Opsi of the claim, provide reasonable cooperation, and allow Opsi sole control of the defence and settlement. Customer may participate at its own cost.</p>
+        <p><span class="cl">17.3</span>Opsi has no obligation for claims arising from Customer Data, third-party materials, Customer systems, unauthorised use, modification not made by Opsi, combination with items not supplied by Opsi, or use outside the scope of this Agreement.</p>
+        <p><span class="cl">17.4</span>If ORBIT is or may become subject to an infringement claim, Opsi may procure continued use, modify or replace the affected functionality, or terminate the affected subscription and refund prepaid unused Fees for the affected functionality for the remainder of the then-current committed term.</p>
+        <p><span class="cl">17.5</span>This clause 17 states Opsi’s entire liability and Customer’s exclusive remedy for infringement claims.</p>
+
+        <!-- 18 -->
+        <h2 id="c18"><span class="n">18.</span>Disclaimers</h2>
+        <p><span class="cl">18.1</span>ORBIT and all outputs are provided “as is” and “as available” to the maximum extent permitted by law. Opsi disclaims all warranties, representations, conditions and undertakings not expressly stated in this Agreement, whether express, implied, statutory or otherwise, including warranties of merchantability, fitness for a particular purpose, non-infringement, uninterrupted operation, error-free operation, availability, accuracy, completeness, reliability, security, compatibility and achievement of any business result.</p>
+        <p><span class="cl">18.2</span>Without limiting clause 18.1, Opsi does not warrant that ORBIT outputs — including territories, routes, schedules, distance or time estimates, savings estimates, order totals, tax calculations, stock figures, dashboards, reports or AI Assistant responses — will be correct, optimal, legally compliant, safe, commercially suitable, or suitable for Customer’s specific operations. Customer must independently verify all outputs before operational use.</p>
+        <p><span class="cl">18.3</span>Opsi is not responsible for failures or losses caused by Customer Data, Customer systems or devices, connectivity, third-party services, unsupported use, Customer instructions, force majeure events, or use of ORBIT contrary to the Documentation or Opsi’s instructions.</p>
+
+        <!-- 19 -->
+        <h2 id="c19"><span class="n">19.</span>Limitation of liability</h2>
+        <p><span class="cl">19.1</span>To the maximum extent permitted by law, Opsi’s aggregate liability arising out of or relating to this Agreement, ORBIT or any related services, whether in contract, delict, statute, strict liability or otherwise, is limited to the Fees actually paid to Opsi for the affected ORBIT subscription or service during the 12 months immediately preceding the event giving rise to liability. If no Fees were paid to Opsi for the affected subscription or service, including during a Pilot, Opsi’s aggregate liability is limited to USD 600.</p>
+        <p><span class="cl">19.2</span>To the maximum extent permitted by law, Opsi is not liable for indirect, incidental, special, punitive, exemplary or consequential loss or damage, loss of profit, revenue, sales, goodwill, anticipated savings, business opportunity, production, contracts, data, use, reputation, or business interruption, even if Opsi was advised of the possibility of such loss.</p>
+        <p><span class="cl">19.3</span>The limitations apply despite the failure of any limited remedy and apply to Opsi’s Affiliates, directors, officers, employees, contractors, licensors, resellers and suppliers.</p>
+        <p><span class="cl">19.4</span>Nothing in this Agreement excludes liability to the extent it cannot be excluded under applicable law.</p>
+
+        <!-- 20 -->
+        <h2 id="c20"><span class="n">20.</span>Indemnities by Customer</h2>
+        <p><span class="cl">20.1</span>Customer indemnifies and holds harmless Opsi, its Affiliates, directors, officers, employees, contractors, licensors, resellers and suppliers from and against all claims, losses, damages, penalties, costs and expenses arising from or relating to:</p>
+        <ul>
+          <li>Customer Data, including alleged infringement, unlawfulness, inaccuracy or misuse of Customer Data;</li>
+          <li>Customer’s or Authorised Users’ breach of this Agreement or applicable law, including data protection and labour law in relation to Field Users;</li>
+          <li>Customer’s operational implementation of outputs generated by ORBIT without independent verification;</li>
+          <li>orders, invoices, prices, tax treatment and other documents or commitments Customer issues to its own customers through ORBIT;</li>
+          <li>Customer systems, devices, infrastructure, security failures or unauthorised access not caused by Opsi’s breach; and</li>
+          <li>third-party claims by Customer’s customers, stores, employees, contractors, sales representatives, service providers or regulators arising from Customer’s use of ORBIT.</li>
+        </ul>
+
+        <!-- 21 -->
+        <h2 id="c21"><span class="n">21.</span>Term, termination and effect of termination</h2>
+        <p><span class="cl">21.1</span>This Agreement begins when accepted or when Customer first accesses or uses ORBIT, and continues until all subscriptions and Order Forms have expired or been terminated.</p>
+        <p><span class="cl">21.2</span>Unless an Order Form specifies a committed term, subscriptions run month to month, and either party may terminate a subscription on 30 days’ written notice, effective at the end of the billing month in which the notice period ends. A subscription with a committed term, such as an annual plan, runs for that term and renews as stated in the Order Form.</p>
+        <p><span class="cl">21.3</span>Opsi may terminate this Agreement or any subscription on written notice if Customer materially breaches this Agreement and fails to remedy the breach within 20 business days after notice, or immediately if the breach is incapable of remedy, relates to clauses 6, 11, 14 or 15, creates security or legal risk, or involves unauthorised use of Opsi Technology.</p>
+        <p><span class="cl">21.4</span>On termination or expiry, Customer must immediately stop using ORBIT, ensure that Authorised Users stop using the rep app and clear any ORBIT data stored on their devices, return or destroy Opsi Confidential Information, and certify compliance on request. Customer must pay all outstanding Fees.</p>
+        <p><span class="cl">21.5</span>Opsi will retain Customer Data for 30 days following the effective date of termination or expiry to allow Customer to export it. After that period, Opsi may delete all Customer Data without further notice and in accordance with its standard retention practices, unless a different period is stated in an Order Form or required by law. Customer is responsible for exporting Customer Data before the 30-day retrieval period ends.</p>
+        <p><span class="cl">21.6</span>Clauses that by their nature should survive termination will survive, including clauses 6, 11 to 21, 23 to 27, and Schedule 1 to the extent relevant.</p>
+
+        <!-- 22 -->
+        <h2 id="c22"><span class="n">22.</span>Export, sanctions and anti-corruption</h2>
+        <p><span class="cl">22.1</span>Customer must comply with all applicable export control, sanctions, anti-bribery and anti-corruption laws. Customer must not use, export, re-export or provide access to ORBIT in breach of those laws or to any sanctioned person, entity, territory or end-use.</p>
+        <p><span class="cl">22.2</span>Customer warrants that neither it nor, to its knowledge, its Authorised Users are subject to sanctions that would prohibit use of ORBIT.</p>
+
+        <!-- 23 -->
+        <h2 id="c23"><span class="n">23.</span>Publicity</h2>
+        <p><span class="cl">23.1</span>Unless Customer notifies Opsi in writing that it opts out, Opsi may identify Customer as an ORBIT customer and use Customer’s name and logo in customer lists, presentations and marketing materials. Any press release, case study or detailed public reference requires Customer’s prior consent.</p>
+
+        <!-- 24 -->
+        <h2 id="c24"><span class="n">24.</span>Resellers and third-party purchasers</h2>
+        <p><span class="cl">24.1</span>If Customer purchases through a reseller, distributor or other third party, this Agreement still governs Customer’s use of ORBIT. Commercial terms such as pricing, invoicing and payment may be between Customer and the reseller, but Opsi is not responsible for reseller acts, omissions, promises, discounts, refunds or commitments unless expressly agreed by Opsi in writing.</p>
+        <p><span class="cl">24.2</span>A reseller may not modify this Agreement or grant rights in ORBIT beyond those expressly authorised by Opsi.</p>
+
+        <!-- 25 -->
+        <h2 id="c25"><span class="n">25.</span>Governing law and dispute resolution</h2>
+        <p><span class="cl">25.1</span>This Agreement is governed by the laws of the Republic of South Africa, without regard to conflict-of-law rules.</p>
+        <p><span class="cl">25.2</span>The parties consent to the jurisdiction of the High Court of South Africa, Gauteng Local Division, Johannesburg for urgent, interim, intellectual property, confidentiality, payment and injunctive relief.</p>
+        <p><span class="cl">25.3</span>Any other dispute that is not resolved by good faith senior management discussions within 14 days after written escalation must be referred to confidential arbitration in Sandton, South Africa under the expedited commercial rules of the Arbitration Foundation of Southern Africa, by one arbitrator appointed by agreement or, failing agreement, by AFSA. The arbitrator may award costs on the attorney-and-client scale where appropriate.</p>
+
+        <!-- 26 -->
+        <h2 id="c26"><span class="n">26.</span>Notices</h2>
+        <p><span class="cl">26.1</span>Opsi may give notices by email, through ORBIT, through an online account, or by posting to the website or link through which this Agreement is made available. Customer must send legal notices to Opsi at 21 Scott Street, Waverley, Johannesburg, South Africa, 2090 and to <a href="mailto:legal@opsi.co.za">legal@opsi.co.za</a>.</p>
+        <p><span class="cl">26.2</span>Customer is responsible for keeping account, billing and administrator contact details current.</p>
+
+        <!-- 27 -->
+        <h2 id="c27"><span class="n">27.</span>General</h2>
+        <p><span class="cl">27.1</span>Neither party is liable for delay or failure caused by events beyond its reasonable control, including power failures and load-shedding, internet and mobile network failures, hosting failures, labour disputes, acts of government, war, terrorism, civil unrest, natural disasters, epidemics, cyberattacks, third-party service failures and force majeure events. This clause does not excuse Customer’s obligation to pay Fees.</p>
+        <p><span class="cl">27.2</span>Customer may not assign, transfer or novate this Agreement without Opsi’s prior written consent. Opsi may assign, transfer or novate this Agreement to an Affiliate or in connection with a merger, restructuring, sale of shares, sale of assets or transfer of business.</p>
+        <p><span class="cl">27.3</span>This Agreement is the entire agreement regarding Customer’s use of ORBIT and supersedes prior or contemporaneous terms on that subject, except for any Order Form that expressly remains in effect.</p>
+        <p><span class="cl">27.4</span>No waiver is effective unless in writing and signed by the waiving party. Failure to enforce a provision is not a waiver.</p>
+        <p><span class="cl">27.5</span>If any provision is invalid or unenforceable, it will be limited or severed to the minimum extent necessary, and the remaining provisions will remain in force.</p>
+        <p><span class="cl">27.6</span>The words “including” and similar expressions are illustrative and not limiting. Headings are for convenience only. References to writing include email and electronic acceptance where legally permissible.</p>
+
+        <!-- SCHEDULE 1 -->
+        <div class="sched">
+          <h2 id="s1">Schedule 1: Standard support terms</h2>
+
+          <h3>1. Definitions</h3>
+          <p>In this Schedule 1, terms defined in the body of this Agreement bear the meanings given to them. The following additional terms apply:</p>
+          <dl>
+            <dt>Additional Support Services</dt>
+            <dd>means any Excluded Support Services that Opsi agrees to provide to Customer at additional cost.</dd>
+            <dt>Business Hours</dt>
+            <dd>means 08:00 to 17:00 on business days in South Africa.</dd>
+            <dt>Excluded Support Services</dt>
+            <dd>means any support services not specified in this Schedule 1.</dd>
+            <dt>Patches and Fixes</dt>
+            <dd>means changes made to ORBIT, including changes made for the purpose of error correction and Workarounds implemented to restore ORBIT to substantial conformity with its intended functionality.</dd>
+            <dt>Resolve</dt>
+            <dd>means correcting an error or providing a Workaround allowing Customer to continue to access or use ORBIT.</dd>
+            <dt>Standard Support Services</dt>
+            <dd>means software support services that do not attract charges over and above the subscription Fees and which are available during Business Hours only.</dd>
+            <dt>Tenant</dt>
+            <dd>means Customer’s account on the ORBIT Hosted Service, including all partitions, scenarios and users within it.</dd>
+            <dt>Ticket</dt>
+            <dd>means a support request logged with Opsi’s support team using Opsi’s ticketing system relating to a problem or fault regarding ORBIT.</dd>
+            <dt>TTF</dt>
+            <dd>means the time to fix an error, measured from the time a Ticket is logged with Opsi to the time the Ticket has been Resolved.</dd>
+            <dt>TTR</dt>
+            <dd>means the time to respond to a Ticket, measured from the time a Ticket is logged to the time Opsi contacts the person who logged the Ticket with initial feedback.</dd>
+            <dt>Updates</dt>
+            <dd>means generally available changes to ORBIT or its components that may incorporate bug fixes, new or improved functionality, or changed functionality since the last version.</dd>
+            <dt>Workaround</dt>
+            <dd>means a temporary solution to an error.</dd>
+          </dl>
+
+          <h3>2. Standard support scope</h3>
+          <p><span class="cl">2.1</span>Standard Support Services apply to each Customer Tenant for which all applicable Fees are being paid to Opsi.</p>
+          <p><span class="cl">2.2</span>Standard Support Services are provided during Business Hours only.</p>
+          <p><span class="cl">2.3</span>Standard Support Services include, at no additional cost:</p>
+          <ul>
+            <li>Updates and required Patches and Fixes, applied by Opsi to the Hosted Service, as necessary to maintain the correct functionality of ORBIT;</li>
+            <li>remote support from the Opsi support team, including a ticketing system that keeps a record of communications and actions relating to each Ticket for review and reporting; and</li>
+            <li>the targeted response and fix times in paragraph 8 of this Schedule.</li>
+          </ul>
+
+          <h3>3. Opsi responsibilities</h3>
+          <p><span class="cl">3.1</span>Opsi will provide the Standard Support Services to Customer for every Tenant for which the relevant Fees are being paid.</p>
+          <p><span class="cl">3.2</span>Opsi will:</p>
+          <ul>
+            <li>be responsible for the management and supervision of the Standard Support Services; and</li>
+            <li>give Customer reasonable advance notice of Updates that materially change how Authorised Users work with ORBIT, including the scope of the change and its timing. Emergency Updates and security fixes may be applied without advance notice and will be communicated as soon as practicable.</li>
+          </ul>
+
+          <h3>4. Customer responsibilities</h3>
+          <p><span class="cl">4.1</span>Before an issue is escalated to Opsi, it must be reviewed and troubleshot by a designated super user or administrator who has been trained on ORBIT and knows Customer’s business processes and configuration well enough to make a reasonable assessment of the problem and to describe it clearly.</p>
+
+          <h3>5. Support process</h3>
+          <p><span class="cl">5.1</span>The following procedure applies for logging a Ticket:</p>
+          <ul>
+            <li>the Authorised User reports the issue to the designated super user or administrator;</li>
+            <li>if the super user cannot resolve it, the super user logs a Ticket with Opsi and, in urgent cases, follows up immediately with a call to Opsi’s helpdesk;</li>
+            <li>until the issue is Resolved, Opsi provides progress updates to the super user at reasonable intervals;</li>
+            <li>Opsi notifies Customer when a Ticket is closed, signifying that the problem has been Resolved; and</li>
+            <li>for Critical incidents, Opsi provides a root cause analysis on request within 5 business days of the incident being closed.</li>
+          </ul>
+
+          <h3>6. Updates</h3>
+          <p><span class="cl">6.1</span>Updates are released to the production Hosted Service only after appropriate testing.</p>
+
+          <h3>7. Backups</h3>
+          <p><span class="cl">7.1</span>Opsi maintains backups of production data on the Hosted Service at least once a day.</p>
+          <p><span class="cl">7.2</span>Opsi maintains a formal disaster recovery plan. Details, including the recovery time objective, are available to Customer on request.</p>
+
+          <h3>8. Severity levels and response times</h3>
+          <p><span class="cl">8.1</span>The following severity levels apply:</p>
+          <dl>
+            <dt>Critical</dt>
+            <dd>an incident causing severe disruption to Customer’s business, or which will do so if not dealt with immediately, with Authorised Users having no readily available alternative way of performing their normal work.</dd>
+            <dt>High</dt>
+            <dd>an incident where a major component is degraded or causing significant business impact and Authorised Users are having difficulty performing part of their normal work.</dd>
+            <dt>Medium</dt>
+            <dd>an incident where a component is not functioning but is not critical, with limited business impact, or a service request.</dd>
+            <dt>Low</dt>
+            <dd>a request for change or enhancement, or a minor incident with little or no business impact.</dd>
+          </dl>
+          <p><span class="cl">8.2</span>The targeted response and fix times are:</p>
+          <table class="sev">
+            <thead>
+              <tr><th>Severity</th><th>TTR (respond)</th><th>TTF (fix)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1 · Critical</td><td>1 hour</td><td>2 hours</td></tr>
+              <tr><td>2 · High</td><td>2 hours</td><td>8 hours</td></tr>
+              <tr><td>3 · Medium</td><td>8 Business Hours</td><td>16 Business Hours</td></tr>
+              <tr><td>4 · Low</td><td>16 Business Hours</td><td>N/A</td></tr>
+            </tbody>
+          </table>
+          <p><span class="cl">8.3</span>The targeted maximum downtime resulting from Severity 1 or Severity 2 issues is less than 0.5%, measured over a calendar month.</p>
+
+          <h3>9. Escalation</h3>
+          <p><span class="cl">9.1</span>If Customer is not satisfied with Opsi’s progress on a Critical or High severity issue, the issue will be escalated to more senior management within Opsi.</p>
+
+          <h3>10. Excluded services</h3>
+          <p><span class="cl">10.1</span>The following are excluded from Standard Support Services but may be provided by Opsi as Additional Support Services at additional cost:</p>
+          <ol class="alpha">
+            <li>training beyond any onboarding included in an Order Form;</li>
+            <li>customisations, enhancements and extensions not explicitly included in the licensed scope;</li>
+            <li>support for issues that do not result from an ORBIT fault, that are first-level support, or that result from a lack of Authorised User training;</li>
+            <li>Customer-side testing, change management or go-live support for Updates;</li>
+            <li>resolving issues caused by changes made to Customer Data, configuration or integrations without the involvement of Opsi personnel;</li>
+            <li>services relating to third-party software, ERP systems, equipment or services not procured from Opsi;</li>
+            <li>repetitive questions or errors resulting from incomplete training;</li>
+            <li>errors for which Opsi has provided correction procedures that Customer has not implemented within a reasonable time;</li>
+            <li>errors resulting from misuse, or use not in accordance with the Documentation;</li>
+            <li>configuration, maintenance, troubleshooting and similar work on Customer devices, including Field Users’ phones and tablets;</li>
+            <li>user errors, such as problems caused by incorrect setup, incorrect master data, user actions that conflict with the Documentation or Customer’s own procedures, or failure to perform required administrative duties; and</li>
+            <li>basic operational or training-related enquiries.</li>
+          </ol>
+
+          <h3>11. Remote support</h3>
+          <p><span class="cl">11.1</span>All Standard Support Services are provided remotely.</p>
+          <p><span class="cl">11.2</span>In-person support is provided only under a separate agreement for Additional Support Services.</p>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="logo" href="index.html">
+          <svg width="24" height="24" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+            <circle cx="15" cy="15" r="4" fill="#0080c7"/>
+            <ellipse cx="15" cy="15" rx="12.5" ry="6" stroke="#0080c7" stroke-width="1.5" fill="none" opacity="0.6" transform="rotate(-30 15 15)"/>
+            <ellipse cx="15" cy="15" rx="8.5" ry="4" stroke="#0080c7" stroke-width="1.2" fill="none" opacity="0.35" transform="rotate(-30 15 15)"/>
+            <circle cx="26" cy="9" r="1.8" fill="#19afff" opacity="0.85"/>
+          </svg>
+          ORBIT
+        </a>
+        <p>Intelligent territory planning and rep scheduling for field sales teams. Fewer kilometres. More coverage. Balanced workloads.</p>
+        <p class="ft-opsi">Built by <a href="https://www.opsisystems.com" target="_blank" rel="noopener">OPSI Systems (Pty) Ltd</a></p>
+      </div>
+      <div class="ft-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#how">How It Works</a></li>
+          <li><a href="index.html#industries">Industries</a></li>
+          <li><a href="billing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#demo">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="eula.html">License Agreement</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="mailto:info@opsi.co.za">Email Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 ORBIT by OPSI Systems (Pty) Ltd. All rights reserved.</span>
+      <div class="ft-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="eula.html">EULA</a>
+        <a href="index.html#demo">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
